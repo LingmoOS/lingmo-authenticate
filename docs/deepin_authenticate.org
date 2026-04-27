@@ -1,0 +1,601 @@
+#+OPTIONS: toc:nil num:nil date:nil timestamp:nil ^:{} <:{}
+#+TITLE: deepin 认证接口
+
+** 目的
+
+=deepin= 上通常是使用密码进行认证，对于指纹，人脸等没有统一的接口，需要使用者单独适配，不方便使用。
+
+为了统一认证接口，故设计了此接口，用于适配指纹、人脸等认证方式，下文将详细描述这套接口。
+
+
+** 认证接口
+
+接口通过 =DBus= 的方式提供，接口的 =DBus= 服务信息如下：
+
++ *Service:*
+
+  =com.deepin.daemon.Authenticate=
+
++ *Path:*
+
+  =/com/deepin/daemon/Authenticate=
+
++ *Interface:*
+
+  =com.deepin.daemon.Authenticate=
+
+*(这里假定本文的阅读者熟悉 =DBus= ，故不再此介绍 =DBus= 了。)*
+
+--------
+
+下面将按照 =Methods, Properties, Signals= 一一介绍认证接口：
+
+
+*** Methods
+
++ =Authenticate(char *username, int32 flag, int32 timeout) (char *res)=
+
+  + =Description=
+
+    认证接口，调用后将根据 =flag= 的值来决定已何种方式启动认证。
+    调用成功会返回一个 =res= 的json格式字符串，json数据中包含了一个 =id=的字符串的用于标识认证状态的信号， 和一个=flag=的int32数据标识成功开启的认证方式；
+    失败后 =id= 为空并返回 =dbus error= 。
+
+    此接口支持并发调用。
+
+  + =Arguments=
+
+    + =username=
+
+      *(输入参数)*
+
+      需要认证的用户名，可以为空，为空时不支持密码认证。指纹和人脸认证通过后会返回认证成功的用户名，通过认证状态的信号告知调用者。
+
+    + =flag=
+
+      *(输入参数)*
+
+      需要启用的认证方式，目前可用的值如下：
+
+      #+BEGIN_SRC c
+      enum {
+          AuthenticationFlagPassword = 1 << 0,           // 启用密码认证
+          AuthenticationFlagFingerprint = 1 << 1,        // 启用指纹认证
+          AuthenticationFlagFace = 1 << 2,               // 启用人脸认证
+          AuthenticationFlagActiveDirectory = 1 << 3,    // 启用 AD 域认证
+      };
+      #+END_SRC
+
+    + =timeout=
+
+      *(输入参数)*
+
+      认证调用的超时，超时之后将取消此次认证， =< 1= 时表示用不超时。
+
+    + =res=
+
+      *(输出参数)*
+
+      调用成功时会返回认证事件信息，包含此次调用的唯一 =id= ，用于识别认证状态的信号，和=flag=标识成功开启的认证方式；。
+
+--------
+
++ =CancelAuthenticate(char *id)=
+
+  + =Description=
+
+    认证取消接口，取消指定 =id= 对应的认证流程，若失败则返回 =dbus error= 。
+
+  + =Arguments=
+
+    + =id=
+
+      *(输入参数)*
+
+      认证接口调用成功后返回的 =id= 。
+
+
+--------
+
++ =SetPassword(char *id, char *password)=
+
+  + =Description=
+
+    设置用户的密码，密码认证时需要使用此接口传递用户的密码。若调用失败则返回 =dbus error= 。
+
+  + =Arguments=
+
+    + =id=
+
+      *(输入参数)*
+
+      认证接口调用成功后返回的 =id= 。
+
+    + =password=
+
+      *(输入参数)*
+
+      用户的密码
+
++ =GetLimits(char* username) (char* limits)=
+
+  + =Description=
+     返回认证限制相关信息，比如失败次数、解锁时间，每种认证类型分开记录。
+
+  + =Arguments=
+    + =username=
+
+     *(输入参数)*
+
+     用户名
+
+     + =limits=
+
+     *(输出参数)*
+
+     认证限制相关信息，格式是JSON字符串，对象的列表，对象定义为：
+
+     #+BEGIN_SRC
+     typedef _limit struct{
+        char* type
+        int flag
+        int unlockSecs
+        int maxTries
+        numFailures int
+        bool locked
+        char* unlockTime
+     } limit
+     #+END_SRC
+
+     字段含义如下：
+     + =type=
+
+       认证类型
+
+     + =flag=
+
+       认证类型的flag
+
+     + =unlockSecs=
+
+       认证失败次数超过限制锁定后，解除锁定需要等待的时间（秒数），如果 <0 则永久锁定。
+
+     + =maxTries=
+
+       允许认证失败的次数，超过限制后会锁定，如果为 0 表示没有限制。
+
+     + =numFailures=
+
+       认证失败的次数
+
+     + =locked=
+       是否锁定
+
+     + =unlockTime=
+
+       解锁时间，到达时间后就能解除锁定，时间格式为 RFC3339，比如"2006-01-02T15:04:05+07:00"。
+
+*** Properties
+
++ =int32 SupportedFlags=
+
+  *(只读)*
+
+  可支持的认证 =flag= ，认证接口中传入的 =flag= 必须在这个范围内。
+
+--------
+
+*** Signals
+
++ =Status(char *id, int32 code, char *msg)=
+
+  + =Description=
+
+    认证流程中的状态
+
+  + =Arguments=
+
+    - =id=
+
+      *(输入参数)*
+
+      认证接口调用成功后返回的 =id= 。
+
+    - =code=
+
+      *(输入参数)*
+
+      状态码，可用值如下：
+
+      #+BEGIN_SRC c
+      enum {
+          StatusCodeSuccess = 0,    // 认证成功
+          StatusCodeFailure,        // 认证失败
+          StatusCodeCancel,         // 认证取消
+          StatusCodeTimeout,        // 认证超时
+          StatusCodeError,          // 认证错误
+          StatusCodeVerify,         // 认证验证中，下层VerifyStatus信号
+      };
+      #+END_SRC
+
+    - =msg=
+
+      *(输入参数)*
+
+      详细的状态描述，与 =code= 对应。验证成功、失败、超时、错误时， =msg= 中是对应的验证方式，可用值如下：
+
+      #+BEGIN_SRC c
+      "password"
+      "fingerprint"
+      "face"
+      "active directory"
+      #+END_SRC
+
+      在验证中，=code= 为 StatusCodeVerify 时，=msg= 是一个 JSON 对象, 示例如下：
+
+      #+BEGIN_SRC json
+      {
+        "flag": 0,
+        "code": 0,
+        "msg": "",
+      }
+      #+END_SRC
+
+      =flag= 表示哪种认证方式，=code=和=msg= 为该认证方式的 =VerifyStatus= 信号中的参数，具体含义看该认证方式的详细描述。
+
+--------
+
+** 指纹接口
+
+指纹接口默认适配了 =fprintd= ，如果指纹设备是被 =libprint= 项目支持的话，那就可以直接在 =deepin= 系统上使用；如果不支持则请按照 =deepin= 指纹接口规范来实现指定的接口，以便在 =deepin= 系统上使用。
+
+指纹接口会在启动时扫描 =/usr/share/deepin-authentication/interfaces/= 目录，检查并添加自定义的指纹接口，检查是通过校验 =DBus= 接口签名来判断的。
+另外需要注意的是指纹接口默认提供了使用文件来保存指纹模板的功能和接口，在校验接口时需要考虑。
+
+指纹接口是通过 =DBus= 的方式提供，接口的 =DBus= 服务信息如下：
+
++ *Service:*
+
+  =com.deepin.daemon.Authenticate=
+
++ *Path:*
+
+  =/com/deepin/daemon/Authenticate/Fingerprint=
+
++ *Interface:*
+
+  =com.deepin.daemon.Authenticate.Fingerprint=
+
+--------
+
+下面将按照 =Methods, Properties, Signals= 一一介绍认证接口：
+
+
+*** Methods
+
++ =SetDefaultDevice(char *device)=
+
+  - =Description=
+
+    设置默认的指纹设备，若失败则返回 =dbus error= 。 *注意：* 设备在使用过程中不允许更改默认设备。
+
+  - =Arguments=
+
+    + =device=
+
+      *(输入参数)*
+
+      设备名称
+
+--------
+
++ =Claim(char *username, bool claimed)=
+
+  - =Description=
+
+    独占指纹设备，失败则返回 =dbus error= 。指纹设备同时只允许做一种操作，不支持并行，所以需要在使用设备之前独占设备，如果成功就意味着设备可用，才能继续下面的操作。
+
+  - =Arguments=
+
+    + =username=
+
+      *(输入参数)*
+
+      用户名
+
+    + =claimed=
+
+      *(输入参数)*
+
+      表示是否独占设备， =true= 表示独占， =false= 表示释放
+
+--------
+
++ =Enroll(char *finger)=
+
+  - =Description=
+
+    指纹采集接口，调用成功后进入采集流程，失败则返回 =dbus error= 。采集过程中通过信号 =EnrollStatus= 返回每次采集的状态。只能在独占设备之后调用它。
+
+  - =Arguments=
+
+    + =finger=
+
+      *(输入参数)*
+
+      此次采集的手指名
+
+
+--------
+
++ =StopEnroll()=
+
+  - =Description=
+
+    结束当前的采集流程，失败则返回 =dbus error=, 正常结束或中途取消都需要调用此方法。只能在独占设备之后调用它。
+
+  - =Arguments=
+
+--------
+
++ =Verify(char *finger)=
+
+  - =Description=
+
+    指纹验证接口，调用成功后进入验证流程，失败则返回 =dbus error= 。验证过程中通过信号 =VerifyStatus= 返回验证的结果。只能在独占设备之后调用它。
+
+  - =Arguments=
+
+    + =finger=
+
+      *(输入参数)*
+
+      此次采集的手指名，可为空
+
+
+--------
+
++ =StopVerify()=
+
+  - =Description=
+
+    结束当前的验证流程，失败则返回 =dbus error=, 正常结束或中途取消都需要调用此方法。只能在独占设备之后调用它。
+
+  - =Arguments=
+
+--------
+
+
++ =DeleteFinger(char *username, char *finger)=
+
+  - =Description=
+
+    删除指定 =finger= 的模板数据，删除失败则返回 =dbus error=
+
+  - =Arguments=
+
+    + =username=
+
+      *(输入参数)*
+
+      用户名
+
+    + =finger=
+
+      *(输入参数)*
+
+      需要删除的手指名
+
+--------
+
+
++ =DeleteAllFingers(char *username)=
+
+  - =Description=
+
+    删除所以的模板数据，删除失败则返回 =dbus error=
+
+  - =Arguments=
+
+    + =username=
+
+      *(输入参数)*
+
+      用户名
+
+--------
+
++ =ListFingers(char *username) （char **fingers)=
+
+  - =Description=
+
+    列出已录入的所有手指名，失败则返回 =dbus error=
+
+  - =Arguments=
+
+    + =username=
+
+      *(输入参数)*
+
+      用户名
+
+    + =fingers=
+
+      *(输出参数)*
+
+      已录入的所有手指名
+
+
+*** Properties
+
+- =char *DefaultDevice=
+
+  *(只读)*
+
+  默认的指纹设备，如果没有手动设置，则为发现的第一个指纹设备
+
+--------
+
+- =char *DeviceList=
+
+  *(只读)*
+
+  设备基本信息列表，包含设备的名称、是否可用、支持的特性等，列表是 =JSON= 编码后的数据。设备基本信息的定义如下：
+
+  #+BEGIN_SRC c
+  typedef _device_info struct {
+      char *name;
+      bool *available;
+      int32 capability;
+  }DeviceInfo;
+  #+END_SRC
+
+
+*** Signals
+
+- =EnrollStatus(char *username, int32 code, char *msg)=
+
+  + =Description=
+
+    采集流程中的信号，反馈采集的状态，包括采集进度、采集中的错误等信息
+
+  + =Arguments=
+
+    - =username=
+
+      用户名
+
+    - =code=
+
+      状态码
+
+    - =msg=
+
+      详细的状态描述
+
+--------
+
+- =VerifyStatus(char *username, int32 code, char *msg)=
+
+  + =Description=
+
+    验证流程中的信号，反馈验证的状态
+
+  + =Arguments=
+
+    - =username=
+
+      用户名
+
+    - =code=
+
+      状态码
+
+    - =msg=
+
+      详细的状态描述
+
+--------
+
+- =Touch(char *username, bool pressed)=
+
+  *(可暂不实现)*
+
+  + =Description=
+
+    手指是否接触指纹设备，接触和离开时都需要发送信号
+
+  + =Arguments=
+
+    - =username=
+
+      用户名
+
+    - =pressed=
+
+      手指是否接触指纹设备
+
+--------
+--------
+
+** 人脸识别接口
+
+暂未实现，待补充。
+
+--------
+--------
+
+** PAM
+
+=PAM= 是 =linux= 下一套认证模块， =deepin= 的认证接口最终是通过 =PAM= 的方式共使用者调用，即对使用者是透明的。
+所以需要实现一个 =PAM= 模块来做这个事情，然后按照规则配置到 =common-auth= 中。
+
+另外 =deepin= 的认证接口期望接管各种认证方式，因此需要修改 =common-auth= 文件，将文件中其他的认证方式移走。
+因此需要实现一个工具来完成这个事情，并监听 =common-auth= 文件的改变(通过 =postinst= 的方式监听)来修改文件。
+
+*** Deepin PAM 模块
+
+此模块调用 =deepin= 认证接口，然后等待信号返回结果，大致流程如下：
+
+1. 获取支持的认证方式
+2. 监听 =Status= 信号
+2. 调用 =Authenticate= 函数
+3. 阻塞流程，直至 =Status= 信号出现
+4. 根据 =Status= 信号的值返回结果
+
+
+*** PAM 文件修改工具
+
+这个工具主要修改 =common-auth= 文件，将文件中其他的认证方式移走。工具需要支持白名单和黑名单，白名单内的不做处理，黑名单内的直接删掉。
+
+如 =common-auth= 内容如下：
+
+#+BEGIN_SRC shell
+auth	[success=2 default=ignore]	pam_deepin_auth.so
+auth	[success=1 default=ignore]	pam_unix.so nullok_secure try_first_pass
+# here's the fallback if no module succeeds
+auth	requisite			pam_deny.so
+# prime the stack with a positive return value if there isn't one already;
+# this avoids us returning an error just because nothing sets a success code
+# since the modules above will each just jump around
+auth	required			pam_permit.so
+#+END_SRC
+
+白名单为： =pam_deny.so, pam_permit.so= ，黑名单为： =pam_deepin_auth.so= ，认证接口的 =PAM= 模块名为： =pam_deepin_authentication.so= 。
+经过修改工具处理后应为：
+
+#+BEGIN_SRC shell
+# here's the fallback if no module succeeds
+auth	[success=1 default=ignore]	pam_deepin_authentication.so
+auth	requisite			pam_deny.so
+# prime the stack with a positive return value if there isn't one already;
+# this avoids us returning an error just because nothing sets a success code
+# since the modules above will each just jump around
+auth	required			pam_permit.so
+#+END_SRC
+
+被移走的 =pam_unix.so= 放入一个新文件中，文件名为： =deepin_pam_unix= ，内容如下：
+
+#+BEGIN_SRC shell
+auth	[success=1 default=ignore]	pam_unix.so nullok_secure try_first_pass
+#+END_SRC
+
+这个新添加的文件，会被 =Authenticate= 接口使用。 =Authenticate= 在被调用后自动启动 =deepin_= 开头的 =PAM= 文件的认证流程，以此来达到多路认证的目的。
+
+--------
+--------
+
+** Fprintd
+
+为了保持接口的统一性，需要修改 =fprintd= 的代码，添加以下接口：
+
++ 删除单个指纹
+
+  已实现
+
++ 录入取消接口
+
++ 验证取消接口
+
+
+指纹接口中不考虑设备可插拔，因此不需要将 =fprintd= 改为 =daemon= 程序。

@@ -1,0 +1,287 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Cindy0514, 2020
+# Maggie Liu <maggie.liufei@gmail.com>, 2021
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2021
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-06 10:48+0800\n"
+"PO-Revision-Date: 2020-06-11 09:00+0000\n"
+"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>, 2021\n"
+"Language-Team: Portuguese (https://www.transifex.com/linuxdeepin/teams/3617/pt/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../service/authcommon/text.go:23 misc/pam-module/utils.c:109
+#, c-format
+msgid "Password"
+msgstr "Palavra-passe"
+
+#: ../../service/authcommon/text.go:44
+msgid "Enter your PIN"
+msgstr "Introduza o seu PIN"
+
+#: ../../service/authcommon/ukey.go:27
+msgid "Device abnormal"
+msgstr "Anormalidade do dispositivo"
+
+#: ../../service/authcommon/ukey.go:29
+msgid "Enter your PIN: "
+msgstr "Introduza o seu PIN:"
+
+#: ../../service/authcommon/ukey.go:31
+msgid "Verifying..."
+msgstr "A verificar..."
+
+#: ../../service/authcommon/ukey.go:33
+msgid "UKey is required"
+msgstr "UKey é necessária"
+
+#: ../../service/authcommon/ukey.go:35
+msgid "Unknown UKey state"
+msgstr "Estado da Ukey desconhecido"
+
+#: ../../service/authenticate/session/fingerprint_tx.go:178
+msgid "Verify your fingerprint"
+msgstr "Verifique a impressão digital"
+
+#: ../../service/authenticate/session/fingerprint_tx.go:320
+msgid "fingerprint"
+msgstr "impressão digital"
+
+#: ../../service/authenticate/session/multifactor_verify.go:53
+msgid "Multiple verification methods are required"
+msgstr "São necessários vários métodos de verificação"
+
+#: ../../service/authenticate/session/multifactor_verify.go:266
+#: ../../service/authenticate/session/normal_verify.go:222
+#, c-format
+msgid "Verify your %s"
+msgstr "Verifique a %s"
+
+#: ../../service/authenticate/session/multifactor_verify.go:269
+#: ../../service/authenticate/session/normal_verify.go:225
+#, c-format
+msgid "Enter your %s"
+msgstr "Introduza a %s"
+
+#: ../../service/authenticate/session/multifactor_verify.go:276
+#, c-format
+msgid "Verify your %s and %s"
+msgstr "Verifique a %s e %s"
+
+#: ../../service/authenticate/session/multifactor_verify.go:279
+#, c-format
+msgid "Enter your %s and %s"
+msgstr "Introduza a %s e %s"
+
+#: ../../service/authenticate/session/multifactor_verify.go:281
+#, c-format
+msgid "%s and %s"
+msgstr "%s e %s"
+
+#: ../../service/authenticate/session/multifactor_verify.go:286
+#, c-format
+msgid "Verify your %s, %s and %s"
+msgstr "Verifique a %s, %s e %s"
+
+#: ../../service/authenticate/session/multifactor_verify.go:289
+#, c-format
+msgid "Enter your %s, %s and %s"
+msgstr "Introduza a %s, %s e %s"
+
+#: ../../service/authenticate/session/multifactor_verify.go:291
+#, c-format
+msgid "%s, %s and %s"
+msgstr "%s, %s e %s"
+
+#: ../../service/authenticate/session/multifactor_verify.go:296
+#, c-format
+msgid "Verify your %s, %s, %s and %s"
+msgstr "Verifique a %s, %s, %s e %s"
+
+#: ../../service/authenticate/session/multifactor_verify.go:299
+#, c-format
+msgid "Enter your %s, %s, %s and %s"
+msgstr "Introduza a %s, %s, %s e %s"
+
+#: ../../service/authenticate/session/multifactor_verify.go:301
+#, c-format
+msgid "%s, %s, %s and %s"
+msgstr "%s, %s, %s e %s"
+
+#: ../../service/authenticate/session/normal_verify.go:232
+#, c-format
+msgid "Verify your %s or %s"
+msgstr "Verifique a %s ou %s"
+
+#: ../../service/authenticate/session/normal_verify.go:235
+#, c-format
+msgid "Enter your %s or %s"
+msgstr "Introduza a %s ou %s"
+
+#: ../../service/authenticate/session/normal_verify.go:237
+#, c-format
+msgid "%s or %s"
+msgstr "%s ou %s"
+
+#: ../../service/authenticate/session/normal_verify.go:242
+#, c-format
+msgid "Verify your %s, %s or %s"
+msgstr "Verifique a %s, %s ou %s"
+
+#: ../../service/authenticate/session/normal_verify.go:245
+#, c-format
+msgid "Enter your %s, %s or %s"
+msgstr "Introduza a %s, %s ou %s"
+
+#: ../../service/authenticate/session/normal_verify.go:247
+#, c-format
+msgid "%s, %s or %s"
+msgstr "%s, %s ou %s"
+
+#: ../../service/authenticate/session/normal_verify.go:252
+#, c-format
+msgid "Verify your %s, %s, %s or %s"
+msgstr "Verifique a %s, %s, %s ou %s"
+
+#: ../../service/authenticate/session/normal_verify.go:255
+#, c-format
+msgid "Enter your %s, %s, %s or %s"
+msgstr "Introduza a %s, %s, %s ou %s"
+
+#: ../../service/authenticate/session/normal_verify.go:257
+#, c-format
+msgid "%s, %s, %s or %s"
+msgstr "%s, %s, %s ou %s"
+
+#: ../../service/authenticate/session/password_tx.go:46
+msgid "Password: "
+msgstr "Palavra-passe:"
+
+#: ../../service/authenticate/session/password_tx.go:58
+msgid "password"
+msgstr "palavra-passe"
+
+#: ../../service/authenticate/session/ukey_tx.go:248 misc/pam-module/type.c:24
+msgid "PIN"
+msgstr "PIN"
+
+#: misc/pam-module/limit.c:27
+#, c-format
+msgid "Please try again %d minutes later"
+msgstr "Tentar novamente %d minutos mais tarde"
+
+#: misc/pam-module/limit.c:29
+#, c-format
+msgid "Please try again %d minute later"
+msgstr "Tentar novamente %d minuto mais tarde"
+
+#: misc/pam-module/mfa.c:40 misc/pam-module/sfa.c:34
+#, c-format
+msgid "Verification successful"
+msgstr "Verificação bem sucedida"
+
+#: misc/pam-module/mfa.c:86
+#, c-format
+msgid "Password verification failed"
+msgstr "Falha na verificação da palavra-passe"
+
+#: misc/pam-module/mfa.c:90
+#, c-format
+msgid "%s verification failed"
+msgstr "Falha ao verificar %s"
+
+#: misc/pam-module/pam.c:365
+#, c-format
+msgid "Your password will expire in %d days, please change it timely"
+msgstr ""
+
+#: misc/pam-module/sfa.c:67
+#, c-format
+msgid "%s locked, use password please"
+msgstr "%s  bloqueada, utilize a palavra-passe"
+
+#: misc/pam-module/sfa.c:72
+#, c-format
+msgid "Password locked, %s"
+msgstr "Palavra-passe bloqueada, %s"
+
+#: misc/pam-module/sfa.c:80
+#, c-format
+msgid "Password verification failed, %d chances left"
+msgstr "Falha ao verificar palavra-passe. %d tentativas restantes"
+
+#: misc/pam-module/sfa.c:85
+#, c-format
+msgid "%s verification failed, %d chances left"
+msgstr "Falha ao verificar %s. %d tentativas restantes"
+
+#: misc/pam-module/sfa.c:93
+#, c-format
+msgid "Password verification failed, only one chance left"
+msgstr "Falha na verificação da palavra-passe. Apenas resta uma tentativa"
+
+#: misc/pam-module/sfa.c:97
+#, c-format
+msgid "%s verification failed, only one chance left"
+msgstr "Falha ao verificar %s. Resta apenas uma tentativa"
+
+#: misc/pam-module/type.c:18
+msgid "Fingerprint"
+msgstr "Impressão digital"
+
+#: misc/pam-module/type.c:20
+msgid "Face recognition"
+msgstr "Reconhecimento facial"
+
+#: misc/pam-module/type.c:22
+msgid "ActiveDirectory"
+msgstr "DiretórioAtivo"
+
+#: misc/pam-module/type.c:26
+msgid "Unknown"
+msgstr "Desconhecido"
+
+#: misc/pam-module/utils.c:50
+#, c-format
+msgid "Verification error"
+msgstr "Erro de verificação"
+
+#: misc/pam-module/utils.c:55
+#, c-format
+msgid "Fingerprint verification unavailable, please input password"
+msgstr ""
+"Verificação da impressão digital indisponível, introduza a palavra-passe"
+
+#: misc/pam-module/utils.c:79 misc/pam-module/utils.c:87
+#, c-format
+msgid "Clean your finger and try again"
+msgstr "Limpe o dedo e tente novamente"
+
+#: misc/pam-module/utils.c:83
+#, c-format
+msgid "Finger not centered"
+msgstr "Dedo não centrado"
+
+#: misc/pam-module/utils.c:92
+#, c-format
+msgid "Unclear fingerprint, please clean your finger and try again"
+msgstr "Impressão digital imprecisa, limpe o dedo e tente novamente"
+
+#: misc/pam-module/utils.c:98
+#, c-format
+msgid "Finger moved too fast, please do not lift until prompted"
+msgstr ""
+"O dedo moveu-se demasiado depressa, não levante até que seja solicitado"

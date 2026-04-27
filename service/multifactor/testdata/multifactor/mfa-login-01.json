@@ -1,0 +1,9 @@
+{
+	"ApplicationType" : "login",
+	"RequestVerificationType": [
+		{
+			"Type": "password",
+			"Service": "xxx"
+		}
+	]
+}

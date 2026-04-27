@@ -1,0 +1,52 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
+	 "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+    <interface name="com.deepin.daemon.Authenticate.Session">
+        <method name="EncryptKey">
+            <arg name="encryptType" type="i" direction="in"></arg>
+            <arg name="encryptMethod" type="ai" direction="in"></arg>
+            <arg name="encType" type="i" direction="out"></arg>
+            <arg name="encMethod" type="ai" direction="out"></arg>
+            <arg name="pubKey" type="s" direction="out"></arg>
+        </method>
+        <method name="End">
+            <arg name="flag" type="i" direction="in"></arg>
+            <arg name="failNum" type="i" direction="out"></arg>
+        </method>
+        <method name="GetResult">
+            <arg name="result" type="i" direction="out"></arg>
+        </method>
+        <method name="PrivilegesDisable"></method>
+        <method name="PrivilegesEnable">
+            <arg name="masterPath" type="s" direction="in"></arg>
+            <arg name="enabled" type="b" direction="out"></arg>
+        </method>
+        <method name="Quit"></method>
+        <method name="SetQuitFlag">
+            <arg name="method" type="i" direction="in"></arg>
+        </method>
+        <method name="SetToken">
+            <arg name="flag" type="i" direction="in"></arg>
+            <arg name="token" type="ay" direction="in"></arg>
+        </method>
+        <method name="Start">
+            <arg name="flag" type="i" direction="in"></arg>
+            <arg name="timeout" type="i" direction="in"></arg>
+            <arg name="failNum" type="i" direction="out"></arg>
+        </method>
+        <method name="SetSymmetricKey">
+            <arg name="key" type="ay" direction="in"></arg>
+        </method>
+        <signal name="Status">
+            <arg name="flag" type="i"></arg>
+            <arg name="status" type="i"></arg>
+            <arg name="msg" type="s"></arg>
+        </signal>
+        <property name="IsMFA" type="b" access="read"></property>
+        <property name="Prompt" type="s" access="read"></property>
+        <property name="FactorsInfo" type="a(iiib)" access="read"></property>
+        <property name="Username" type="s" access="read"></property>
+        <property name="PINLen" type="i" access="read"></property>
+        <property name="PrgPath" type="s" access="read"></property>
+    </interface>
+</node>

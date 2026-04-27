@@ -1,0 +1,9 @@
+{
+	"Limits": [
+		{
+			"Type": "fingerprint",
+			"UnlockSecs": -1,
+			"MaxTries": 3
+		}
+	]
+}

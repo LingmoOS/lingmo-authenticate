@@ -1,0 +1,7 @@
+/usr/sbin/lightdm
+/usr/bin/dde-lock
+/usr/lib/policykit-1/polkit-agent-helper-1
+/usr/bin/sudo
+/usr/bin/su
+/usr/bin/login
+/usr/sbin/sshd

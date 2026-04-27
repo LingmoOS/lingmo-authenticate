@@ -1,0 +1,385 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-22 13:54+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
+
+#: ../../service/authcommon/face.go:41 ../../service/authcommon/iris.go:37
+#: misc/pam-module/auth/mfa.c:40 misc/pam-module/auth/sfa.c:34
+#, c-format
+msgid "Verification successful"
+msgstr "Verification successful"
+
+#: ../../service/authcommon/face.go:43
+msgid "Position your face please"
+msgstr "Position your face please"
+
+#: ../../service/authcommon/face.go:45
+msgid "Position your face inside the frame"
+msgstr "Position your face inside the frame"
+
+#: ../../service/authcommon/face.go:47 ../../service/authcommon/iris.go:39
+msgid "Keep away from the camera"
+msgstr "Keep away from the camera"
+
+#: ../../service/authcommon/face.go:49 ../../service/authcommon/iris.go:41
+msgid "Get closer to the camera"
+msgstr "Get closer to the camera"
+
+#: ../../service/authcommon/face.go:51
+msgid "Face not found"
+msgstr "Face not found"
+
+#: ../../service/authcommon/face.go:53
+msgid "Do not position multiple faces inside the frame"
+msgstr "Do not position multiple faces inside the frame"
+
+#: ../../service/authcommon/face.go:55 ../../service/authcommon/iris.go:45
+msgid "Make sure the camera lens is clean"
+msgstr "Make sure the camera lens is clean"
+
+#: ../../service/authcommon/face.go:57 ../../service/authcommon/iris.go:47
+msgid "Do not enroll in dark, bright or backlit environments"
+msgstr "Do not enroll in dark, bright or backlit environments"
+
+#: ../../service/authcommon/face.go:59
+msgid "Keep your face uncovered"
+msgstr "Keep your face uncovered"
+
+#: ../../service/authcommon/face.go:61 ../../service/authcommon/iris.go:51
+msgid "Unknown error"
+msgstr "Unknown error"
+
+#: ../../service/authcommon/iris.go:43
+msgid "Iris not found"
+msgstr "Iris not found"
+
+#: ../../service/authcommon/iris.go:49
+msgid "Keep your eyes wide open"
+msgstr "Keep your eyes wide open"
+
+#: ../../service/authcommon/text.go:23 misc/pam-module/auth/utils.c:110
+#, c-format
+msgid "Password"
+msgstr "Password"
+
+#: ../../service/authcommon/text.go:44
+msgid "Enter your PIN"
+msgstr "Enter your PIN"
+
+#: ../../service/authcommon/ukey.go:27
+msgid "Device abnormal"
+msgstr "Device abnormal"
+
+#: ../../service/authcommon/ukey.go:29
+msgid "Enter your PIN: "
+msgstr "Enter your PIN: "
+
+#: ../../service/authcommon/ukey.go:31
+msgid "Verifying..."
+msgstr "Verifying..."
+
+#: ../../service/authcommon/ukey.go:33
+msgid "UKey is required"
+msgstr "UKey is required"
+
+#: ../../service/authcommon/ukey.go:35
+msgid "Unknown UKey state"
+msgstr "Unknown UKey state"
+
+#: ../../service/authenticate/session/face_tx.go:129
+msgid "Verify your face"
+msgstr "Verify your face"
+
+#: ../../service/authenticate/session/face_tx.go:250
+msgid "face"
+msgstr "face"
+
+#: ../../service/authenticate/session/fingerprint_tx.go:178
+msgid "Verify your fingerprint"
+msgstr "Verify your fingerprint"
+
+#: ../../service/authenticate/session/fingerprint_tx.go:320
+msgid "fingerprint"
+msgstr "fingerprint"
+
+#: ../../service/authenticate/session/iris_tx.go:123
+msgid "Verify your iris"
+msgstr "Verify your iris"
+
+#: ../../service/authenticate/session/iris_tx.go:245
+msgid "iris"
+msgstr "iris"
+
+#: ../../service/authenticate/session/multifactor_verify.go:53
+msgid "Multiple verification methods are required"
+msgstr "Multiple verification methods are required"
+
+#: ../../service/authenticate/session/multifactor_verify.go:266
+#: ../../service/authenticate/session/normal_verify.go:222
+#, c-format
+msgid "Verify your %s"
+msgstr "Verify your %s"
+
+#: ../../service/authenticate/session/multifactor_verify.go:269
+#: ../../service/authenticate/session/normal_verify.go:225
+#, c-format
+msgid "Enter your %s"
+msgstr "Enter your %s"
+
+#: ../../service/authenticate/session/multifactor_verify.go:276
+#, c-format
+msgid "Verify your %s and %s"
+msgstr "Verify your %s and %s"
+
+#: ../../service/authenticate/session/multifactor_verify.go:279
+#, c-format
+msgid "Enter your %s and %s"
+msgstr "Enter your %s and %s"
+
+#: ../../service/authenticate/session/multifactor_verify.go:281
+#, c-format
+msgid "%s and %s"
+msgstr "%s and %s"
+
+#: ../../service/authenticate/session/multifactor_verify.go:286
+#, c-format
+msgid "Verify your %s, %s and %s"
+msgstr "Verify your %s, %s and %s"
+
+#: ../../service/authenticate/session/multifactor_verify.go:289
+#, c-format
+msgid "Enter your %s, %s and %s"
+msgstr "Enter your %s, %s and %s"
+
+#: ../../service/authenticate/session/multifactor_verify.go:291
+#, c-format
+msgid "%s, %s and %s"
+msgstr "%s, %s and %s"
+
+#: ../../service/authenticate/session/multifactor_verify.go:296
+#, c-format
+msgid "Verify your %s, %s, %s and %s"
+msgstr "Verify your %s, %s, %s and %s"
+
+#: ../../service/authenticate/session/multifactor_verify.go:299
+#, c-format
+msgid "Enter your %s, %s, %s and %s"
+msgstr "Enter your %s, %s, %s and %s"
+
+#: ../../service/authenticate/session/multifactor_verify.go:301
+#, c-format
+msgid "%s, %s, %s and %s"
+msgstr "%s, %s, %s and %s"
+
+#: ../../service/authenticate/session/multifactor_verify.go:306
+#: ../../service/authenticate/session/normal_verify.go:262
+#, c-format
+msgid "Verify your %s, %s, %s, %s or %s"
+msgstr "Verify your %s, %s, %s, %s or %s"
+
+#: ../../service/authenticate/session/multifactor_verify.go:309
+#: ../../service/authenticate/session/normal_verify.go:265
+#, c-format
+msgid "Enter your %s, %s, %s, %s or %s"
+msgstr "Enter your %s, %s, %s, %s or %s"
+
+#: ../../service/authenticate/session/multifactor_verify.go:311
+#: ../../service/authenticate/session/normal_verify.go:267
+#, c-format
+msgid "%s, %s, %s, %s or %s"
+msgstr "%s, %s, %s, %s or %s"
+
+#: ../../service/authenticate/session/multifactor_verify.go:316
+#: ../../service/authenticate/session/normal_verify.go:272
+#, c-format
+msgid "Verify your %s, %s, %s, %s, %s or %s"
+msgstr "Verify your %s, %s, %s, %s, %s or %s"
+
+#: ../../service/authenticate/session/multifactor_verify.go:319
+#: ../../service/authenticate/session/normal_verify.go:275
+#, c-format
+msgid "Enter your %s, %s, %s, %s, %s or %s"
+msgstr "Enter your %s, %s, %s, %s, %s or %s"
+
+#: ../../service/authenticate/session/multifactor_verify.go:321
+#: ../../service/authenticate/session/normal_verify.go:277
+#, c-format
+msgid "%s, %s, %s, %s, %s or %s"
+msgstr "%s, %s, %s, %s, %s or %s"
+
+#: ../../service/authenticate/session/normal_verify.go:232
+#, c-format
+msgid "Verify your %s or %s"
+msgstr "Verify your %s or %s"
+
+#: ../../service/authenticate/session/normal_verify.go:235
+#, c-format
+msgid "Enter your %s or %s"
+msgstr "Enter your %s or %s"
+
+#: ../../service/authenticate/session/normal_verify.go:237
+#, c-format
+msgid "%s or %s"
+msgstr "%s or %s"
+
+#: ../../service/authenticate/session/normal_verify.go:242
+#, c-format
+msgid "Verify your %s, %s or %s"
+msgstr "Verify your %s, %s or %s"
+
+#: ../../service/authenticate/session/normal_verify.go:245
+#, c-format
+msgid "Enter your %s, %s or %s"
+msgstr "Enter your %s, %s or %s"
+
+#: ../../service/authenticate/session/normal_verify.go:247
+#, c-format
+msgid "%s, %s or %s"
+msgstr "%s, %s or %s"
+
+#: ../../service/authenticate/session/normal_verify.go:252
+#, c-format
+msgid "Verify your %s, %s, %s or %s"
+msgstr "Verify your %s, %s, %s or %s"
+
+#: ../../service/authenticate/session/normal_verify.go:255
+#, c-format
+msgid "Enter your %s, %s, %s or %s"
+msgstr "Enter your %s, %s, %s or %s"
+
+#: ../../service/authenticate/session/normal_verify.go:257
+#, c-format
+msgid "%s, %s, %s or %s"
+msgstr "%s, %s, %s or %s"
+
+#: ../../service/authenticate/session/password_tx.go:46
+msgid "Password: "
+msgstr "Password: "
+
+#: ../../service/authenticate/session/password_tx.go:59
+msgid "password"
+msgstr "password"
+
+#: ../../service/authenticate/session/ukey_tx.go:289
+#: misc/pam-module/auth/type.c:24
+msgid "PIN"
+msgstr "PIN"
+
+#: misc/pam-module/auth/limit.c:27
+#, c-format
+msgid "Please try again %d minutes later"
+msgstr "Please try again %d minutes later"
+
+#: misc/pam-module/auth/limit.c:29
+#, c-format
+msgid "Please try again %d minute later"
+msgstr "Please try again %d minute later"
+
+#: misc/pam-module/auth/mfa.c:86
+#, c-format
+msgid "Password verification failed"
+msgstr "Password verification failed"
+
+#: misc/pam-module/auth/mfa.c:95
+#, c-format
+msgid "%s verification failed"
+msgstr "%s verification failed"
+
+#: misc/pam-module/auth/pam.c:387
+#, c-format
+msgid "Your password will expire in %d days, please change it timely"
+msgstr "Your password will expire in %d days, please change it timely"
+
+#: misc/pam-module/auth/sfa.c:73
+#, c-format
+msgid "%s locked, use password please"
+msgstr "%s locked, use password please"
+
+#: misc/pam-module/auth/sfa.c:78
+#, c-format
+msgid "Password locked, %s"
+msgstr "Password locked, %s"
+
+#: misc/pam-module/auth/sfa.c:86
+#, c-format
+msgid "Password verification failed, %d chances left"
+msgstr "Password verification failed, %d chances left"
+
+#: misc/pam-module/auth/sfa.c:96
+#, c-format
+msgid "%s verification failed, %d chances left"
+msgstr "%s verification failed, %d chances left"
+
+#: misc/pam-module/auth/sfa.c:104
+#, c-format
+msgid "Password verification failed, only one chance left"
+msgstr "Password verification failed, only one chance left"
+
+#: misc/pam-module/auth/sfa.c:113
+#, c-format
+msgid "%s verification failed, only one chance left"
+msgstr "%s verification failed, only one chance left"
+
+#: misc/pam-module/auth/type.c:18
+msgid "Fingerprint"
+msgstr "Fingerprint"
+
+#: misc/pam-module/auth/type.c:20
+msgid "Face recognition"
+msgstr "Face recognition"
+
+#: misc/pam-module/auth/type.c:22
+msgid "ActiveDirectory"
+msgstr "ActiveDirectory"
+
+#: misc/pam-module/auth/type.c:26
+msgid "Iris"
+msgstr "Iris"
+
+#: misc/pam-module/auth/type.c:28
+msgid "Unknown"
+msgstr "Unknown"
+
+#: misc/pam-module/auth/utils.c:51
+#, c-format
+msgid "Verification error"
+msgstr "Verification error"
+
+#: misc/pam-module/auth/utils.c:56
+#, c-format
+msgid "Fingerprint verification unavailable, please input password"
+msgstr "Fingerprint verification unavailable, please input password"
+
+#: misc/pam-module/auth/utils.c:80 misc/pam-module/auth/utils.c:88
+#, c-format
+msgid "Clean your finger and try again"
+msgstr "Clean your finger and try again"
+
+#: misc/pam-module/auth/utils.c:84
+#, c-format
+msgid "Finger not centered"
+msgstr "Finger not centered"
+
+#: misc/pam-module/auth/utils.c:93
+#, c-format
+msgid "Unclear fingerprint, please clean your finger and try again"
+msgstr "Unclear fingerprint, please clean your finger and try again"
+
+#: misc/pam-module/auth/utils.c:99
+#, c-format
+msgid "Finger moved too fast, please do not lift until prompted"
+msgstr "Finger moved too fast, please do not lift until prompted"

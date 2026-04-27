@@ -1,0 +1,7 @@
+[Unit]
+Description=Deepin Authentication
+
+[Service]
+Type=dbus
+BusName=com.deepin.daemon.Authenticate
+ExecStart=/usr/lib/deepin-authenticate/deepin-authentication

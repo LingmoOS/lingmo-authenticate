@@ -1,0 +1,15 @@
+diff --git a/Makefile b/Makefile
+index 7a2458f..363adb6 100644
+--- a/Makefile
++++ b/Makefile
+@@ -38,8 +38,8 @@ install: translate install-pam-module
+ 	install -m755 out/bin/deepin-authentication ${DESTDIR}${PREFIX}/lib/deepin-authenticate/
+ 	install -d ${DESTDIR}${PREFIX}/share/dbus-1/system.d
+ 	install -m644 misc/conf/*.conf ${DESTDIR}${PREFIX}/share/dbus-1/system.d/
+-	install -d ${DESTDIR}/lib/systemd/system
+-	install -m644 misc/systemd/*.service ${DESTDIR}/lib/systemd/system/
++	install -d ${DESTDIR}${PREFIX}/lib/systemd/system
++	install -m644 misc/systemd/*.service ${DESTDIR}${PREFIX}/lib/systemd/system/
+ 	install -d ${DESTDIR}${PREFIX}/share/dbus-1/system-services
+ 	install -m644 misc/system-services/* ${DESTDIR}${PREFIX}/share/dbus-1/system-services/
+ 	install -d ${DESTDIR}/etc/pam.d

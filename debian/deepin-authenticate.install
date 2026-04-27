@@ -1,0 +1,8 @@
+debian/pam-configs/* usr/share/pam-configs/
+usr/lib/deepin-authenticate/*
+etc/pam.d/deepin_pam_unix
+lib/systemd/system/*
+lib/**/security/*.so
+usr/bin/*
+usr/share/*
+var/lib/deepin/authenticate/*

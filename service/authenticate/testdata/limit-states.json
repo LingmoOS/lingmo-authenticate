@@ -1,0 +1,36 @@
+{
+    "test1": [
+        {
+            "Type": "password",
+            "NumFailures": 0,
+            "LockAt": "0001-01-01T00:00:00Z"
+        },
+        {
+            "Type": "active directory",
+            "NumFailures": 0,
+            "LockAt": "0001-01-01T00:00:00Z"
+        },
+        {
+            "Type": "fingerprint",
+            "NumFailures": 3,
+            "LockAt": "2020-11-11T09:35:04Z"
+        },
+        {
+            "Type": "face",
+            "NumFailures": 0,
+            "LockAt": "0001-01-01T00:00:00Z"
+        }
+    ],
+    "uos": [
+        {
+            "Type": "password",
+            "NumFailures": 0,
+            "LockAt": "0001-01-01T00:00:00Z"
+        },
+        {
+            "Type": "fingerprint",
+            "NumFailures": 0,
+            "LockAt": "0001-01-01T00:00:00Z"
+        }
+    ]
+}

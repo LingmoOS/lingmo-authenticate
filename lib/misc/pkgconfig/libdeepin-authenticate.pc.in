@@ -1,0 +1,15 @@
+#  This file is part of deepin-authenticate.
+
+#  deepin-authenticate is a framework for authenticate, include some development kit.
+
+libdir=@libdir@
+includedir=@includedir@
+libappend=@libappend@
+includeappend=@includeappend@
+
+Name: deepin_authenticate
+Description: deepin-authenticate Library
+URL: https://www.deepin.com
+Version: 0.0.0.1
+Libs: -L${libdir} -ldeepin-authenticate ${libappend}
+Cflags: -I${includedir} ${includeappend}

@@ -1,0 +1,35 @@
+#!/usr/bin/make -f
+
+include /usr/share/dpkg/architecture.mk
+
+export GOCACHE = /tmp/gocache
+export GOPATH = /usr/share/gocode
+export PAM_MODULE_DIR = lib/$(DEB_HOST_MULTIARCH)/security
+export GO111MODULE = off
+
+ifeq ($(DEB_BUILD_ARCH), sw_64)
+export GOFLAGS = -vet=off
+endif
+
+ifneq ($(DEB_BUILD_ARCH), mips64el)
+    export GOBUILD_OPTIONS=-ldflags '-linkmode=external -extldflags "-pie"'
+endif
+
+SYSTYPE=Desktop
+SYSTYPE=$(shell cat /etc/deepin-version | grep Type= | awk -F'=' '{print $$2}')
+
+ifeq ($(SYSTYPE), Desktop)
+override_dh_gencontrol:
+	dh_gencontrol -- -Vdist:Depends="fprintd, libpam-fprintd"
+endif
+
+%:
+	dh $@
+
+
+override_dh_installsystemd:
+	dh_installsystemd --no-start
+
+override_dh_link:
+	dh_link -plibdeepin-authenticate-dev usr/lib/$(DEB_HOST_MULTIARCH)/libdeepin-authenticate.so.1 \
+		usr/lib/$(DEB_HOST_MULTIARCH)/libdeepin-authenticate.so

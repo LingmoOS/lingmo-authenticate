@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE policyconfig PUBLIC "-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN"
+"http://www.freedesktop.org/standards/PolicyKit/1.0/policyconfig.dtd">
+<policyconfig>
+	<vendor>LinuxDeepin</vendor>
+	<vendor_url>https://www.deepin.com/</vendor_url>
+	<action id="com.deepin.daemon.authenticate.Face.enroll">
+		<description>Add face</description>
+		<message>Authentication is required to add faces</message>
+		<defaults>
+			<allow_any>no</allow_any>
+			<allow_inactive>no</allow_inactive>
+			<allow_active>auth_self</allow_active>
+		</defaults>
+	</action>
+	<action id="com.deepin.daemon.authenticate.Face.rename-enrolled-face">
+		<description>Rename face</description>
+		<message>Authentication is required to change the name</message>
+		<defaults>
+			<allow_any>no</allow_any>
+			<allow_inactive>no</allow_inactive>
+			<allow_active>auth_self_keep</allow_active>
+		</defaults>
+	</action>
+	<action id="com.deepin.daemon.authenticate.Face.delete-enrolled-face">
+		<description>Delete face</description>
+		<message>Authentication is required to delete faces</message>
+		<defaults>
+			<allow_any>no</allow_any>
+			<allow_inactive>no</allow_inactive>
+			<allow_active>auth_self</allow_active>
+		</defaults>
+	</action>
+</policyconfig>

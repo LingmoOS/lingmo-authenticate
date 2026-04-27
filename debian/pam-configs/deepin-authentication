@@ -1,0 +1,7 @@
+Name: Deepin Authentication
+Default: yes
+Priority: 1024
+Conflicts:
+Auth-Type: Primary
+Auth:
+	[success=end auth_err=done new_authtok_reqd=ok ignore=ignore default=die]	pam_deepin_authentication.so user_locale=.config/locale.conf timeout=-1

@@ -1,0 +1,436 @@
+#+OPTIONS: toc:nil num:nil date:nil timestamp:nil ^:{} <:{}
+#+TITLE: deepin 指纹接口规范
+
+=deepin= 下有两种适配指纹设备的方法，分别是 =fprintd= 和 =deepin= 自定义的接口规范，这两种方式中我们推荐使用 =fprintd= 的方式。
+
+** fprintd
+
+使用 =fprintd= 的方式适配时需要先了解 [[https://fprint.freedesktop.org/][libfprint]] 这个项目，因为设备的驱动是在 =libfprint= 中实现的，即基本上只需要修改 =libfprint= 项目即可，按照规则添加需要适配的指纹设备驱动。
+具体如何添加驱动这里就不描述， =libfprint= 项目中有丰富的例子。
+
+--------
+--------
+
+** deepin 自定义的接口规范
+
+若不想按照 =libfprint= 的方式实现，则可按照 =deepin= 自定义的接口规范来适配指纹设备，下面将详细介绍。
+
+*** 配置文件
+
+=deepin= 自定义的指纹接口是通过 =DBus= 的方式提供，接口的 =DBus= 服务信息由适配者自定义，但需要添加接口配置文件到 =/usr/share/deepin-authentication/interfaces/= 目录中，配置文件的内容如下：
+
+#+BEGIN_SRC json
+{
+  "service": "",
+  "path": "",
+  "interface": "",
+  "type": 1,
+  "storage_type":1
+}
+#+END_SRC
+
+各字段含义如下：
+
++ =service=
+
+  =DBus= 接口的 =service name=
+
++ =path=
+
+  =DBus= 接口的 =object path name=
+
++ =interface=
+
+  =DBus= 接口的 =interface name=
+
++ =type=
+
+  接口类型，目前可用的字段如下：
+
+  + =1=
+
+    指纹接口
+
+  + =2=
+
+    人脸接口
+
++ =storage_type=
+
+  表示数据存储的位置，目前可用的值如下：
+
+  + =1=
+
+    设备自行存储，如存储在设备中
+
+  + =2=
+
+    使用文件存储，由 =deepin= 系统负责管理，不需要实现 =DeleteAllFingers、DeleteFinger、ListFingers= 等接口。
+
+
+=deepin= 认证程序会读取这个配置文件来加载配置中指定的 =DBus= 接口，加载时会检查是否实现了所需的接口。
+
+*** 指纹文件
+指纹录入后由设置自行储存，推荐放在 /usr/share/deepin-authentication/modes/=设备标志=/userid/。
+
+*** 接口描述
+
+下面将按照 =Methods, Properties, Signals= 一一介绍：
+
+
+**** Methods
+
++ =Claim(char *id, bool claimed)=
+
+  - =Description=
+
+    独占指纹设备，失败则返回 =dbus error= 。指纹设备同时只允许做一种操作，不支持并行，所以需要在使用设备之前独占设备，如果成功就意味着设备可用，才能继续下面的操作。
+
+  - =Arguments=
+
+    + =id=
+
+      *(输入参数)*
+
+      用户的唯一 =id= ，由系统生成
+
+    + =claimed=
+
+      *(输入参数)*
+
+      表示是否独占设备， =true= 表示独占， =false= 表示释放
+
+--------
+
++ =Enroll(char *id, char *finger)=
+
+  - =Description=
+
+    指纹采集接口，调用成功后进入采集流程，失败则返回 =dbus error= 。采集过程中通过信号 =EnrollStatus= 返回每次采集的状态。只能在独占设备之后调用它。
+
+  - =Arguments=
+
+    + =id=
+
+      *(输入参数)*
+
+      此次采集的手指所属用户的唯一 =id=，由系统生成
+
+    + =finger=
+
+      *(输入参数)*
+
+      此次采集的手指名
+
+
+--------
+
++ =StopEnroll()=
+
+  - =Description=
+
+    结束当前采集流程，失败则返回 =dbus error=, 正常结束或中途取消都需要调用此方法。只能在独占设备后调用它。
+
+  - =Arguments=
+
+--------
+
++ =Verify(char *finger)=
+
+  - =Description=
+
+    指纹验证接口，调用成功后进入验证流程，失败则返回 =dbus error= 。验证过程中通过信号 =VerifyStatus= 返回验证的结果。只能在独占设备后调用它。
+
+  - =Arguments=
+
+    + =finger=
+
+      *(输入参数)*
+
+      此次采集的手指名，可为空
+
+
+--------
+
++ =StopVerify()=
+
+  - =Description=
+
+    结束当前的验证流程，失败则返回 =dbus error=，正常结束或中途取消都需要调用此方法。只能在独占设备后调用它。
+
+  - =Arguments=
+
+--------
+
+
++ =DeleteFinger(char *id, char *finger)=
+
+  - =Description=
+
+    删除指定 =finger= 的模板数据，删除失败则返回 =dbus error=
+
+  - =Arguments=
+
+    + =id=
+
+      *(输入参数)*
+
+      用户的唯一 =id= ，由系统生成
+
+    + =finger=
+
+      *(输入参数)*
+
+      需要删除的手指名
+
+--------
+
+
++ =DeleteAllFingers(char *id)=
+
+  - =Description=
+
+    删除所以的模板数据，删除失败则返回 =dbus error=
+
+  - =Arguments=
+
+    + =id=
+
+      *(输入参数)*
+
+      用户的唯一 =id= ，由系统生成
+
+--------
+
++ =ListFingers(char *id) （char **fingers)=
+
+  - =Description=
+
+    列出已录入的所有手指名，失败则返回 =dbus error=
+
+  - =Arguments=
+
+    + =id=
+
+      *(输入参数)*
+
+      用户的唯一 =id= ，由系统生成
+
+    + =fingers=
+
+      *(输出参数)*
+
+      已录入的所有手指名
+
+--------
+
++ =RenameFinger(char *id, char *finger, char *newName)=
+
+  - =Description=
+
+    重命名指定 =finger= 为 =newName=，失败则返回 =dbus error=
+
+  - =Arguments=
+
+    + =id=
+
+      *(输入参数)*
+
+      用户的唯一 =id= ，由系统生成
+
+    + =finger=
+
+      *(输入参数)*
+
+      需要重命名的手指名
+
+    + =newName=
+
+      *(输入参数)*
+
+      新名称
+
+
+**** Properties
+
+- =char *Name=
+
+  *(只读)*
+
+  设备名称
+
+- =int32 State=
+
+  *(只读)*
+
+  设备状态, 可为以下位的组合：
+
+  #+BEGIN_SRC c
+  enum {
+      DeviceStateNormal = 1 << 0,            // 设备正常可用
+      DeviceStateClaimed = 1 << 1,           // 设备被独占
+  };
+  #+END_SRC
+
+  最低位表示设备是否正常可用，没设置表示设备不可用，设置了表示设备正常可用；更高1位表示设备是否被独占了，没设置表示没被独占，即是空闲中，设置了表示被独占。
+
+- =int32 Type=
+
+  *(只读)*
+
+  设备类型，可为以下值：
+
+  #+BEGIN_SRC c
+  enum {
+      DeviceTypeUnknown = 0,    // 未知类型
+      DeviceTypeScanning,       // 扫描式指纹设备
+      DeviceTypeTouch,          // 触摸式指纹设备
+  };
+  #+END_SRC
+
+- =int32 Capability=
+
+  *(只读)*
+
+  设备特性，可为以下值：
+
+  #+BEGIN_SRC c
+  enum {
+      DeviceCapAutologin = 1,    // 支持指纹一键自动登录
+  };
+  #+END_SRC
+
+
+**** Signals
+
+- =EnrollStatus(char *id, int32 code, char *msg)=
+
+  + =Description=
+
+    采集流程中的信号，反馈采集的状态，包括采集进度、采集中的错误等信息
+
+  + =Arguments=
+
+    - =id=
+
+      用户的唯一 =id= ，由系统生成
+
+    - =code=
+
+      状态码
+
+    - =msg=
+
+      详细的状态描述
+
+    code 0
+      Completed 成功完成，之后应该结束录入。
+      msg 为空。
+
+    code 1
+      Failed 失败，之后应该结束录入。
+      msg 为空或JSON字符串，如果为JSON，则有 subcode 字段表示子代码。
+      subcode 1
+         unknown-error 未知错误
+      subcode 2
+        重复模板
+      subcode 3
+        录入中断
+      subcode 4
+         data-full 数据满了，不能再录制更多指纹。
+
+    code 2
+      StagePassed 阶段通过, 之后继续录入。
+      msg 为空或JSON字符串，如果是JSON，则有 progress 字段表示数字进度，取值范围 0~100的整数。
+
+    code 3
+      Retry 重试，之后继续录入。
+      msg 为空或JSON字符串，如果是JSON，则有 subcode 字段表示子代码。
+      subcode 1
+        接触时间过短
+      subcode 2
+        图形不可用
+      subcode 3
+        两次触摸的指纹信息重复率过高
+      subcode 4
+        当前指纹已经存在，请换其他的手指
+      subcode 5
+        swipe-too-short 滑动太短
+      subcode 6
+        finger-not-centered 手指不在中间
+      subcode 7
+        remove-and-retry 拿开手指再重新扫描
+
+    code 4
+      Disconnected 与设备失联，之后应该不对设备进行任何操作。
+      msg 为空。
+
+--------
+
+- =VerifyStatus(char *id, int32 code, char *msg)=
+
+  + =Description=
+
+    验证流程中的信号，反馈验证的状态
+
+  + =Arguments=
+
+    - =id=
+
+      用户的唯一 =id= ，由系统生成
+
+    - =code=
+
+      状态码
+
+    - =msg=
+
+      详细的状态描述
+
+    code 0
+      Match 匹配, 之后结束认证。
+      msg 为空。
+
+    code 1
+      NoMatch 不匹配，之后结束认证。
+      msg 为空。
+
+    code 2
+      Error 失败，之后结束认证。
+      msg 为空或 JSON 字符串，如果是JSON，则有 subcode 字段表示子代码。
+      subcode 1
+        unknown-error 未知错误
+
+    code 3
+       Retry 重试，之后继续认证。
+       msg 为空或 JSON 字符串，如果是JSON，则有 subcode 字段表示子代码。
+       subcode 1
+         swipe-too-short 滑动太短
+       subcode 2
+         finger-not-centered 手指不在中间
+       subcode 3
+         remove-and-retry 拿开手指再重新扫描
+
+    code 4
+        Disconnected 与设备失联，之后不要对设备进行任何操作。
+        msg 为空。
+
+--------
+
+- =Touch(char *id, bool pressed)=
+
+  *(可暂不实现)*
+
+  + =Description=
+
+    手指是否接触指纹设备，接触和离开时都需要发送信号
+
+  + =Arguments=
+
+    - =id=
+
+      用户的唯一 =id= ，由系统生成
+
+    - =pressed=
+
+      手指是否接触指纹设备

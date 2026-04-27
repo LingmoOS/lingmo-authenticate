@@ -1,0 +1,17 @@
+
+{
+	"Limits": [
+		{
+			"Type": "fingerprint",
+			"UnlockSecs": -1,
+			"MaxTries": 3
+		},
+		{
+			"Type": "password",
+			"UnlockSecs": 180,
+			"MaxTries": 5,
+			"DynamicLimit": true,
+			"DynamicLimitUnlockSecs":[180,300,900,1800,3600,86400]
+		}
+	]
+}
