@@ -1,7 +1,7 @@
-Source: deepin-authenticate
+Source: lingmo-authenticate
 Section: devel
 Priority: optional
-Maintainer: Deepin Packages Builder <packages@deepin.com>
+Maintainer: Lingmo OS Team <team@lingmo.org>
 Build-Depends:
  dde-api-dev(>> 3.16.0+),
  debhelper-compat (= 11),
@@ -21,7 +21,7 @@ Build-Depends:
  libjson-glib-dev,
  libgtk2.0-dev,
 Standards-Version: 4.3.0
-Homepage: http://www.deepin.org
+Homepage: http://lingmo.org
 
 Package: deepin-authenticate
 Architecture: any

@@ -1,11 +1,5 @@
-deepin-authenticate (1.3.23+r500+gd6bc03b-1) UNRELEASED; urgency=medium
+lingmo-authenticate (2.0.0.lingmo.1) unstable; urgency=medium
 
-  * update
+  * Rebuild for Lingmo OS.
 
- -- Deepin Packages Builder <packages@deepin.com>  Thu, 09 Jun 2022 21:17:41 +0800
-
-deepin-authenticate (1.0-1) unstable; urgency=medium
-
-  * Initial release
-
- -- zccrs <zccrs@live.com>  Tue, 10 Dec 2019 13:31:29 +0800
+ -- Lingmo OS Team <team@lingmo.org>  Thu, 06 Jun 2026 02:06:00 +0800
