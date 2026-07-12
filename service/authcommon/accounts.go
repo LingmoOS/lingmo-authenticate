@@ -4,10 +4,10 @@ import (
 	"errors"
 	"fmt"
 
-	login1 "github.com/linuxdeepin/go-dbus-factory/org.freedesktop.login1"
+	login1 "github.com/LingmoOS/golang-github-lingmo-go-dbus-factory/org.freedesktop.login1"
 
 	"github.com/godbus/dbus"
-	accounts "github.com/linuxdeepin/go-dbus-factory/com.deepin.daemon.accounts"
+	accounts "github.com/LingmoOS/golang-github-lingmo-go-dbus-factory/com.lingmo.daemon.accounts"
 )
 
 type UserInfo struct {

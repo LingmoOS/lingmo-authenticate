@@ -7,10 +7,10 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/linuxdeepin/go-lib/strv"
+	"github.com/LingmoOS/golang-github-lingmo-go-lib/strv"
 
 	"github.com/godbus/dbus"
-	fprintd "github.com/linuxdeepin/go-dbus-factory/net.reactivated.fprint"
+	fprintd "github.com/LingmoOS/golang-github-lingmo-go-dbus-factory/net.reactivated.fprint"
 	pkgfp "pkg.deepin.io/dde/authentication/pkg/fingerprint"
 )
 

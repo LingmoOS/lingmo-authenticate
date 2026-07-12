@@ -7,7 +7,7 @@ import (
 	"github.com/godbus/dbus"
 	"github.com/stretchr/testify/assert"
 
-	huawei_fprint "github.com/linuxdeepin/go-dbus-factory/com.huawei.fingerprint"
+	huawei_fprint "github.com/LingmoOS/golang-github-lingmo-go-dbus-factory/com.huawei.fingerprint"
 	pkgfp "pkg.deepin.io/dde/authentication/pkg/fingerprint"
 )
 

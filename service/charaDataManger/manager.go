@@ -11,9 +11,9 @@ import (
 	"time"
 
 	"github.com/godbus/dbus"
-	ofdbus "github.com/linuxdeepin/go-dbus-factory/org.freedesktop.dbus"
-	"github.com/linuxdeepin/go-lib/dbusutil"
-	"github.com/linuxdeepin/go-lib/utils"
+	ofdbus "github.com/LingmoOS/golang-github-lingmo-go-dbus-factory/org.freedesktop.dbus"
+	"github.com/LingmoOS/golang-github-lingmo-go-lib/dbusutil"
+	"github.com/LingmoOS/golang-github-lingmo-go-lib/utils"
 	. "pkg.deepin.io/dde/authentication/service/authcommon"
 )
 

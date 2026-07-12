@@ -6,10 +6,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/linuxdeepin/go-lib/dbusutil"
+	"github.com/LingmoOS/golang-github-lingmo-go-lib/dbusutil"
 
 	"github.com/godbus/dbus"
-	authenticate "github.com/linuxdeepin/go-dbus-factory/com.deepin.daemon.authenticate"
+	authenticate "github.com/LingmoOS/golang-github-lingmo-go-dbus-factory/com.lingmo.daemon.authenticate"
 	"pkg.deepin.io/dde/authentication/pkg/fingerprint"
 	pkgfp "pkg.deepin.io/dde/authentication/pkg/fingerprint"
 	. "pkg.deepin.io/dde/authentication/service/authcommon"

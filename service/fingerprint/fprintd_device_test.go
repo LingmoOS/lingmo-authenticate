@@ -10,8 +10,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	auth_fd_fp "github.com/linuxdeepin/go-dbus-factory/net.reactivated.fprint"
-	"github.com/linuxdeepin/go-lib/dbusutil/proxy"
+	auth_fd_fp "github.com/LingmoOS/golang-github-lingmo-go-dbus-factory/net.reactivated.fprint"
+	"github.com/LingmoOS/golang-github-lingmo-go-lib/dbusutil/proxy"
 )
 
 func TestFingerprintFprintdDevice_deselect(t *testing.T) {

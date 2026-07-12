@@ -1,3 +1,9 @@
+lingmo-authenticate (2.0.1.lingmo.1) unstable; urgency=medium
+
+  * Lingmo namespace migration.
+
+ -- Lingmo OS Team <team@lingmo.org>  Sun, 12 Jul 2026 23:11:19 +0800
+
 lingmo-authenticate (2.0.0.lingmo.1) unstable; urgency=medium
 
   * Rebuild for Lingmo OS.

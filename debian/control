@@ -3,11 +3,11 @@ Section: devel
 Priority: optional
 Maintainer: Lingmo OS Team <team@lingmo.org>
 Build-Depends:
- dde-api-dev(>> 3.16.0+),
+ lingmo-api-dev(>> 3.16.0+),
  debhelper-compat (= 11),
- deepin-gettext-tools,
- golang-github-linuxdeepin-go-lib-dev (>> 1.8.0+),
- golang-github-linuxdeepin-go-dbus-factory-dev (>> 0.6.0+),
+ lingmo-gettext-tools,
+ golang-github-lingmo-go-lib-dev (>> 1.8.0+),
+ golang-github-lingmo-go-dbus-factory-dev (>> 0.6.0+),
  golang-github-stretchr-testify-dev,
  golang-go,
  golang-gopkg-check.v1-dev,
@@ -23,25 +23,25 @@ Build-Depends:
 Standards-Version: 4.3.0
 Homepage: http://lingmo.org
 
-Package: deepin-authenticate
+Package: lingmo-authenticate
 Architecture: any
 Built-Using:
  ${misc:Built-Using},
 Depends:
- dde-api,
+ lingmo-api,
  libpam-runtime (>= 1.3.1.11),
  ${misc:Depends},
  ${shlibs:Depends},
 Recommends:
- dde-qt5integration,
- deepin-face,
+ lingmo-qt5integration,
+ lingmo-face,
 Conflicts:
  deepin-session,
  deepin-wm-switcher,
 Description: deepin authenticate service
  deepin authentication is a service for user identifing.
 
-Package: libdeepin-authenticate
+Package: liblingmo-authenticate
 Architecture: any
 Built-Using:
  ${misc:Built-Using},
@@ -52,11 +52,11 @@ Description: deepin authenticate development kit
  libdeepin-authentication is a development kit to develop application for authentication.
 
 
-Package: libdeepin-authenticate-dev
+Package: liblingmo-authenticate-dev
 Architecture: any
 Built-Using:
  ${misc:Built-Using},
 Depends:
- libdeepin-authenticate,
+ liblingmo-authenticate,
 Description: deepin authenticate development kit's file
  libdeepin-authentication-dev is some file for libdeepin-authenticate.

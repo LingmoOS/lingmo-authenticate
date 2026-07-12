@@ -2,7 +2,7 @@ package fingerprint
 
 import (
 	"github.com/godbus/dbus"
-	aufp "github.com/linuxdeepin/go-dbus-factory/com.deepin.daemon.authenticate.fingerprint"
+	aufp "github.com/LingmoOS/golang-github-lingmo-go-dbus-factory/com.lingmo.daemon.authenticate.fingerprint"
 )
 
 type commonDevice struct {

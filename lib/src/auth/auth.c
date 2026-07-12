@@ -7,7 +7,7 @@
 #define DA_DBUS_SERVER "com.deepin.daemon.Authenticate"
 #define DA_DBUS_MANAGER_PATH "/com/deepin/daemon/Authenticate"
 
-#define DA_DBUS_SESSION_INTERFACE "com.deepin.daemon.Authenticate.Session"
+#define DA_DBUS_SESSION_INTERFACE "com.lingmo.daemon.Authenticate.Session"
 
 int da_set_log_callback(da_proxy *proxy, log_cb cb) {
     if (proxy == NULL || cb == NULL) {

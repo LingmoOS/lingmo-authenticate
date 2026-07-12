@@ -10,8 +10,8 @@ import (
 	"github.com/fsnotify/fsnotify"
 	"github.com/godbus/dbus"
 
-	ofdbus "github.com/linuxdeepin/go-dbus-factory/org.freedesktop.dbus"
-	"github.com/linuxdeepin/go-lib/dbusutil"
+	ofdbus "github.com/LingmoOS/golang-github-lingmo-go-dbus-factory/org.freedesktop.dbus"
+	"github.com/LingmoOS/golang-github-lingmo-go-lib/dbusutil"
 
 	ac "pkg.deepin.io/dde/authentication/service/authcommon"
 	"pkg.deepin.io/dde/authentication/service/task"
@@ -19,7 +19,7 @@ import (
 
 const (
 	dBusFacePath      = "/com/deepin/daemon/Authenticate/Face"
-	dBusFaceInterface = "com.deepin.daemon.Authenticate.Face"
+	dBusFaceInterface = "com.lingmo.daemon.Authenticate.Face"
 	defaultConfigFile = "/var/lib/deepin/authenticate/face.json"
 )
 

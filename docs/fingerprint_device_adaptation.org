@@ -47,15 +47,15 @@
 
 + *Service:*
 
-  =com.deepin.daemon.Authenticate=
+  =com.lingmo.daemon.Authenticate=
 
 + *Path:*
 
-  =/com/deepin/daemon/Authenticate/Fingerprint=
+  =/com/lingmo/daemon/Authenticate/Fingerprint=
 
 + *Interface:*
 
-  =com.deepin.daemon.Authenticate.Fingerprint=
+  =com.lingmo.daemon.Authenticate.Fingerprint=
 
 
 + =SetDefaultDevice(char *device)=
@@ -196,7 +196,7 @@
 
   - =.conf= 文件
 
-    =.conf= 文件中会名接口的访问权限，内容如下(以 =com.deepin.Example= 为 =service name= 和 =interface name= )：
+    =.conf= 文件中会名接口的访问权限，内容如下(以 =com.lingmo.Example= 为 =service name= 和 =interface name= )：
 
     #+BEGIN_SRC xml
     <?xml version="1.0" encoding="UTF-8"?> <!-- -*- XML -*- -->
@@ -207,13 +207,13 @@
     <busconfig>
       <!-- Deny anyone to invoke methods on this service -->
       <policy context="default">
-        <deny send_destination="com.deepin.Example" />
+        <deny send_destination="com.lingmo.Example" />
       </policy>
 
       <!-- Only root can own the service and send message to this service -->
       <policy user="root">
-        <allow own="com.deepin.Example"/>
-        <allow send_destination="com.deepin.Example" />
+        <allow own="com.lingmo.Example"/>
+        <allow send_destination="com.lingmo.Example" />
       </policy>
     </busconfig>
     #+END_SRC

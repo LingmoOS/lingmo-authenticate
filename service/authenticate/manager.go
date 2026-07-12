@@ -14,13 +14,13 @@ import (
 
 	"github.com/fsnotify/fsnotify"
 
-	login1 "github.com/linuxdeepin/go-dbus-factory/org.freedesktop.login1"
+	login1 "github.com/LingmoOS/golang-github-lingmo-go-dbus-factory/org.freedesktop.login1"
 
 	"github.com/godbus/dbus"
-	accounts "github.com/linuxdeepin/go-dbus-factory/com.deepin.daemon.accounts"
-	ofdbus "github.com/linuxdeepin/go-dbus-factory/org.freedesktop.dbus"
-	"github.com/linuxdeepin/go-lib/dbusutil"
-	"github.com/linuxdeepin/go-lib/procfs"
+	accounts "github.com/LingmoOS/golang-github-lingmo-go-dbus-factory/com.lingmo.daemon.accounts"
+	ofdbus "github.com/LingmoOS/golang-github-lingmo-go-dbus-factory/org.freedesktop.dbus"
+	"github.com/LingmoOS/golang-github-lingmo-go-lib/dbusutil"
+	"github.com/LingmoOS/golang-github-lingmo-go-lib/procfs"
 	"pkg.deepin.io/dde/authentication/pkg/common"
 	. "pkg.deepin.io/dde/authentication/service/authcommon"
 	"pkg.deepin.io/dde/authentication/service/authenticate/session"
@@ -32,7 +32,7 @@ import (
 
 const (
 	dbusServicePath       = "/com/deepin/daemon/Authenticate"
-	dbusServiceInterface  = "com.deepin.daemon.Authenticate"
+	dbusServiceInterface  = "com.lingmo.daemon.Authenticate"
 	pamCommonAuthFilePath = "/etc/pam.d/common-auth"
 	deepinPamConfFilePath = "/etc/pam.d/deepin_pam_unix"
 )

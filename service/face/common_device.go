@@ -4,8 +4,8 @@ import (
 	"errors"
 
 	"github.com/godbus/dbus"
-	face "github.com/linuxdeepin/go-dbus-factory/com.deepin.daemon.authenticate.face"
-	"github.com/linuxdeepin/go-lib/dbusutil"
+	face "github.com/LingmoOS/golang-github-lingmo-go-dbus-factory/com.lingmo.daemon.authenticate.face"
+	"github.com/LingmoOS/golang-github-lingmo-go-lib/dbusutil"
 )
 
 type commonDevice struct {

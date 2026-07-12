@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/godbus/dbus"
-	"github.com/linuxdeepin/go-lib/dbusutil"
+	"github.com/LingmoOS/golang-github-lingmo-go-lib/dbusutil"
 
 	"pkg.deepin.io/dde/authentication/service/authcommon"
 	"pkg.deepin.io/dde/authentication/service/task"

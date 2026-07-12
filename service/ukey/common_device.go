@@ -2,7 +2,7 @@ package ukey
 
 import (
 	"github.com/godbus/dbus"
-	ukey "github.com/linuxdeepin/go-dbus-factory/com.deepin.daemon.authenticate.ukey"
+	ukey "github.com/LingmoOS/golang-github-lingmo-go-dbus-factory/com.lingmo.daemon.authenticate.ukey"
 	"pkg.deepin.io/dde/authentication/service/authcommon"
 )
 

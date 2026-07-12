@@ -5,13 +5,13 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/linuxdeepin/go-lib/strv"
+	"github.com/LingmoOS/golang-github-lingmo-go-lib/strv"
 
-	"github.com/linuxdeepin/go-lib/dbusutil"
+	"github.com/LingmoOS/golang-github-lingmo-go-lib/dbusutil"
 
 	"github.com/godbus/dbus"
 
-	authenticate "github.com/linuxdeepin/go-dbus-factory/com.deepin.daemon.authenticate"
+	authenticate "github.com/LingmoOS/golang-github-lingmo-go-dbus-factory/com.lingmo.daemon.authenticate"
 	. "pkg.deepin.io/dde/authentication/service/authcommon"
 	mf "pkg.deepin.io/dde/authentication/service/multifactor"
 	"pkg.deepin.io/dde/authentication/service/ukey"

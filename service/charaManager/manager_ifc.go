@@ -5,9 +5,9 @@ import (
 	"fmt"
 
 	"github.com/godbus/dbus"
-	"github.com/linuxdeepin/dde-api/polkit"
+	"github.com/LingmoOS/velora-api/polkit"
 	. "pkg.deepin.io/dde/authentication/service/authcommon"
-	"github.com/linuxdeepin/go-lib/dbusutil"
+	"github.com/LingmoOS/golang-github-lingmo-go-lib/dbusutil"
 )
 
 func (m *Manager) EnrollStart(sender dbus.Sender, driverName string, charaType CharaType, charaName string) (dbus.UnixFD, *dbus.Error) {

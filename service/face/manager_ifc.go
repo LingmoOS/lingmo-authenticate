@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/linuxdeepin/dde-api/polkit"
+	"github.com/LingmoOS/velora-api/polkit"
 
 	"github.com/godbus/dbus"
 	ac "pkg.deepin.io/dde/authentication/service/authcommon"
 	"pkg.deepin.io/dde/authentication/service/task"
-	"github.com/linuxdeepin/go-lib/dbusutil"
+	"github.com/LingmoOS/golang-github-lingmo-go-lib/dbusutil"
 )
 
 const (

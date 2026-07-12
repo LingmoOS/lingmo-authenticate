@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"sync"
 
-	ofdbus "github.com/linuxdeepin/go-dbus-factory/org.freedesktop.dbus"
+	ofdbus "github.com/LingmoOS/golang-github-lingmo-go-dbus-factory/org.freedesktop.dbus"
 	. "pkg.deepin.io/dde/authentication/service/authcommon"
 	. "pkg.deepin.io/dde/authentication/service/charaDataManger"
-	"github.com/linuxdeepin/go-lib/dbusutil"
+	"github.com/LingmoOS/golang-github-lingmo-go-lib/dbusutil"
 )
 
 const (

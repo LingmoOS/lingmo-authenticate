@@ -9,16 +9,16 @@ import (
 
 	"github.com/fsnotify/fsnotify"
 	"github.com/godbus/dbus"
-	ofdbus "github.com/linuxdeepin/go-dbus-factory/org.freedesktop.dbus"
+	ofdbus "github.com/LingmoOS/golang-github-lingmo-go-dbus-factory/org.freedesktop.dbus"
 	"pkg.deepin.io/dde/authentication/service/authcommon"
-	"github.com/linuxdeepin/go-lib/dbusutil"
+	"github.com/LingmoOS/golang-github-lingmo-go-lib/dbusutil"
 )
 
 //go:generate dbusutil-gen em -type Manager
 
 const (
 	dbusUKeyPath      = "/com/deepin/daemon/Authenticate/UKey"
-	dbusUKeyInterface = "com.deepin.daemon.Authenticate.UKey"
+	dbusUKeyInterface = "com.lingmo.daemon.Authenticate.UKey"
 	defaultConfigFile = "/var/lib/deepin/authenticate/ukey.json"
 )
 

@@ -6,7 +6,7 @@ import (
 	"sync"
 
 	. "pkg.deepin.io/dde/authentication/service/authcommon"
-	"github.com/linuxdeepin/go-lib/pam"
+	"github.com/LingmoOS/golang-github-lingmo-go-lib/pam"
 )
 
 type PasswordTx struct {

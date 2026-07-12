@@ -1,6 +1,6 @@
 LIB_NAME = libdeepin-authenticate.so.1
 LIB_DIR_NAME = libdeepin-authenticate
-GDBUS_FILE = auth/com.deepin.daemon.Authenticate.c auth/com.deepin.daemon.Authenticate.Session.c
+GDBUS_FILE = auth/com.lingmo.daemon.Authenticate.c auth/com.lingmo.daemon.Authenticate.Session.c
 LIB_DEST_DIR=../../out/lib
 PREFIX=/usr
 
@@ -23,8 +23,8 @@ ${LIB_NAME}: auth/*.c encrypt/*.c shm-comm/*.c
 	mv ${LIB_NAME} ${LIB_DEST_DIR}
 
 ${GDBUS_FILE}:
-	gdbus-codegen --generate-c-code=com.deepin.daemon.Authenticate auth/com.deepin.daemon.Authenticate.xml
-	gdbus-codegen --annotate "com.deepin.daemon.Authenticate.Session.SetSymmetricKey()[key]" org.gtk.GDBus.C.ForceGVariant true --annotate "com.deepin.daemon.Authenticate.Session.SetToken()[token]" org.gtk.GDBus.C.ForceGVariant true --generate-c-code=com.deepin.daemon.Authenticate.Session auth/com.deepin.daemon.Authenticate.Session.xml
+	gdbus-codegen --generate-c-code=com.lingmo.daemon.Authenticate auth/com.lingmo.daemon.Authenticate.xml
+	gdbus-codegen --annotate "com.lingmo.daemon.Authenticate.Session.SetSymmetricKey()[key]" org.gtk.GDBus.C.ForceGVariant true --annotate "com.lingmo.daemon.Authenticate.Session.SetToken()[token]" org.gtk.GDBus.C.ForceGVariant true --generate-c-code=com.lingmo.daemon.Authenticate.Session auth/com.lingmo.daemon.Authenticate.Session.xml
 
 gen_pkgconfig:
 	cd ../misc/pkgconfig;	\

@@ -3,9 +3,9 @@ package main
 import (
 	"os"
 
-	"github.com/linuxdeepin/go-lib/dbusutil"
-	"github.com/linuxdeepin/go-lib/gettext"
-	"github.com/linuxdeepin/go-lib/log"
+	"github.com/LingmoOS/golang-github-lingmo-go-lib/dbusutil"
+	"github.com/LingmoOS/golang-github-lingmo-go-lib/gettext"
+	"github.com/LingmoOS/golang-github-lingmo-go-lib/log"
 
 	"pkg.deepin.io/dde/authentication/service/authenticate"
 	"pkg.deepin.io/dde/authentication/service/charaDataManger"

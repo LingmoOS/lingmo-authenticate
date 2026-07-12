@@ -7,12 +7,12 @@ import (
 	"github.com/godbus/dbus"
 	"github.com/stretchr/testify/assert"
 
-	auth_fp "github.com/linuxdeepin/go-dbus-factory/com.deepin.daemon.authenticate.fingerprint"
-	huawei_fprint "github.com/linuxdeepin/go-dbus-factory/com.huawei.fingerprint"
-	fd_fprint "github.com/linuxdeepin/go-dbus-factory/net.reactivated.fprint"
-	ofdbus "github.com/linuxdeepin/go-dbus-factory/org.freedesktop.dbus"
+	auth_fp "github.com/LingmoOS/golang-github-lingmo-go-dbus-factory/com.lingmo.daemon.authenticate.fingerprint"
+	huawei_fprint "github.com/LingmoOS/golang-github-lingmo-go-dbus-factory/com.huawei.fingerprint"
+	fd_fprint "github.com/LingmoOS/golang-github-lingmo-go-dbus-factory/net.reactivated.fprint"
+	ofdbus "github.com/LingmoOS/golang-github-lingmo-go-dbus-factory/org.freedesktop.dbus"
 	"pkg.deepin.io/dde/authentication/pkg/fingerprint"
-	"github.com/linuxdeepin/go-lib/dbusutil/proxy"
+	"github.com/LingmoOS/golang-github-lingmo-go-lib/dbusutil/proxy"
 )
 
 func TestFingerprintManager_initFakeDevice(t *testing.T) {

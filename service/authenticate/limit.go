@@ -7,8 +7,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/linuxdeepin/go-lib/keyfile"
-	"github.com/linuxdeepin/go-lib/utils"
+	"github.com/LingmoOS/golang-github-lingmo-go-lib/keyfile"
+	"github.com/LingmoOS/golang-github-lingmo-go-lib/utils"
 	. "pkg.deepin.io/dde/authentication/service/authcommon"
 )
 

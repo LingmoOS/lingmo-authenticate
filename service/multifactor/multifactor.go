@@ -8,11 +8,11 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/linuxdeepin/go-lib/strv"
+	"github.com/LingmoOS/golang-github-lingmo-go-lib/strv"
 
 	"github.com/fsnotify/fsnotify"
-	"github.com/linuxdeepin/go-lib/log"
-	"github.com/linuxdeepin/go-lib/utils"
+	"github.com/LingmoOS/golang-github-lingmo-go-lib/log"
+	"github.com/LingmoOS/golang-github-lingmo-go-lib/utils"
 
 	. "pkg.deepin.io/dde/authentication/service/authcommon"
 )

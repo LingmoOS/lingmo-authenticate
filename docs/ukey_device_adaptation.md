@@ -92,7 +92,7 @@
       **`.service` 应该安装到 `/usr/share/dbus-1/system-services/` 目录中**
 
    - `.conf`文件
-     `.conf` 文件中会规定接口的访问权限，内容如下(以 `com.deepin.Example` 为 `service name` 和   `interface name` 为例)：
+     `.conf` 文件中会规定接口的访问权限，内容如下(以 `com.lingmo.Example` 为 `service name` 和   `interface name` 为例)：
 
       ```xml
       <?xml version="1.0" encoding="UTF-8"?> <!-- -*- XML -*- -->
@@ -104,18 +104,18 @@
 
         <!-- Only root can own the service -->
         <policy user="root">
-          <allow own="com.deepin.Example"/>
+          <allow own="com.lingmo.Example"/>
         </policy>
 
         <!-- Allow anyone to invoke methods on the interfaces -->
         <policy context="default">
-          <allow send_destination="com.deepin.Example" />
+          <allow send_destination="com.lingmo.Example" />
 
-          <allow send_destination="com.deepin.Example"
-                send_interface="com.deepin.Example"/>
-          <allow send_destination="com.deepin.Example"
+          <allow send_destination="com.lingmo.Example"
+                send_interface="com.lingmo.Example"/>
+          <allow send_destination="com.lingmo.Example"
                 send_interface="org.freedesktop.DBus.Properties"/>
-          <allow send_destination="com.deepin.Example"
+          <allow send_destination="com.lingmo.Example"
                 send_interface="org.freedesktop.DBus.Introspectable"/>
         </policy>
 

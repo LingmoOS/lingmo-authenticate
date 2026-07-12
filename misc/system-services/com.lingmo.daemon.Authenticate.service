@@ -1,5 +1,5 @@
 [D-BUS Service]
-Name=com.deepin.daemon.Authenticate
+Name=com.lingmo.daemon.Authenticate
 Exec=/usr/lib/deepin-authenticate/deepin-authentication
 User=root
 SystemdService=deepin-authenticate.service

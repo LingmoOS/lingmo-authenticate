@@ -6,7 +6,7 @@ import (
 	"github.com/godbus/dbus"
 	"github.com/stretchr/testify/assert"
 
-	auth_fp "github.com/linuxdeepin/go-dbus-factory/com.deepin.daemon.authenticate.fingerprint"
+	auth_fp "github.com/LingmoOS/golang-github-lingmo-go-dbus-factory/com.lingmo.daemon.authenticate.fingerprint"
 )
 
 func TestFingerprintCommonDevice_deselect(t *testing.T) {

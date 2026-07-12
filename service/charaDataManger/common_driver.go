@@ -2,10 +2,10 @@ package charaDataManger
 
 import (
 	"github.com/godbus/dbus"
-	biometrics "github.com/linuxdeepin/go-dbus-factory/com.deepin.daemon.authenticate.BiometricsDriver"
-	ofdbus "github.com/linuxdeepin/go-dbus-factory/org.freedesktop.dbus"
+	biometrics "github.com/LingmoOS/golang-github-lingmo-go-dbus-factory/com.lingmo.daemon.authenticate.BiometricsDriver"
+	ofdbus "github.com/LingmoOS/golang-github-lingmo-go-dbus-factory/org.freedesktop.dbus"
 	. "pkg.deepin.io/dde/authentication/service/authcommon"
-	"github.com/linuxdeepin/go-lib/dbusutil"
+	"github.com/LingmoOS/golang-github-lingmo-go-lib/dbusutil"
 )
 
 // 录入过程中的状态码

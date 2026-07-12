@@ -5,8 +5,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/linuxdeepin/go-lib/dbusutil"
-	"github.com/linuxdeepin/go-lib/procfs"
+	"github.com/LingmoOS/golang-github-lingmo-go-lib/dbusutil"
+	"github.com/LingmoOS/golang-github-lingmo-go-lib/procfs"
 )
 
 func ReadFileLines(filepath string) ([]string, error) {

@@ -11,21 +11,21 @@ import (
 	"time"
 
 	"github.com/godbus/dbus"
-	accounts "github.com/linuxdeepin/go-dbus-factory/com.deepin.daemon.accounts"
-	huawei_fprint "github.com/linuxdeepin/go-dbus-factory/com.huawei.fingerprint"
-	fprintd "github.com/linuxdeepin/go-dbus-factory/net.reactivated.fprint"
-	ofdbus "github.com/linuxdeepin/go-dbus-factory/org.freedesktop.dbus"
-	"github.com/linuxdeepin/dde-api/polkit"
+	accounts "github.com/LingmoOS/golang-github-lingmo-go-dbus-factory/com.lingmo.daemon.accounts"
+	huawei_fprint "github.com/LingmoOS/golang-github-lingmo-go-dbus-factory/com.huawei.fingerprint"
+	fprintd "github.com/LingmoOS/golang-github-lingmo-go-dbus-factory/net.reactivated.fprint"
+	ofdbus "github.com/LingmoOS/golang-github-lingmo-go-dbus-factory/org.freedesktop.dbus"
+	"github.com/LingmoOS/velora-api/polkit"
 	"pkg.deepin.io/dde/authentication/pkg/fingerprint"
 	pkgfp "pkg.deepin.io/dde/authentication/pkg/fingerprint"
 	ac "pkg.deepin.io/dde/authentication/service/authcommon"
-	"github.com/linuxdeepin/go-lib/dbusutil"
-	"github.com/linuxdeepin/go-lib/strv"
+	"github.com/LingmoOS/golang-github-lingmo-go-lib/dbusutil"
+	"github.com/LingmoOS/golang-github-lingmo-go-lib/strv"
 )
 
 const (
 	dbusFingerPrintPath      = "/com/deepin/daemon/Authenticate/Fingerprint"
-	dbusFingerPrintInterface = "com.deepin.daemon.Authenticate.Fingerprint"
+	dbusFingerPrintInterface = "com.lingmo.daemon.Authenticate.Fingerprint"
 
 	actionIdEnroll = "com.deepin.daemon.authenticate.Fingerprint.enroll"
 	actionIdDelete = "com.deepin.daemon.authenticate.Fingerprint.delete-enrolled-fingers"

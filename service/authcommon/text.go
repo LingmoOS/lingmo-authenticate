@@ -9,7 +9,7 @@ import (
 	"sync"
 
 	"github.com/fsnotify/fsnotify"
-	"github.com/linuxdeepin/go-lib/gettext"
+	"github.com/LingmoOS/golang-github-lingmo-go-lib/gettext"
 )
 
 const (

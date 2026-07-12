@@ -10,7 +10,7 @@
 %endif
 
 
-Name:           deepin-authenticate
+Name:           lingmo-authenticate
 Version:        1.2.6
 Release:        1
 Summary:        Used to adapt fingerprint, face and other authentication methods
@@ -31,7 +31,7 @@ BuildRequires:  pkgconfig(gdk-x11-3.0)
 BuildRequires:  pkgconfig(gdk-pixbuf-xlib-2.0)
 BuildRequires:  pkgconfig(libpulse)
 BuildRequires:  gocode
-BuildRequires:  deepin-gettext-tools
+BuildRequires:  lingmo-gettext-tools
 BuildRequires:  golang-github-linuxdeepin-go-dbus-factory-devel
 BuildRequires:  go-lib-devel
 
@@ -58,7 +58,7 @@ export GOPATH=/usr/share/gocode
 %doc README.org
 %license
 
-%{_prefix}/lib/deepin-authenticate/deepin-authentication
+%{_prefix}/lib/lingmo-authenticate/deepin-authentication
 %{_prefix}/share/deepin-authentication/allowlist
 %{_var}/lib/deepin/authenticate/blacklist
 %{_var}/lib/deepin/authenticate/pam-modules
