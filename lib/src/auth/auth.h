@@ -72,14 +72,14 @@ typedef struct _da_error {
 
 void da_error_free(da_error *err);
 
-// init, create com.deepin.daemon.Authenticate proxy
+// init, create com.lingmo.daemon.Authenticate proxy
 int da_set_log_callback(da_proxy *proxy, log_cb cb);
 
 da_proxy *da_dbus_proxy_new();
 
 void da_dbus_proxy_free(da_proxy *proxy);
 
-// create session, create com.deepin.daemon.Authenticate.session proxy
+// create session, create com.lingmo.daemon.Authenticate.session proxy
 int da_create_authenticate(da_proxy *proxy,
                            const char *username,
                            int flags,
@@ -88,7 +88,7 @@ int da_create_authenticate(da_proxy *proxy,
 
 int da_quit_authenticate(da_proxy *proxy, da_error **err); // session method
 
-// com.deepin.daemon.Authenticate method
+// com.lingmo.daemon.Authenticate method
 int da_get_limits(da_proxy *proxy,
                   const char *username,
                   da_limit_info **limits,
@@ -97,15 +97,15 @@ int da_get_limits(da_proxy *proxy,
 
 int da_pre_one_key_login(da_proxy *proxy, int flag, char *result, int result_len, da_error **err);
 
-// com.deepin.daemon.Authenticate property
+// com.lingmo.daemon.Authenticate property
 int da_prop_get_framework_state(da_proxy *proxy, int *result);
 
 int da_prop_get_supported_flags(da_proxy *proxy, int *result);
 
-// com.deepin.daemon.Authenticate signal
+// com.lingmo.daemon.Authenticate signal
 int da_signal_connect_limit_updated(da_proxy *proxy, signal_limit_updated_cb cb, void *userdata);
 
-// after da_create_authenticate, com.deepin.daemon.Authenticate.Session method
+// after da_create_authenticate, com.lingmo.daemon.Authenticate.Session method
 int da_session_set_token(da_proxy *proxy,
                          const int auth_type,
                          const char *password,
@@ -115,14 +115,14 @@ int da_session_end(da_proxy *proxy, int flag, int *out_failNum, da_error **err);
 
 int da_session_start(da_proxy *proxy, int flag, int timeout, int *failNum, da_error **err);
 
-// com.deepin.daemon.Authenticate property
+// com.lingmo.daemon.Authenticate property
 int da_prop_get_is_MFA(da_proxy *proxy, bool *result);
 
 int da_prop_get_prompt(da_proxy *proxy, char *result, int result_len);
 
 int da_prop_get_factors_info(da_proxy *proxy, da_factor_info **result, int *factor_info_len);
 
-// com.deepin.daemon.Authenticate signal
+// com.lingmo.daemon.Authenticate signal
 int da_session_signal_connect_status(da_proxy *proxy, signal_status_cb cb, void *userdata);
 
 bool is_valid_auth_flag(int auth_flag);

@@ -22,7 +22,7 @@ import (
 //go:generate dbusutil-gen em -type Manager
 
 const (
-	dBusAuthenticateSessionPath = "/com/deepin/daemon/Authenticate/Session/_"
+	dBusAuthenticateSessionPath = "/com/lingmo/daemon/Authenticate/Session/_"
 )
 
 type authFactor struct {
@@ -124,7 +124,7 @@ func isTTYPrg(s *dbusutil.Service, sender string) (bool, error) {
 }
 
 func (m *Manager) GetInterfaceName() string {
-	return "com.deepin.daemon.Authenticate.Session"
+	return "com.lingmo.daemon.Authenticate.Session"
 }
 
 func NewManager(service *dbusutil.Service, id string, username string,

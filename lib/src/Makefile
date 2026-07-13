@@ -22,7 +22,7 @@ ${LIB_NAME}: auth/*.c encrypt/*.c shm-comm/*.c
 	gcc ${SECURITY_BUILD_OPTIONS} -shared -D_GNU_SOURCE -W -Wall -Wl,-soname,${LIB_NAME} -o $@ $^ -I../encrypt/ ${PKG_CONFIG_LIB} ${PKG_CONFIG_INCLUDE}
 	mv ${LIB_NAME} ${LIB_DEST_DIR}
 
-${GDBUS_FILE}:
+${GDBUS_FILE}: auth/com.lingmo.daemon.Authenticate.xml auth/com.lingmo.daemon.Authenticate.Session.xml
 	gdbus-codegen --generate-c-code=com.lingmo.daemon.Authenticate auth/com.lingmo.daemon.Authenticate.xml
 	gdbus-codegen --annotate "com.lingmo.daemon.Authenticate.Session.SetSymmetricKey()[key]" org.gtk.GDBus.C.ForceGVariant true --annotate "com.lingmo.daemon.Authenticate.Session.SetToken()[token]" org.gtk.GDBus.C.ForceGVariant true --generate-c-code=com.lingmo.daemon.Authenticate.Session auth/com.lingmo.daemon.Authenticate.Session.xml
 

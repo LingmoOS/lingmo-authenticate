@@ -1,11 +1,11 @@
-#include "com.deepin.daemon.Authenticate.h"
-#include "com.deepin.daemon.Authenticate.Session.h"
+#include "com.lingmo.daemon.Authenticate.h"
+#include "com.lingmo.daemon.Authenticate.Session.h"
 #include <stdio.h>
 #include <json-c/json.h>
 #include "auth-priv.h"
 
-#define DA_DBUS_SERVER "com.deepin.daemon.Authenticate"
-#define DA_DBUS_MANAGER_PATH "/com/deepin/daemon/Authenticate"
+#define DA_DBUS_SERVER "com.lingmo.daemon.Authenticate"
+#define DA_DBUS_MANAGER_PATH "/com/lingmo/daemon/Authenticate"
 
 #define DA_DBUS_SESSION_INTERFACE "com.lingmo.daemon.Authenticate.Session"
 
@@ -88,10 +88,10 @@ static int limit_json_deal(gchar *in, da_limit_info **limits, int *limit_len) {
     return error_ret;
 }
 
-gboolean signal_limit_updated_handler(ComDeepinDaemonAuthenticate *object,
+gboolean signal_limit_updated_handler(ComLingmoDaemonAuthenticate *object,
                                       gchar *value,
                                       gpointer userdata) {
-    g_return_val_if_fail(IS_COM_DEEPIN_DAEMON_AUTHENTICATE(object), FALSE);
+    g_return_val_if_fail(IS_COM_LINGMO_DAEMON_AUTHENTICATE(object), FALSE);
 
     da_proxy *proxy = (da_proxy *)userdata;
 
@@ -107,8 +107,8 @@ gboolean signal_limit_updated_handler(ComDeepinDaemonAuthenticate *object,
 
         GError *callError = NULL;
         gchar *out_limits = NULL;
-        com_deepin_daemon_authenticate_call_get_limits_sync(
-                (ComDeepinDaemonAuthenticate *)(proxy->authenticate_proxy),
+        com_lingmo_daemon_authenticate_call_get_limits_sync(
+                (ComLingmoDaemonAuthenticate *)(proxy->authenticate_proxy),
                 value,
                 &out_limits,
                 NULL,
@@ -180,12 +180,12 @@ static void error_new(da_error **err, char *msg) {
 
 static gboolean has_valid_authenticate_proxy(da_proxy *proxy) {
     g_return_val_if_fail((proxy != NULL), FALSE);
-    g_return_val_if_fail(IS_COM_DEEPIN_DAEMON_AUTHENTICATE(proxy->authenticate_proxy), FALSE);
+    g_return_val_if_fail(IS_COM_LINGMO_DAEMON_AUTHENTICATE(proxy->authenticate_proxy), FALSE);
     return TRUE;
 }
 static gboolean has_valid_session_proxy(da_proxy *proxy) {
     g_return_val_if_fail((proxy != NULL), FALSE);
-    g_return_val_if_fail(IS_COM_DEEPIN_DAEMON_AUTHENTICATE_SESSION(proxy->session_proxy), FALSE);
+    g_return_val_if_fail(IS_COM_LINGMO_DAEMON_AUTHENTICATE_SESSION(proxy->session_proxy), FALSE);
     return TRUE;
 }
 
@@ -205,7 +205,7 @@ da_proxy *da_dbus_proxy_new() {
     }
     GError *callError = NULL;
     proxy->authenticate_proxy =
-            (GDBusProxy *)com_deepin_daemon_authenticate_proxy_new_sync(proxy->con,
+            (GDBusProxy *)com_lingmo_daemon_authenticate_proxy_new_sync(proxy->con,
                                                                         G_DBUS_PROXY_FLAGS_NONE,
                                                                         DA_DBUS_SERVER,
                                                                         DA_DBUS_MANAGER_PATH,
@@ -221,19 +221,19 @@ da_proxy *da_dbus_proxy_new() {
         return NULL;
     }
 
-    g_signal_connect((ComDeepinDaemonAuthenticate *)(proxy->authenticate_proxy),
+    g_signal_connect((ComLingmoDaemonAuthenticate *)(proxy->authenticate_proxy),
                      "limit-updated",
                      G_CALLBACK(signal_limit_updated_handler),
                      proxy);
     return proxy;
 }
 
-gboolean signal_status_handler(ComDeepinDaemonAuthenticateSession *object,
+gboolean signal_status_handler(ComLingmoDaemonAuthenticateSession *object,
                                gint flag,
                                gint status,
                                gchar *msg,
                                gpointer userdata) {
-    g_return_val_if_fail(IS_COM_DEEPIN_DAEMON_AUTHENTICATE_SESSION(object), FALSE);
+    g_return_val_if_fail(IS_COM_LINGMO_DAEMON_AUTHENTICATE_SESSION(object), FALSE);
 
     da_proxy *proxy = (da_proxy *)userdata;
 
@@ -256,8 +256,8 @@ int da_create_authenticate(da_proxy *proxy,
 
     GError *callError = NULL;
     gchar *out_path = NULL;
-    com_deepin_daemon_authenticate_call_authenticate_sync(
-            (ComDeepinDaemonAuthenticate *)(proxy->authenticate_proxy),
+    com_lingmo_daemon_authenticate_call_authenticate_sync(
+            (ComLingmoDaemonAuthenticate *)(proxy->authenticate_proxy),
             username,
             flags,
             app_type,
@@ -274,7 +274,7 @@ int da_create_authenticate(da_proxy *proxy,
         return -1;
     }
 
-    proxy->session_proxy = (GDBusProxy *)com_deepin_daemon_authenticate_session_proxy_new_sync(
+    proxy->session_proxy = (GDBusProxy *)com_lingmo_daemon_authenticate_session_proxy_new_sync(
             proxy->con,
             G_DBUS_PROXY_FLAGS_NONE,
             DA_DBUS_SERVER,
@@ -296,8 +296,8 @@ int da_create_authenticate(da_proxy *proxy,
     proxy->username = g_strdup(username);
 
     GVariant *args = g_variant_new_array(G_VARIANT_TYPE_INT32, NULL, 0);
-    com_deepin_daemon_authenticate_session_call_encrypt_key_sync(
-            (ComDeepinDaemonAuthenticateSession *)(proxy->session_proxy),
+    com_lingmo_daemon_authenticate_session_call_encrypt_key_sync(
+            (ComLingmoDaemonAuthenticateSession *)(proxy->session_proxy),
             0,
             args,
             &proxy->enc_type,
@@ -333,8 +333,8 @@ int da_create_authenticate(da_proxy *proxy,
     GVariant *enc_symmetricKey_variant =
             g_variant_new_from_bytes(G_VARIANT_TYPE_BYTESTRING, bytes, TRUE);
 
-    com_deepin_daemon_authenticate_session_call_set_symmetric_key_sync(
-            (ComDeepinDaemonAuthenticateSession *)(proxy->session_proxy),
+    com_lingmo_daemon_authenticate_session_call_set_symmetric_key_sync(
+            (ComLingmoDaemonAuthenticateSession *)(proxy->session_proxy),
             enc_symmetricKey_variant,
             NULL,
             &callError);
@@ -350,7 +350,7 @@ int da_create_authenticate(da_proxy *proxy,
         return -1;
     }
 
-    g_signal_connect((ComDeepinDaemonAuthenticateSession *)(proxy->session_proxy),
+    g_signal_connect((ComLingmoDaemonAuthenticateSession *)(proxy->session_proxy),
                      "status",
                      G_CALLBACK(signal_status_handler),
                      proxy);
@@ -362,8 +362,8 @@ int da_quit_authenticate(da_proxy *proxy, da_error **err) {
     g_return_val_if_fail(has_valid_session_proxy(proxy), -1);
 
     GError *callError = NULL;
-    com_deepin_daemon_authenticate_session_call_end_sync(
-            (ComDeepinDaemonAuthenticateSession *)(proxy->session_proxy),
+    com_lingmo_daemon_authenticate_session_call_end_sync(
+            (ComLingmoDaemonAuthenticateSession *)(proxy->session_proxy),
             -1,
             NULL,
             NULL,
@@ -498,8 +498,8 @@ int da_get_limits(da_proxy *proxy,
 
     GError *callError = NULL;
     gchar *out_limits = NULL;
-    com_deepin_daemon_authenticate_call_get_limits_sync(
-            (ComDeepinDaemonAuthenticate *)(proxy->authenticate_proxy),
+    com_lingmo_daemon_authenticate_call_get_limits_sync(
+            (ComLingmoDaemonAuthenticate *)(proxy->authenticate_proxy),
             username,
             &out_limits,
             NULL,
@@ -527,8 +527,8 @@ int da_pre_one_key_login(da_proxy *proxy, int flag, char *result, int result_len
     }
     GError *callError = NULL;
     gchar *out_result;
-    com_deepin_daemon_authenticate_call_pre_one_key_login_sync(
-            (ComDeepinDaemonAuthenticate *)(proxy->authenticate_proxy),
+    com_lingmo_daemon_authenticate_call_pre_one_key_login_sync(
+            (ComLingmoDaemonAuthenticate *)(proxy->authenticate_proxy),
             flag,
             &out_result,
             NULL,
@@ -548,10 +548,10 @@ int da_pre_one_key_login(da_proxy *proxy, int flag, char *result, int result_len
 }
 
 static int da_auth_dbus_prop_get_string(GDBusProxy *dbus_proxy, gchar *name, gchar **value) {
-    return da_dbus_prop_get_string(dbus_proxy, "com.deepin.daemon.Authenticate", name, value);
+    return da_dbus_prop_get_string(dbus_proxy, "com.lingmo.daemon.Authenticate", name, value);
 }
 static int da_auth_dbus_prop_get_int(GDBusProxy *dbus_proxy, gchar *name, gint *value) {
-    return da_dbus_prop_get_int(dbus_proxy, "com.deepin.daemon.Authenticate", name, value);
+    return da_dbus_prop_get_int(dbus_proxy, "com.lingmo.daemon.Authenticate", name, value);
 }
 
 int da_prop_get_support_encrypts(da_proxy *proxy, char *result, int result_len) {
@@ -561,8 +561,8 @@ int da_prop_get_support_encrypts(da_proxy *proxy, char *result, int result_len) 
     }
 
 #ifdef DBUS_PROPERTY_CACHE
-    const gchar *value = com_deepin_daemon_authenticate_get_support_encrypts(
-            (ComDeepinDaemonAuthenticate *)(proxy->authenticate_proxy));
+    const gchar *value = com_lingmo_daemon_authenticate_get_support_encrypts(
+            (ComLingmoDaemonAuthenticate *)(proxy->authenticate_proxy));
     g_strlcpy(result, value, result_len);
 #else
     gchar *value = NULL;
@@ -582,8 +582,8 @@ int da_prop_get_framework_state(da_proxy *proxy, int *result) {
     }
     gint value = 0;
 #ifdef DBUS_PROPERTY_CACHE
-    value = com_deepin_daemon_authenticate_get_framework_state(
-            (ComDeepinDaemonAuthenticate *)(proxy->authenticate_proxy));
+    value = com_lingmo_daemon_authenticate_get_framework_state(
+            (ComLingmoDaemonAuthenticate *)(proxy->authenticate_proxy));
 #else
     if (da_auth_dbus_prop_get_int(proxy->authenticate_proxy, "FrameworkState", &value)) {
         return -1;
@@ -600,8 +600,8 @@ int da_prop_get_supported_flags(da_proxy *proxy, int *result) {
     }
     gint value = 0;
 #ifdef DBUS_PROPERTY_CACHE
-    gint value = com_deepin_daemon_authenticate_get_supported_flags(
-            (ComDeepinDaemonAuthenticate *)(proxy->authenticate_proxy));
+    gint value = com_lingmo_daemon_authenticate_get_supported_flags(
+            (ComLingmoDaemonAuthenticate *)(proxy->authenticate_proxy));
 #else
     if (da_auth_dbus_prop_get_int(proxy->authenticate_proxy, "SupportedFlags", &value)) {
         return -1;
@@ -644,8 +644,8 @@ int da_session_set_token(da_proxy *proxy,
 
     GVariant *enc_token_variant = g_variant_new_from_bytes(G_VARIANT_TYPE_BYTESTRING, bytes, TRUE);
 
-    com_deepin_daemon_authenticate_session_call_set_token_sync(
-            (ComDeepinDaemonAuthenticateSession *)(proxy->session_proxy),
+    com_lingmo_daemon_authenticate_session_call_set_token_sync(
+            (ComLingmoDaemonAuthenticateSession *)(proxy->session_proxy),
             auth_type,
             enc_token_variant,
             NULL,
@@ -667,8 +667,8 @@ int da_session_end(da_proxy *proxy, int flag, int *out_failNum, da_error **err) 
         return -1;
     }
     GError *callError = NULL;
-    com_deepin_daemon_authenticate_session_call_end_sync(
-            (ComDeepinDaemonAuthenticateSession *)(proxy->session_proxy),
+    com_lingmo_daemon_authenticate_session_call_end_sync(
+            (ComLingmoDaemonAuthenticateSession *)(proxy->session_proxy),
             flag,
             out_failNum,
             NULL,
@@ -688,8 +688,8 @@ int da_session_get_result(da_proxy *proxy, int *result, da_error **err) {
         return -1;
     }
     GError *callError = NULL;
-    com_deepin_daemon_authenticate_session_call_get_result_sync(
-            (ComDeepinDaemonAuthenticateSession *)(proxy->session_proxy),
+    com_lingmo_daemon_authenticate_session_call_get_result_sync(
+            (ComLingmoDaemonAuthenticateSession *)(proxy->session_proxy),
             result,
             NULL,
             &callError);
@@ -705,8 +705,8 @@ int da_session_privileges_disable(da_proxy *proxy, da_error **err) {
     g_return_val_if_fail(has_valid_session_proxy(proxy), -1);
 
     GError *callError = NULL;
-    com_deepin_daemon_authenticate_session_call_privileges_disable_sync(
-            (ComDeepinDaemonAuthenticateSession *)(proxy->session_proxy),
+    com_lingmo_daemon_authenticate_session_call_privileges_disable_sync(
+            (ComLingmoDaemonAuthenticateSession *)(proxy->session_proxy),
             NULL,
             &callError);
     if (callError != NULL) {
@@ -727,8 +727,8 @@ int da_session_privileges_enable(da_proxy *proxy,
         return -1;
     }
     GError *callError = NULL;
-    com_deepin_daemon_authenticate_session_call_privileges_enable_sync(
-            (ComDeepinDaemonAuthenticateSession *)(proxy->session_proxy),
+    com_lingmo_daemon_authenticate_session_call_privileges_enable_sync(
+            (ComLingmoDaemonAuthenticateSession *)(proxy->session_proxy),
             master_path,
             (gboolean *)enabled,
             NULL,
@@ -745,8 +745,8 @@ int da_session_set_quit_flag(da_proxy *proxy, int method, da_error **err) {
     g_return_val_if_fail(has_valid_session_proxy(proxy), -1);
 
     GError *callError = NULL;
-    com_deepin_daemon_authenticate_session_call_set_quit_flag_sync(
-            (ComDeepinDaemonAuthenticateSession *)(proxy->session_proxy),
+    com_lingmo_daemon_authenticate_session_call_set_quit_flag_sync(
+            (ComLingmoDaemonAuthenticateSession *)(proxy->session_proxy),
             method,
             NULL,
             &callError);
@@ -765,8 +765,8 @@ int da_session_start(da_proxy *proxy, int flag, int timeout, int *failNum, da_er
         return -1;
     }
     GError *callError = NULL;
-    com_deepin_daemon_authenticate_session_call_start_sync(
-            (ComDeepinDaemonAuthenticateSession *)(proxy->session_proxy),
+    com_lingmo_daemon_authenticate_session_call_start_sync(
+            (ComLingmoDaemonAuthenticateSession *)(proxy->session_proxy),
             flag,
             timeout,
             failNum,
@@ -781,18 +781,18 @@ int da_session_start(da_proxy *proxy, int flag, int timeout, int *failNum, da_er
 }
 
 static int da_session_dbus_prop_get_string(GDBusProxy *dbus_proxy, gchar *name, gchar **value) {
-    return da_dbus_prop_get_string(dbus_proxy, "com.deepin.daemon.Authenticate.Session", name, value);
+    return da_dbus_prop_get_string(dbus_proxy, "com.lingmo.daemon.Authenticate.Session", name, value);
 }
 static int da_session_dbus_prop_get_int(GDBusProxy *dbus_proxy, gchar *name, gint *value) {
-    return da_dbus_prop_get_int(dbus_proxy, "com.deepin.daemon.Authenticate.Session", name, value);
+    return da_dbus_prop_get_int(dbus_proxy, "com.lingmo.daemon.Authenticate.Session", name, value);
 }
 static int da_session_dbus_prop_get_bool(GDBusProxy *dbus_proxy, gchar *name, gboolean *value) {
-    return da_dbus_prop_get_bool(dbus_proxy, "com.deepin.daemon.Authenticate.Session", name, value);
+    return da_dbus_prop_get_bool(dbus_proxy, "com.lingmo.daemon.Authenticate.Session", name, value);
 }
 static int da_session_dbus_prop_get_gvariant(GDBusProxy *dbus_proxy,
                                              gchar *name,
                                              GVariant **value) {
-    return da_dbus_prop_get_gvariant(dbus_proxy, "com.deepin.daemon.Authenticate.Session", name, value);
+    return da_dbus_prop_get_gvariant(dbus_proxy, "com.lingmo.daemon.Authenticate.Session", name, value);
 }
 
 int da_prop_get_is_MFA(da_proxy *proxy, bool *result) {
@@ -802,8 +802,8 @@ int da_prop_get_is_MFA(da_proxy *proxy, bool *result) {
     }
     gboolean value = FALSE;
 #ifdef DBUS_PROPERTY_CACHE
-    value = com_deepin_daemon_authenticate_session_get_is_mfa(
-            (ComDeepinDaemonAuthenticateSession *)(proxy->session_proxy));
+    value = com_lingmo_daemon_authenticate_session_get_is_mfa(
+            (ComLingmoDaemonAuthenticateSession *)(proxy->session_proxy));
 #else
     if (da_session_dbus_prop_get_bool(proxy->session_proxy, "IsMFA", &value)) {
         return -1;
@@ -818,8 +818,8 @@ int da_prop_get_prompt(da_proxy *proxy, char *result, int result_len) {
         return -1;
     }
 #ifdef DBUS_PROPERTY_CACHE
-    const gchar *ret = com_deepin_daemon_authenticate_session_get_prompt(
-            (ComDeepinDaemonAuthenticateSession *)(proxy->session_proxy));
+    const gchar *ret = com_lingmo_daemon_authenticate_session_get_prompt(
+            (ComLingmoDaemonAuthenticateSession *)(proxy->session_proxy));
     g_strlcpy(result, ret, result_len);
 #else
     gchar *value = NULL;
@@ -838,8 +838,8 @@ int da_prop_get_factors_info(da_proxy *proxy, da_factor_info **result, int *fact
     }
     GVariant *value = NULL;
 #ifdef DBUS_PROPERTY_CACHE
-    value = com_deepin_daemon_authenticate_session_dup_factors_info(
-            (ComDeepinDaemonAuthenticateSession *)(proxy->session_proxy));
+    value = com_lingmo_daemon_authenticate_session_dup_factors_info(
+            (ComLingmoDaemonAuthenticateSession *)(proxy->session_proxy));
 #else
     if (da_session_dbus_prop_get_gvariant(proxy->session_proxy, "FactorsInfo", &value)) {
         return -1;
@@ -879,8 +879,8 @@ int da_prop_get_username(da_proxy *proxy, char *result, int result_len) {
         return -1;
     }
 #ifdef DBUS_PROPERTY_CACHE
-    const gchar *ret = com_deepin_daemon_authenticate_session_get_username(
-            (ComDeepinDaemonAuthenticateSession *)(proxy->session_proxy));
+    const gchar *ret = com_lingmo_daemon_authenticate_session_get_username(
+            (ComLingmoDaemonAuthenticateSession *)(proxy->session_proxy));
     g_strlcpy(result, ret, result_len);
 #else
     gchar *value = NULL;
@@ -899,8 +899,8 @@ int da_prop_get_PIN_len(da_proxy *proxy, int *result) {
     }
     gint value = 0;
 #ifdef DBUS_PROPERTY_CACHE
-    value = com_deepin_daemon_authenticate_session_get_pinlen(
-            (ComDeepinDaemonAuthenticateSession *)(proxy->session_proxy));
+    value = com_lingmo_daemon_authenticate_session_get_pinlen(
+            (ComLingmoDaemonAuthenticateSession *)(proxy->session_proxy));
 #else
     if (da_session_dbus_prop_get_int(proxy->session_proxy, "PINLen", &value)) {
         return -1;
@@ -915,8 +915,8 @@ int da_prop_get_prg_path(da_proxy *proxy, char *result, int result_len) {
         return -1;
     }
 #ifdef DBUS_PROPERTY_CACHE
-    const gchar *ret = com_deepin_daemon_authenticate_session_get_prg_path(
-            (ComDeepinDaemonAuthenticateSession *)(proxy->session_proxy));
+    const gchar *ret = com_lingmo_daemon_authenticate_session_get_prg_path(
+            (ComLingmoDaemonAuthenticateSession *)(proxy->session_proxy));
     g_strlcpy(result, ret, result_len);
 #else
     gchar *value = NULL;

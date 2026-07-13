@@ -17,7 +17,7 @@ import (
 )
 
 const (
-	dbusServiceName = "com.deepin.daemon.Authenticate"
+	dbusServiceName = "com.lingmo.daemon.Authenticate"
 )
 
 var logger = log.NewLogger("daemon/deepin-authenticate")

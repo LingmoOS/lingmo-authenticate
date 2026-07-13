@@ -3,12 +3,12 @@
 
 #include "common.h"
 
-#define DBUS_SERVICE "com.deepin.daemon.Authenticate"
-#define DBUS_PATH "/com/deepin/daemon/Authenticate"
+#define DBUS_SERVICE "com.lingmo.daemon.Authenticate"
+#define DBUS_PATH "/com/lingmo/daemon/Authenticate"
 #define DBUS_INTERFACE "com.lingmo.daemon.Authenticate"
 #define DBUS_AUTHCTRL_INTERFACE "com.lingmo.daemon.Authenticate.Session"
-#define FINGER_DBUS_PATH "/com/deepin/daemon/Authenticate/Fingerprint"
-#define FINGER_DBUS_INTERFACE "com.deepin.daemon.Authenticate.Fingerprint"
+#define FINGER_DBUS_PATH "/com/lingmo/daemon/Authenticate/Fingerprint"
+#define FINGER_DBUS_INTERFACE "com.lingmo.daemon.Authenticate.Fingerprint"
 
 #define AUTH_SIGNAL_STATUS "Status"
 #define FINGER_SIGNAL_VERIFYSTATUS "VerifyStatus"

@@ -1,7 +1,7 @@
 #pragma once
 
-#include "com.deepin.daemon.Authenticate.h"
-#include "com.deepin.daemon.Authenticate.Session.h"
+#include "com.lingmo.daemon.Authenticate.h"
+#include "com.lingmo.daemon.Authenticate.Session.h"
 #include "../encrypt/aes.h"
 #include "../encrypt/rsa.h"
 #include "auth.h"

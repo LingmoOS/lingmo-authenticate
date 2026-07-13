@@ -9,7 +9,7 @@
 #  include "config.h"
 #endif
 
-#include "com.deepin.daemon.Authenticate.h"
+#include "com.lingmo.daemon.Authenticate.h"
 
 #include <string.h>
 #ifdef G_OS_UNIX
@@ -155,16 +155,16 @@ _g_value_equal (const GValue *a, const GValue *b)
  */
 
 /**
- * SECTION:ComDeepinDaemonAuthenticate
- * @title: ComDeepinDaemonAuthenticate
+ * SECTION:ComLingmoDaemonAuthenticate
+ * @title: ComLingmoDaemonAuthenticate
  * @short_description: Generated C code for the com.lingmo.daemon.Authenticate D-Bus interface
  *
- * This section contains code for working with the <link linkend="gdbus-interface-com-deepin-daemon-Authenticate.top_of_page">com.lingmo.daemon.Authenticate</link> D-Bus interface in C.
+ * This section contains code for working with the <link linkend="gdbus-interface-com-lingmo-daemon-Authenticate.top_of_page">com.lingmo.daemon.Authenticate</link> D-Bus interface in C.
  */
 
-/* ---- Introspection data for com.deepin.daemon.Authenticate ---- */
+/* ---- Introspection data for com.lingmo.daemon.Authenticate ---- */
 
-static const _ExtendedGDBusArgInfo _com_deepin_daemon_authenticate_method_info_authenticate_IN_ARG_username =
+static const _ExtendedGDBusArgInfo _com_lingmo_daemon_authenticate_method_info_authenticate_IN_ARG_username =
 {
   {
     -1,
@@ -175,7 +175,7 @@ static const _ExtendedGDBusArgInfo _com_deepin_daemon_authenticate_method_info_a
   FALSE
 };
 
-static const _ExtendedGDBusArgInfo _com_deepin_daemon_authenticate_method_info_authenticate_IN_ARG_authFlags =
+static const _ExtendedGDBusArgInfo _com_lingmo_daemon_authenticate_method_info_authenticate_IN_ARG_authFlags =
 {
   {
     -1,
@@ -186,7 +186,7 @@ static const _ExtendedGDBusArgInfo _com_deepin_daemon_authenticate_method_info_a
   FALSE
 };
 
-static const _ExtendedGDBusArgInfo _com_deepin_daemon_authenticate_method_info_authenticate_IN_ARG_appType =
+static const _ExtendedGDBusArgInfo _com_lingmo_daemon_authenticate_method_info_authenticate_IN_ARG_appType =
 {
   {
     -1,
@@ -197,15 +197,15 @@ static const _ExtendedGDBusArgInfo _com_deepin_daemon_authenticate_method_info_a
   FALSE
 };
 
-static const GDBusArgInfo * const _com_deepin_daemon_authenticate_method_info_authenticate_IN_ARG_pointers[] =
+static const GDBusArgInfo * const _com_lingmo_daemon_authenticate_method_info_authenticate_IN_ARG_pointers[] =
 {
-  &_com_deepin_daemon_authenticate_method_info_authenticate_IN_ARG_username.parent_struct,
-  &_com_deepin_daemon_authenticate_method_info_authenticate_IN_ARG_authFlags.parent_struct,
-  &_com_deepin_daemon_authenticate_method_info_authenticate_IN_ARG_appType.parent_struct,
+  &_com_lingmo_daemon_authenticate_method_info_authenticate_IN_ARG_username.parent_struct,
+  &_com_lingmo_daemon_authenticate_method_info_authenticate_IN_ARG_authFlags.parent_struct,
+  &_com_lingmo_daemon_authenticate_method_info_authenticate_IN_ARG_appType.parent_struct,
   NULL
 };
 
-static const _ExtendedGDBusArgInfo _com_deepin_daemon_authenticate_method_info_authenticate_OUT_ARG_path =
+static const _ExtendedGDBusArgInfo _com_lingmo_daemon_authenticate_method_info_authenticate_OUT_ARG_path =
 {
   {
     -1,
@@ -216,26 +216,26 @@ static const _ExtendedGDBusArgInfo _com_deepin_daemon_authenticate_method_info_a
   FALSE
 };
 
-static const GDBusArgInfo * const _com_deepin_daemon_authenticate_method_info_authenticate_OUT_ARG_pointers[] =
+static const GDBusArgInfo * const _com_lingmo_daemon_authenticate_method_info_authenticate_OUT_ARG_pointers[] =
 {
-  &_com_deepin_daemon_authenticate_method_info_authenticate_OUT_ARG_path.parent_struct,
+  &_com_lingmo_daemon_authenticate_method_info_authenticate_OUT_ARG_path.parent_struct,
   NULL
 };
 
-static const _ExtendedGDBusMethodInfo _com_deepin_daemon_authenticate_method_info_authenticate =
+static const _ExtendedGDBusMethodInfo _com_lingmo_daemon_authenticate_method_info_authenticate =
 {
   {
     -1,
     (gchar *) "Authenticate",
-    (GDBusArgInfo **) &_com_deepin_daemon_authenticate_method_info_authenticate_IN_ARG_pointers,
-    (GDBusArgInfo **) &_com_deepin_daemon_authenticate_method_info_authenticate_OUT_ARG_pointers,
+    (GDBusArgInfo **) &_com_lingmo_daemon_authenticate_method_info_authenticate_IN_ARG_pointers,
+    (GDBusArgInfo **) &_com_lingmo_daemon_authenticate_method_info_authenticate_OUT_ARG_pointers,
     NULL
   },
   "handle-authenticate",
   FALSE
 };
 
-static const _ExtendedGDBusArgInfo _com_deepin_daemon_authenticate_method_info_get_limits_IN_ARG_username =
+static const _ExtendedGDBusArgInfo _com_lingmo_daemon_authenticate_method_info_get_limits_IN_ARG_username =
 {
   {
     -1,
@@ -246,13 +246,13 @@ static const _ExtendedGDBusArgInfo _com_deepin_daemon_authenticate_method_info_g
   FALSE
 };
 
-static const GDBusArgInfo * const _com_deepin_daemon_authenticate_method_info_get_limits_IN_ARG_pointers[] =
+static const GDBusArgInfo * const _com_lingmo_daemon_authenticate_method_info_get_limits_IN_ARG_pointers[] =
 {
-  &_com_deepin_daemon_authenticate_method_info_get_limits_IN_ARG_username.parent_struct,
+  &_com_lingmo_daemon_authenticate_method_info_get_limits_IN_ARG_username.parent_struct,
   NULL
 };
 
-static const _ExtendedGDBusArgInfo _com_deepin_daemon_authenticate_method_info_get_limits_OUT_ARG_limits =
+static const _ExtendedGDBusArgInfo _com_lingmo_daemon_authenticate_method_info_get_limits_OUT_ARG_limits =
 {
   {
     -1,
@@ -263,26 +263,26 @@ static const _ExtendedGDBusArgInfo _com_deepin_daemon_authenticate_method_info_g
   FALSE
 };
 
-static const GDBusArgInfo * const _com_deepin_daemon_authenticate_method_info_get_limits_OUT_ARG_pointers[] =
+static const GDBusArgInfo * const _com_lingmo_daemon_authenticate_method_info_get_limits_OUT_ARG_pointers[] =
 {
-  &_com_deepin_daemon_authenticate_method_info_get_limits_OUT_ARG_limits.parent_struct,
+  &_com_lingmo_daemon_authenticate_method_info_get_limits_OUT_ARG_limits.parent_struct,
   NULL
 };
 
-static const _ExtendedGDBusMethodInfo _com_deepin_daemon_authenticate_method_info_get_limits =
+static const _ExtendedGDBusMethodInfo _com_lingmo_daemon_authenticate_method_info_get_limits =
 {
   {
     -1,
     (gchar *) "GetLimits",
-    (GDBusArgInfo **) &_com_deepin_daemon_authenticate_method_info_get_limits_IN_ARG_pointers,
-    (GDBusArgInfo **) &_com_deepin_daemon_authenticate_method_info_get_limits_OUT_ARG_pointers,
+    (GDBusArgInfo **) &_com_lingmo_daemon_authenticate_method_info_get_limits_IN_ARG_pointers,
+    (GDBusArgInfo **) &_com_lingmo_daemon_authenticate_method_info_get_limits_OUT_ARG_pointers,
     NULL
   },
   "handle-get-limits",
   FALSE
 };
 
-static const _ExtendedGDBusArgInfo _com_deepin_daemon_authenticate_method_info_pre_one_key_login_IN_ARG_flag =
+static const _ExtendedGDBusArgInfo _com_lingmo_daemon_authenticate_method_info_pre_one_key_login_IN_ARG_flag =
 {
   {
     -1,
@@ -293,13 +293,13 @@ static const _ExtendedGDBusArgInfo _com_deepin_daemon_authenticate_method_info_p
   FALSE
 };
 
-static const GDBusArgInfo * const _com_deepin_daemon_authenticate_method_info_pre_one_key_login_IN_ARG_pointers[] =
+static const GDBusArgInfo * const _com_lingmo_daemon_authenticate_method_info_pre_one_key_login_IN_ARG_pointers[] =
 {
-  &_com_deepin_daemon_authenticate_method_info_pre_one_key_login_IN_ARG_flag.parent_struct,
+  &_com_lingmo_daemon_authenticate_method_info_pre_one_key_login_IN_ARG_flag.parent_struct,
   NULL
 };
 
-static const _ExtendedGDBusArgInfo _com_deepin_daemon_authenticate_method_info_pre_one_key_login_OUT_ARG_result =
+static const _ExtendedGDBusArgInfo _com_lingmo_daemon_authenticate_method_info_pre_one_key_login_OUT_ARG_result =
 {
   {
     -1,
@@ -310,34 +310,34 @@ static const _ExtendedGDBusArgInfo _com_deepin_daemon_authenticate_method_info_p
   FALSE
 };
 
-static const GDBusArgInfo * const _com_deepin_daemon_authenticate_method_info_pre_one_key_login_OUT_ARG_pointers[] =
+static const GDBusArgInfo * const _com_lingmo_daemon_authenticate_method_info_pre_one_key_login_OUT_ARG_pointers[] =
 {
-  &_com_deepin_daemon_authenticate_method_info_pre_one_key_login_OUT_ARG_result.parent_struct,
+  &_com_lingmo_daemon_authenticate_method_info_pre_one_key_login_OUT_ARG_result.parent_struct,
   NULL
 };
 
-static const _ExtendedGDBusMethodInfo _com_deepin_daemon_authenticate_method_info_pre_one_key_login =
+static const _ExtendedGDBusMethodInfo _com_lingmo_daemon_authenticate_method_info_pre_one_key_login =
 {
   {
     -1,
     (gchar *) "PreOneKeyLogin",
-    (GDBusArgInfo **) &_com_deepin_daemon_authenticate_method_info_pre_one_key_login_IN_ARG_pointers,
-    (GDBusArgInfo **) &_com_deepin_daemon_authenticate_method_info_pre_one_key_login_OUT_ARG_pointers,
+    (GDBusArgInfo **) &_com_lingmo_daemon_authenticate_method_info_pre_one_key_login_IN_ARG_pointers,
+    (GDBusArgInfo **) &_com_lingmo_daemon_authenticate_method_info_pre_one_key_login_OUT_ARG_pointers,
     NULL
   },
   "handle-pre-one-key-login",
   FALSE
 };
 
-static const GDBusMethodInfo * const _com_deepin_daemon_authenticate_method_info_pointers[] =
+static const GDBusMethodInfo * const _com_lingmo_daemon_authenticate_method_info_pointers[] =
 {
-  &_com_deepin_daemon_authenticate_method_info_authenticate.parent_struct,
-  &_com_deepin_daemon_authenticate_method_info_get_limits.parent_struct,
-  &_com_deepin_daemon_authenticate_method_info_pre_one_key_login.parent_struct,
+  &_com_lingmo_daemon_authenticate_method_info_authenticate.parent_struct,
+  &_com_lingmo_daemon_authenticate_method_info_get_limits.parent_struct,
+  &_com_lingmo_daemon_authenticate_method_info_pre_one_key_login.parent_struct,
   NULL
 };
 
-static const _ExtendedGDBusArgInfo _com_deepin_daemon_authenticate_signal_info_limit_updated_ARG_username =
+static const _ExtendedGDBusArgInfo _com_lingmo_daemon_authenticate_signal_info_limit_updated_ARG_username =
 {
   {
     -1,
@@ -348,30 +348,30 @@ static const _ExtendedGDBusArgInfo _com_deepin_daemon_authenticate_signal_info_l
   FALSE
 };
 
-static const GDBusArgInfo * const _com_deepin_daemon_authenticate_signal_info_limit_updated_ARG_pointers[] =
+static const GDBusArgInfo * const _com_lingmo_daemon_authenticate_signal_info_limit_updated_ARG_pointers[] =
 {
-  &_com_deepin_daemon_authenticate_signal_info_limit_updated_ARG_username.parent_struct,
+  &_com_lingmo_daemon_authenticate_signal_info_limit_updated_ARG_username.parent_struct,
   NULL
 };
 
-static const _ExtendedGDBusSignalInfo _com_deepin_daemon_authenticate_signal_info_limit_updated =
+static const _ExtendedGDBusSignalInfo _com_lingmo_daemon_authenticate_signal_info_limit_updated =
 {
   {
     -1,
     (gchar *) "LimitUpdated",
-    (GDBusArgInfo **) &_com_deepin_daemon_authenticate_signal_info_limit_updated_ARG_pointers,
+    (GDBusArgInfo **) &_com_lingmo_daemon_authenticate_signal_info_limit_updated_ARG_pointers,
     NULL
   },
   "limit-updated"
 };
 
-static const GDBusSignalInfo * const _com_deepin_daemon_authenticate_signal_info_pointers[] =
+static const GDBusSignalInfo * const _com_lingmo_daemon_authenticate_signal_info_pointers[] =
 {
-  &_com_deepin_daemon_authenticate_signal_info_limit_updated.parent_struct,
+  &_com_lingmo_daemon_authenticate_signal_info_limit_updated.parent_struct,
   NULL
 };
 
-static const _ExtendedGDBusPropertyInfo _com_deepin_daemon_authenticate_property_info_support_encrypts =
+static const _ExtendedGDBusPropertyInfo _com_lingmo_daemon_authenticate_property_info_support_encrypts =
 {
   {
     -1,
@@ -384,7 +384,7 @@ static const _ExtendedGDBusPropertyInfo _com_deepin_daemon_authenticate_property
   FALSE
 };
 
-static const _ExtendedGDBusPropertyInfo _com_deepin_daemon_authenticate_property_info_framework_state =
+static const _ExtendedGDBusPropertyInfo _com_lingmo_daemon_authenticate_property_info_framework_state =
 {
   {
     -1,
@@ -397,7 +397,7 @@ static const _ExtendedGDBusPropertyInfo _com_deepin_daemon_authenticate_property
   FALSE
 };
 
-static const _ExtendedGDBusPropertyInfo _com_deepin_daemon_authenticate_property_info_supported_flags =
+static const _ExtendedGDBusPropertyInfo _com_lingmo_daemon_authenticate_property_info_supported_flags =
 {
   {
     -1,
@@ -410,22 +410,22 @@ static const _ExtendedGDBusPropertyInfo _com_deepin_daemon_authenticate_property
   FALSE
 };
 
-static const GDBusPropertyInfo * const _com_deepin_daemon_authenticate_property_info_pointers[] =
+static const GDBusPropertyInfo * const _com_lingmo_daemon_authenticate_property_info_pointers[] =
 {
-  &_com_deepin_daemon_authenticate_property_info_support_encrypts.parent_struct,
-  &_com_deepin_daemon_authenticate_property_info_framework_state.parent_struct,
-  &_com_deepin_daemon_authenticate_property_info_supported_flags.parent_struct,
+  &_com_lingmo_daemon_authenticate_property_info_support_encrypts.parent_struct,
+  &_com_lingmo_daemon_authenticate_property_info_framework_state.parent_struct,
+  &_com_lingmo_daemon_authenticate_property_info_supported_flags.parent_struct,
   NULL
 };
 
-static const _ExtendedGDBusInterfaceInfo _com_deepin_daemon_authenticate_interface_info =
+static const _ExtendedGDBusInterfaceInfo _com_lingmo_daemon_authenticate_interface_info =
 {
   {
     -1,
-    (gchar *) "com.deepin.daemon.Authenticate",
-    (GDBusMethodInfo **) &_com_deepin_daemon_authenticate_method_info_pointers,
-    (GDBusSignalInfo **) &_com_deepin_daemon_authenticate_signal_info_pointers,
-    (GDBusPropertyInfo **) &_com_deepin_daemon_authenticate_property_info_pointers,
+    (gchar *) "com.lingmo.daemon.Authenticate",
+    (GDBusMethodInfo **) &_com_lingmo_daemon_authenticate_method_info_pointers,
+    (GDBusSignalInfo **) &_com_lingmo_daemon_authenticate_signal_info_pointers,
+    (GDBusPropertyInfo **) &_com_lingmo_daemon_authenticate_property_info_pointers,
     NULL
   },
   "com-deepin-daemon-authenticate",
@@ -433,30 +433,30 @@ static const _ExtendedGDBusInterfaceInfo _com_deepin_daemon_authenticate_interfa
 
 
 /**
- * com_deepin_daemon_authenticate_interface_info:
+ * com_lingmo_daemon_authenticate_interface_info:
  *
- * Gets a machine-readable description of the <link linkend="gdbus-interface-com-deepin-daemon-Authenticate.top_of_page">com.lingmo.daemon.Authenticate</link> D-Bus interface.
+ * Gets a machine-readable description of the <link linkend="gdbus-interface-com-lingmo-daemon-Authenticate.top_of_page">com.lingmo.daemon.Authenticate</link> D-Bus interface.
  *
  * Returns: (transfer none): A #GDBusInterfaceInfo. Do not free.
  */
 GDBusInterfaceInfo *
-com_deepin_daemon_authenticate_interface_info (void)
+com_lingmo_daemon_authenticate_interface_info (void)
 {
-  return (GDBusInterfaceInfo *) &_com_deepin_daemon_authenticate_interface_info.parent_struct;
+  return (GDBusInterfaceInfo *) &_com_lingmo_daemon_authenticate_interface_info.parent_struct;
 }
 
 /**
- * com_deepin_daemon_authenticate_override_properties:
+ * com_lingmo_daemon_authenticate_override_properties:
  * @klass: The class structure for a #GObject derived class.
  * @property_id_begin: The property id to assign to the first overridden property.
  *
- * Overrides all #GObject properties in the #ComDeepinDaemonAuthenticate interface for a concrete class.
+ * Overrides all #GObject properties in the #ComLingmoDaemonAuthenticate interface for a concrete class.
  * The properties are overridden in the order they are defined.
  *
  * Returns: The last property id.
  */
 guint
-com_deepin_daemon_authenticate_override_properties (GObjectClass *klass, guint property_id_begin)
+com_lingmo_daemon_authenticate_override_properties (GObjectClass *klass, guint property_id_begin)
 {
   g_object_class_override_property (klass, property_id_begin++, "support-encrypts");
   g_object_class_override_property (klass, property_id_begin++, "framework-state");
@@ -467,50 +467,50 @@ com_deepin_daemon_authenticate_override_properties (GObjectClass *klass, guint p
 
 
 /**
- * ComDeepinDaemonAuthenticate:
+ * ComLingmoDaemonAuthenticate:
  *
- * Abstract interface type for the D-Bus interface <link linkend="gdbus-interface-com-deepin-daemon-Authenticate.top_of_page">com.lingmo.daemon.Authenticate</link>.
+ * Abstract interface type for the D-Bus interface <link linkend="gdbus-interface-com-lingmo-daemon-Authenticate.top_of_page">com.lingmo.daemon.Authenticate</link>.
  */
 
 /**
- * ComDeepinDaemonAuthenticateIface:
+ * ComLingmoDaemonAuthenticateIface:
  * @parent_iface: The parent interface.
- * @handle_authenticate: Handler for the #ComDeepinDaemonAuthenticate::handle-authenticate signal.
- * @handle_get_limits: Handler for the #ComDeepinDaemonAuthenticate::handle-get-limits signal.
- * @handle_pre_one_key_login: Handler for the #ComDeepinDaemonAuthenticate::handle-pre-one-key-login signal.
- * @get_framework_state: Getter for the #ComDeepinDaemonAuthenticate:framework-state property.
- * @get_support_encrypts: Getter for the #ComDeepinDaemonAuthenticate:support-encrypts property.
- * @get_supported_flags: Getter for the #ComDeepinDaemonAuthenticate:supported-flags property.
- * @limit_updated: Handler for the #ComDeepinDaemonAuthenticate::limit-updated signal.
+ * @handle_authenticate: Handler for the #ComLingmoDaemonAuthenticate::handle-authenticate signal.
+ * @handle_get_limits: Handler for the #ComLingmoDaemonAuthenticate::handle-get-limits signal.
+ * @handle_pre_one_key_login: Handler for the #ComLingmoDaemonAuthenticate::handle-pre-one-key-login signal.
+ * @get_framework_state: Getter for the #ComLingmoDaemonAuthenticate:framework-state property.
+ * @get_support_encrypts: Getter for the #ComLingmoDaemonAuthenticate:support-encrypts property.
+ * @get_supported_flags: Getter for the #ComLingmoDaemonAuthenticate:supported-flags property.
+ * @limit_updated: Handler for the #ComLingmoDaemonAuthenticate::limit-updated signal.
  *
- * Virtual table for the D-Bus interface <link linkend="gdbus-interface-com-deepin-daemon-Authenticate.top_of_page">com.lingmo.daemon.Authenticate</link>.
+ * Virtual table for the D-Bus interface <link linkend="gdbus-interface-com-lingmo-daemon-Authenticate.top_of_page">com.lingmo.daemon.Authenticate</link>.
  */
 
-typedef ComDeepinDaemonAuthenticateIface ComDeepinDaemonAuthenticateInterface;
-G_DEFINE_INTERFACE (ComDeepinDaemonAuthenticate, com_deepin_daemon_authenticate, G_TYPE_OBJECT)
+typedef ComLingmoDaemonAuthenticateIface ComLingmoDaemonAuthenticateInterface;
+G_DEFINE_INTERFACE (ComLingmoDaemonAuthenticate, com_lingmo_daemon_authenticate, G_TYPE_OBJECT)
 
 static void
-com_deepin_daemon_authenticate_default_init (ComDeepinDaemonAuthenticateIface *iface)
+com_lingmo_daemon_authenticate_default_init (ComLingmoDaemonAuthenticateIface *iface)
 {
   /* GObject signals for incoming D-Bus method calls: */
   /**
-   * ComDeepinDaemonAuthenticate::handle-authenticate:
-   * @object: A #ComDeepinDaemonAuthenticate.
+   * ComLingmoDaemonAuthenticate::handle-authenticate:
+   * @object: A #ComLingmoDaemonAuthenticate.
    * @invocation: A #GDBusMethodInvocation.
    * @arg_username: Argument passed by remote caller.
    * @arg_authFlags: Argument passed by remote caller.
    * @arg_appType: Argument passed by remote caller.
    *
-   * Signal emitted when a remote caller is invoking the <link linkend="gdbus-method-com-deepin-daemon-Authenticate.Authenticate">Authenticate()</link> D-Bus method.
+   * Signal emitted when a remote caller is invoking the <link linkend="gdbus-method-com-lingmo-daemon-Authenticate.Authenticate">Authenticate()</link> D-Bus method.
    *
-   * If a signal handler returns %TRUE, it means the signal handler will handle the invocation (e.g. take a reference to @invocation and eventually call com_deepin_daemon_authenticate_complete_authenticate() or e.g. g_dbus_method_invocation_return_error() on it) and no order signal handlers will run. If no signal handler handles the invocation, the %G_DBUS_ERROR_UNKNOWN_METHOD error is returned.
+   * If a signal handler returns %TRUE, it means the signal handler will handle the invocation (e.g. take a reference to @invocation and eventually call com_lingmo_daemon_authenticate_complete_authenticate() or e.g. g_dbus_method_invocation_return_error() on it) and no order signal handlers will run. If no signal handler handles the invocation, the %G_DBUS_ERROR_UNKNOWN_METHOD error is returned.
    *
    * Returns: %TRUE if the invocation was handled, %FALSE to let other signal handlers run.
    */
   g_signal_new ("handle-authenticate",
     G_TYPE_FROM_INTERFACE (iface),
     G_SIGNAL_RUN_LAST,
-    G_STRUCT_OFFSET (ComDeepinDaemonAuthenticateIface, handle_authenticate),
+    G_STRUCT_OFFSET (ComLingmoDaemonAuthenticateIface, handle_authenticate),
     g_signal_accumulator_true_handled,
     NULL,
     g_cclosure_marshal_generic,
@@ -519,21 +519,21 @@ com_deepin_daemon_authenticate_default_init (ComDeepinDaemonAuthenticateIface *i
     G_TYPE_DBUS_METHOD_INVOCATION, G_TYPE_STRING, G_TYPE_INT, G_TYPE_INT);
 
   /**
-   * ComDeepinDaemonAuthenticate::handle-get-limits:
-   * @object: A #ComDeepinDaemonAuthenticate.
+   * ComLingmoDaemonAuthenticate::handle-get-limits:
+   * @object: A #ComLingmoDaemonAuthenticate.
    * @invocation: A #GDBusMethodInvocation.
    * @arg_username: Argument passed by remote caller.
    *
-   * Signal emitted when a remote caller is invoking the <link linkend="gdbus-method-com-deepin-daemon-Authenticate.GetLimits">GetLimits()</link> D-Bus method.
+   * Signal emitted when a remote caller is invoking the <link linkend="gdbus-method-com-lingmo-daemon-Authenticate.GetLimits">GetLimits()</link> D-Bus method.
    *
-   * If a signal handler returns %TRUE, it means the signal handler will handle the invocation (e.g. take a reference to @invocation and eventually call com_deepin_daemon_authenticate_complete_get_limits() or e.g. g_dbus_method_invocation_return_error() on it) and no order signal handlers will run. If no signal handler handles the invocation, the %G_DBUS_ERROR_UNKNOWN_METHOD error is returned.
+   * If a signal handler returns %TRUE, it means the signal handler will handle the invocation (e.g. take a reference to @invocation and eventually call com_lingmo_daemon_authenticate_complete_get_limits() or e.g. g_dbus_method_invocation_return_error() on it) and no order signal handlers will run. If no signal handler handles the invocation, the %G_DBUS_ERROR_UNKNOWN_METHOD error is returned.
    *
    * Returns: %TRUE if the invocation was handled, %FALSE to let other signal handlers run.
    */
   g_signal_new ("handle-get-limits",
     G_TYPE_FROM_INTERFACE (iface),
     G_SIGNAL_RUN_LAST,
-    G_STRUCT_OFFSET (ComDeepinDaemonAuthenticateIface, handle_get_limits),
+    G_STRUCT_OFFSET (ComLingmoDaemonAuthenticateIface, handle_get_limits),
     g_signal_accumulator_true_handled,
     NULL,
     g_cclosure_marshal_generic,
@@ -542,21 +542,21 @@ com_deepin_daemon_authenticate_default_init (ComDeepinDaemonAuthenticateIface *i
     G_TYPE_DBUS_METHOD_INVOCATION, G_TYPE_STRING);
 
   /**
-   * ComDeepinDaemonAuthenticate::handle-pre-one-key-login:
-   * @object: A #ComDeepinDaemonAuthenticate.
+   * ComLingmoDaemonAuthenticate::handle-pre-one-key-login:
+   * @object: A #ComLingmoDaemonAuthenticate.
    * @invocation: A #GDBusMethodInvocation.
    * @arg_flag: Argument passed by remote caller.
    *
-   * Signal emitted when a remote caller is invoking the <link linkend="gdbus-method-com-deepin-daemon-Authenticate.PreOneKeyLogin">PreOneKeyLogin()</link> D-Bus method.
+   * Signal emitted when a remote caller is invoking the <link linkend="gdbus-method-com-lingmo-daemon-Authenticate.PreOneKeyLogin">PreOneKeyLogin()</link> D-Bus method.
    *
-   * If a signal handler returns %TRUE, it means the signal handler will handle the invocation (e.g. take a reference to @invocation and eventually call com_deepin_daemon_authenticate_complete_pre_one_key_login() or e.g. g_dbus_method_invocation_return_error() on it) and no order signal handlers will run. If no signal handler handles the invocation, the %G_DBUS_ERROR_UNKNOWN_METHOD error is returned.
+   * If a signal handler returns %TRUE, it means the signal handler will handle the invocation (e.g. take a reference to @invocation and eventually call com_lingmo_daemon_authenticate_complete_pre_one_key_login() or e.g. g_dbus_method_invocation_return_error() on it) and no order signal handlers will run. If no signal handler handles the invocation, the %G_DBUS_ERROR_UNKNOWN_METHOD error is returned.
    *
    * Returns: %TRUE if the invocation was handled, %FALSE to let other signal handlers run.
    */
   g_signal_new ("handle-pre-one-key-login",
     G_TYPE_FROM_INTERFACE (iface),
     G_SIGNAL_RUN_LAST,
-    G_STRUCT_OFFSET (ComDeepinDaemonAuthenticateIface, handle_pre_one_key_login),
+    G_STRUCT_OFFSET (ComLingmoDaemonAuthenticateIface, handle_pre_one_key_login),
     g_signal_accumulator_true_handled,
     NULL,
     g_cclosure_marshal_generic,
@@ -566,18 +566,18 @@ com_deepin_daemon_authenticate_default_init (ComDeepinDaemonAuthenticateIface *i
 
   /* GObject signals for received D-Bus signals: */
   /**
-   * ComDeepinDaemonAuthenticate::limit-updated:
-   * @object: A #ComDeepinDaemonAuthenticate.
+   * ComLingmoDaemonAuthenticate::limit-updated:
+   * @object: A #ComLingmoDaemonAuthenticate.
    * @arg_username: Argument.
    *
-   * On the client-side, this signal is emitted whenever the D-Bus signal <link linkend="gdbus-signal-com-deepin-daemon-Authenticate.LimitUpdated">"LimitUpdated"</link> is received.
+   * On the client-side, this signal is emitted whenever the D-Bus signal <link linkend="gdbus-signal-com-lingmo-daemon-Authenticate.LimitUpdated">"LimitUpdated"</link> is received.
    *
    * On the service-side, this signal can be used with e.g. g_signal_emit_by_name() to make the object emit the D-Bus signal.
    */
   g_signal_new ("limit-updated",
     G_TYPE_FROM_INTERFACE (iface),
     G_SIGNAL_RUN_LAST,
-    G_STRUCT_OFFSET (ComDeepinDaemonAuthenticateIface, limit_updated),
+    G_STRUCT_OFFSET (ComLingmoDaemonAuthenticateIface, limit_updated),
     NULL,
     NULL,
     g_cclosure_marshal_generic,
@@ -586,27 +586,27 @@ com_deepin_daemon_authenticate_default_init (ComDeepinDaemonAuthenticateIface *i
 
   /* GObject properties for D-Bus properties: */
   /**
-   * ComDeepinDaemonAuthenticate:support-encrypts:
+   * ComLingmoDaemonAuthenticate:support-encrypts:
    *
-   * Represents the D-Bus property <link linkend="gdbus-property-com-deepin-daemon-Authenticate.SupportEncrypts">"SupportEncrypts"</link>.
+   * Represents the D-Bus property <link linkend="gdbus-property-com-lingmo-daemon-Authenticate.SupportEncrypts">"SupportEncrypts"</link>.
    *
    * Since the D-Bus property for this #GObject property is readable but not writable, it is meaningful to read from it on both the client- and service-side. It is only meaningful, however, to write to it on the service-side.
    */
   g_object_interface_install_property (iface,
     g_param_spec_string ("support-encrypts", "SupportEncrypts", "SupportEncrypts", NULL, G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS));
   /**
-   * ComDeepinDaemonAuthenticate:framework-state:
+   * ComLingmoDaemonAuthenticate:framework-state:
    *
-   * Represents the D-Bus property <link linkend="gdbus-property-com-deepin-daemon-Authenticate.FrameworkState">"FrameworkState"</link>.
+   * Represents the D-Bus property <link linkend="gdbus-property-com-lingmo-daemon-Authenticate.FrameworkState">"FrameworkState"</link>.
    *
    * Since the D-Bus property for this #GObject property is readable but not writable, it is meaningful to read from it on both the client- and service-side. It is only meaningful, however, to write to it on the service-side.
    */
   g_object_interface_install_property (iface,
     g_param_spec_int ("framework-state", "FrameworkState", "FrameworkState", G_MININT32, G_MAXINT32, 0, G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS));
   /**
-   * ComDeepinDaemonAuthenticate:supported-flags:
+   * ComLingmoDaemonAuthenticate:supported-flags:
    *
-   * Represents the D-Bus property <link linkend="gdbus-property-com-deepin-daemon-Authenticate.SupportedFlags">"SupportedFlags"</link>.
+   * Represents the D-Bus property <link linkend="gdbus-property-com-lingmo-daemon-Authenticate.SupportedFlags">"SupportedFlags"</link>.
    *
    * Since the D-Bus property for this #GObject property is readable but not writable, it is meaningful to read from it on both the client- and service-side. It is only meaningful, however, to write to it on the service-side.
    */
@@ -615,35 +615,35 @@ com_deepin_daemon_authenticate_default_init (ComDeepinDaemonAuthenticateIface *i
 }
 
 /**
- * com_deepin_daemon_authenticate_get_support_encrypts: (skip)
- * @object: A #ComDeepinDaemonAuthenticate.
+ * com_lingmo_daemon_authenticate_get_support_encrypts: (skip)
+ * @object: A #ComLingmoDaemonAuthenticate.
  *
- * Gets the value of the <link linkend="gdbus-property-com-deepin-daemon-Authenticate.SupportEncrypts">"SupportEncrypts"</link> D-Bus property.
+ * Gets the value of the <link linkend="gdbus-property-com-lingmo-daemon-Authenticate.SupportEncrypts">"SupportEncrypts"</link> D-Bus property.
  *
  * Since this D-Bus property is readable, it is meaningful to use this function on both the client- and service-side.
  *
- * <warning>The returned value is only valid until the property changes so on the client-side it is only safe to use this function on the thread where @object was constructed. Use com_deepin_daemon_authenticate_dup_support_encrypts() if on another thread.</warning>
+ * <warning>The returned value is only valid until the property changes so on the client-side it is only safe to use this function on the thread where @object was constructed. Use com_lingmo_daemon_authenticate_dup_support_encrypts() if on another thread.</warning>
  *
  * Returns: (transfer none): The property value or %NULL if the property is not set. Do not free the returned value, it belongs to @object.
  */
 const gchar *
-com_deepin_daemon_authenticate_get_support_encrypts (ComDeepinDaemonAuthenticate *object)
+com_lingmo_daemon_authenticate_get_support_encrypts (ComLingmoDaemonAuthenticate *object)
 {
-  return COM_DEEPIN_DAEMON_AUTHENTICATE_GET_IFACE (object)->get_support_encrypts (object);
+  return COM_LINGMO_DAEMON_AUTHENTICATE_GET_IFACE (object)->get_support_encrypts (object);
 }
 
 /**
- * com_deepin_daemon_authenticate_dup_support_encrypts: (skip)
- * @object: A #ComDeepinDaemonAuthenticate.
+ * com_lingmo_daemon_authenticate_dup_support_encrypts: (skip)
+ * @object: A #ComLingmoDaemonAuthenticate.
  *
- * Gets a copy of the <link linkend="gdbus-property-com-deepin-daemon-Authenticate.SupportEncrypts">"SupportEncrypts"</link> D-Bus property.
+ * Gets a copy of the <link linkend="gdbus-property-com-lingmo-daemon-Authenticate.SupportEncrypts">"SupportEncrypts"</link> D-Bus property.
  *
  * Since this D-Bus property is readable, it is meaningful to use this function on both the client- and service-side.
  *
  * Returns: (transfer full): The property value or %NULL if the property is not set. The returned value should be freed with g_free().
  */
 gchar *
-com_deepin_daemon_authenticate_dup_support_encrypts (ComDeepinDaemonAuthenticate *object)
+com_lingmo_daemon_authenticate_dup_support_encrypts (ComLingmoDaemonAuthenticate *object)
 {
   gchar *value;
   g_object_get (G_OBJECT (object), "support-encrypts", &value, NULL);
@@ -651,100 +651,100 @@ com_deepin_daemon_authenticate_dup_support_encrypts (ComDeepinDaemonAuthenticate
 }
 
 /**
- * com_deepin_daemon_authenticate_set_support_encrypts: (skip)
- * @object: A #ComDeepinDaemonAuthenticate.
+ * com_lingmo_daemon_authenticate_set_support_encrypts: (skip)
+ * @object: A #ComLingmoDaemonAuthenticate.
  * @value: The value to set.
  *
- * Sets the <link linkend="gdbus-property-com-deepin-daemon-Authenticate.SupportEncrypts">"SupportEncrypts"</link> D-Bus property to @value.
+ * Sets the <link linkend="gdbus-property-com-lingmo-daemon-Authenticate.SupportEncrypts">"SupportEncrypts"</link> D-Bus property to @value.
  *
  * Since this D-Bus property is not writable, it is only meaningful to use this function on the service-side.
  */
 void
-com_deepin_daemon_authenticate_set_support_encrypts (ComDeepinDaemonAuthenticate *object, const gchar *value)
+com_lingmo_daemon_authenticate_set_support_encrypts (ComLingmoDaemonAuthenticate *object, const gchar *value)
 {
   g_object_set (G_OBJECT (object), "support-encrypts", value, NULL);
 }
 
 /**
- * com_deepin_daemon_authenticate_get_framework_state: (skip)
- * @object: A #ComDeepinDaemonAuthenticate.
+ * com_lingmo_daemon_authenticate_get_framework_state: (skip)
+ * @object: A #ComLingmoDaemonAuthenticate.
  *
- * Gets the value of the <link linkend="gdbus-property-com-deepin-daemon-Authenticate.FrameworkState">"FrameworkState"</link> D-Bus property.
+ * Gets the value of the <link linkend="gdbus-property-com-lingmo-daemon-Authenticate.FrameworkState">"FrameworkState"</link> D-Bus property.
  *
  * Since this D-Bus property is readable, it is meaningful to use this function on both the client- and service-side.
  *
  * Returns: The property value.
  */
 gint 
-com_deepin_daemon_authenticate_get_framework_state (ComDeepinDaemonAuthenticate *object)
+com_lingmo_daemon_authenticate_get_framework_state (ComLingmoDaemonAuthenticate *object)
 {
-  return COM_DEEPIN_DAEMON_AUTHENTICATE_GET_IFACE (object)->get_framework_state (object);
+  return COM_LINGMO_DAEMON_AUTHENTICATE_GET_IFACE (object)->get_framework_state (object);
 }
 
 /**
- * com_deepin_daemon_authenticate_set_framework_state: (skip)
- * @object: A #ComDeepinDaemonAuthenticate.
+ * com_lingmo_daemon_authenticate_set_framework_state: (skip)
+ * @object: A #ComLingmoDaemonAuthenticate.
  * @value: The value to set.
  *
- * Sets the <link linkend="gdbus-property-com-deepin-daemon-Authenticate.FrameworkState">"FrameworkState"</link> D-Bus property to @value.
+ * Sets the <link linkend="gdbus-property-com-lingmo-daemon-Authenticate.FrameworkState">"FrameworkState"</link> D-Bus property to @value.
  *
  * Since this D-Bus property is not writable, it is only meaningful to use this function on the service-side.
  */
 void
-com_deepin_daemon_authenticate_set_framework_state (ComDeepinDaemonAuthenticate *object, gint value)
+com_lingmo_daemon_authenticate_set_framework_state (ComLingmoDaemonAuthenticate *object, gint value)
 {
   g_object_set (G_OBJECT (object), "framework-state", value, NULL);
 }
 
 /**
- * com_deepin_daemon_authenticate_get_supported_flags: (skip)
- * @object: A #ComDeepinDaemonAuthenticate.
+ * com_lingmo_daemon_authenticate_get_supported_flags: (skip)
+ * @object: A #ComLingmoDaemonAuthenticate.
  *
- * Gets the value of the <link linkend="gdbus-property-com-deepin-daemon-Authenticate.SupportedFlags">"SupportedFlags"</link> D-Bus property.
+ * Gets the value of the <link linkend="gdbus-property-com-lingmo-daemon-Authenticate.SupportedFlags">"SupportedFlags"</link> D-Bus property.
  *
  * Since this D-Bus property is readable, it is meaningful to use this function on both the client- and service-side.
  *
  * Returns: The property value.
  */
 gint 
-com_deepin_daemon_authenticate_get_supported_flags (ComDeepinDaemonAuthenticate *object)
+com_lingmo_daemon_authenticate_get_supported_flags (ComLingmoDaemonAuthenticate *object)
 {
-  return COM_DEEPIN_DAEMON_AUTHENTICATE_GET_IFACE (object)->get_supported_flags (object);
+  return COM_LINGMO_DAEMON_AUTHENTICATE_GET_IFACE (object)->get_supported_flags (object);
 }
 
 /**
- * com_deepin_daemon_authenticate_set_supported_flags: (skip)
- * @object: A #ComDeepinDaemonAuthenticate.
+ * com_lingmo_daemon_authenticate_set_supported_flags: (skip)
+ * @object: A #ComLingmoDaemonAuthenticate.
  * @value: The value to set.
  *
- * Sets the <link linkend="gdbus-property-com-deepin-daemon-Authenticate.SupportedFlags">"SupportedFlags"</link> D-Bus property to @value.
+ * Sets the <link linkend="gdbus-property-com-lingmo-daemon-Authenticate.SupportedFlags">"SupportedFlags"</link> D-Bus property to @value.
  *
  * Since this D-Bus property is not writable, it is only meaningful to use this function on the service-side.
  */
 void
-com_deepin_daemon_authenticate_set_supported_flags (ComDeepinDaemonAuthenticate *object, gint value)
+com_lingmo_daemon_authenticate_set_supported_flags (ComLingmoDaemonAuthenticate *object, gint value)
 {
   g_object_set (G_OBJECT (object), "supported-flags", value, NULL);
 }
 
 /**
- * com_deepin_daemon_authenticate_emit_limit_updated:
- * @object: A #ComDeepinDaemonAuthenticate.
+ * com_lingmo_daemon_authenticate_emit_limit_updated:
+ * @object: A #ComLingmoDaemonAuthenticate.
  * @arg_username: Argument to pass with the signal.
  *
- * Emits the <link linkend="gdbus-signal-com-deepin-daemon-Authenticate.LimitUpdated">"LimitUpdated"</link> D-Bus signal.
+ * Emits the <link linkend="gdbus-signal-com-lingmo-daemon-Authenticate.LimitUpdated">"LimitUpdated"</link> D-Bus signal.
  */
 void
-com_deepin_daemon_authenticate_emit_limit_updated (
-    ComDeepinDaemonAuthenticate *object,
+com_lingmo_daemon_authenticate_emit_limit_updated (
+    ComLingmoDaemonAuthenticate *object,
     const gchar *arg_username)
 {
   g_signal_emit_by_name (object, "limit-updated", arg_username);
 }
 
 /**
- * com_deepin_daemon_authenticate_call_authenticate:
- * @proxy: A #ComDeepinDaemonAuthenticateProxy.
+ * com_lingmo_daemon_authenticate_call_authenticate:
+ * @proxy: A #ComLingmoDaemonAuthenticateProxy.
  * @arg_username: Argument to pass with the method invocation.
  * @arg_authFlags: Argument to pass with the method invocation.
  * @arg_appType: Argument to pass with the method invocation.
@@ -752,15 +752,15 @@ com_deepin_daemon_authenticate_emit_limit_updated (
  * @callback: A #GAsyncReadyCallback to call when the request is satisfied or %NULL.
  * @user_data: User data to pass to @callback.
  *
- * Asynchronously invokes the <link linkend="gdbus-method-com-deepin-daemon-Authenticate.Authenticate">Authenticate()</link> D-Bus method on @proxy.
+ * Asynchronously invokes the <link linkend="gdbus-method-com-lingmo-daemon-Authenticate.Authenticate">Authenticate()</link> D-Bus method on @proxy.
  * When the operation is finished, @callback will be invoked in the <link linkend="g-main-context-push-thread-default">thread-default main loop</link> of the thread you are calling this method from.
- * You can then call com_deepin_daemon_authenticate_call_authenticate_finish() to get the result of the operation.
+ * You can then call com_lingmo_daemon_authenticate_call_authenticate_finish() to get the result of the operation.
  *
- * See com_deepin_daemon_authenticate_call_authenticate_sync() for the synchronous, blocking version of this method.
+ * See com_lingmo_daemon_authenticate_call_authenticate_sync() for the synchronous, blocking version of this method.
  */
 void
-com_deepin_daemon_authenticate_call_authenticate (
-    ComDeepinDaemonAuthenticate *proxy,
+com_lingmo_daemon_authenticate_call_authenticate (
+    ComLingmoDaemonAuthenticate *proxy,
     const gchar *arg_username,
     gint arg_authFlags,
     gint arg_appType,
@@ -782,19 +782,19 @@ com_deepin_daemon_authenticate_call_authenticate (
 }
 
 /**
- * com_deepin_daemon_authenticate_call_authenticate_finish:
- * @proxy: A #ComDeepinDaemonAuthenticateProxy.
+ * com_lingmo_daemon_authenticate_call_authenticate_finish:
+ * @proxy: A #ComLingmoDaemonAuthenticateProxy.
  * @out_path: (out): Return location for return parameter or %NULL to ignore.
- * @res: The #GAsyncResult obtained from the #GAsyncReadyCallback passed to com_deepin_daemon_authenticate_call_authenticate().
+ * @res: The #GAsyncResult obtained from the #GAsyncReadyCallback passed to com_lingmo_daemon_authenticate_call_authenticate().
  * @error: Return location for error or %NULL.
  *
- * Finishes an operation started with com_deepin_daemon_authenticate_call_authenticate().
+ * Finishes an operation started with com_lingmo_daemon_authenticate_call_authenticate().
  *
  * Returns: (skip): %TRUE if the call succeded, %FALSE if @error is set.
  */
 gboolean
-com_deepin_daemon_authenticate_call_authenticate_finish (
-    ComDeepinDaemonAuthenticate *proxy,
+com_lingmo_daemon_authenticate_call_authenticate_finish (
+    ComLingmoDaemonAuthenticate *proxy,
     gchar **out_path,
     GAsyncResult *res,
     GError **error)
@@ -812,8 +812,8 @@ _out:
 }
 
 /**
- * com_deepin_daemon_authenticate_call_authenticate_sync:
- * @proxy: A #ComDeepinDaemonAuthenticateProxy.
+ * com_lingmo_daemon_authenticate_call_authenticate_sync:
+ * @proxy: A #ComLingmoDaemonAuthenticateProxy.
  * @arg_username: Argument to pass with the method invocation.
  * @arg_authFlags: Argument to pass with the method invocation.
  * @arg_appType: Argument to pass with the method invocation.
@@ -821,15 +821,15 @@ _out:
  * @cancellable: (nullable): A #GCancellable or %NULL.
  * @error: Return location for error or %NULL.
  *
- * Synchronously invokes the <link linkend="gdbus-method-com-deepin-daemon-Authenticate.Authenticate">Authenticate()</link> D-Bus method on @proxy. The calling thread is blocked until a reply is received.
+ * Synchronously invokes the <link linkend="gdbus-method-com-lingmo-daemon-Authenticate.Authenticate">Authenticate()</link> D-Bus method on @proxy. The calling thread is blocked until a reply is received.
  *
- * See com_deepin_daemon_authenticate_call_authenticate() for the asynchronous version of this method.
+ * See com_lingmo_daemon_authenticate_call_authenticate() for the asynchronous version of this method.
  *
  * Returns: (skip): %TRUE if the call succeded, %FALSE if @error is set.
  */
 gboolean
-com_deepin_daemon_authenticate_call_authenticate_sync (
-    ComDeepinDaemonAuthenticate *proxy,
+com_lingmo_daemon_authenticate_call_authenticate_sync (
+    ComLingmoDaemonAuthenticate *proxy,
     const gchar *arg_username,
     gint arg_authFlags,
     gint arg_appType,
@@ -859,22 +859,22 @@ _out:
 }
 
 /**
- * com_deepin_daemon_authenticate_call_get_limits:
- * @proxy: A #ComDeepinDaemonAuthenticateProxy.
+ * com_lingmo_daemon_authenticate_call_get_limits:
+ * @proxy: A #ComLingmoDaemonAuthenticateProxy.
  * @arg_username: Argument to pass with the method invocation.
  * @cancellable: (nullable): A #GCancellable or %NULL.
  * @callback: A #GAsyncReadyCallback to call when the request is satisfied or %NULL.
  * @user_data: User data to pass to @callback.
  *
- * Asynchronously invokes the <link linkend="gdbus-method-com-deepin-daemon-Authenticate.GetLimits">GetLimits()</link> D-Bus method on @proxy.
+ * Asynchronously invokes the <link linkend="gdbus-method-com-lingmo-daemon-Authenticate.GetLimits">GetLimits()</link> D-Bus method on @proxy.
  * When the operation is finished, @callback will be invoked in the <link linkend="g-main-context-push-thread-default">thread-default main loop</link> of the thread you are calling this method from.
- * You can then call com_deepin_daemon_authenticate_call_get_limits_finish() to get the result of the operation.
+ * You can then call com_lingmo_daemon_authenticate_call_get_limits_finish() to get the result of the operation.
  *
- * See com_deepin_daemon_authenticate_call_get_limits_sync() for the synchronous, blocking version of this method.
+ * See com_lingmo_daemon_authenticate_call_get_limits_sync() for the synchronous, blocking version of this method.
  */
 void
-com_deepin_daemon_authenticate_call_get_limits (
-    ComDeepinDaemonAuthenticate *proxy,
+com_lingmo_daemon_authenticate_call_get_limits (
+    ComLingmoDaemonAuthenticate *proxy,
     const gchar *arg_username,
     GCancellable *cancellable,
     GAsyncReadyCallback callback,
@@ -892,19 +892,19 @@ com_deepin_daemon_authenticate_call_get_limits (
 }
 
 /**
- * com_deepin_daemon_authenticate_call_get_limits_finish:
- * @proxy: A #ComDeepinDaemonAuthenticateProxy.
+ * com_lingmo_daemon_authenticate_call_get_limits_finish:
+ * @proxy: A #ComLingmoDaemonAuthenticateProxy.
  * @out_limits: (out): Return location for return parameter or %NULL to ignore.
- * @res: The #GAsyncResult obtained from the #GAsyncReadyCallback passed to com_deepin_daemon_authenticate_call_get_limits().
+ * @res: The #GAsyncResult obtained from the #GAsyncReadyCallback passed to com_lingmo_daemon_authenticate_call_get_limits().
  * @error: Return location for error or %NULL.
  *
- * Finishes an operation started with com_deepin_daemon_authenticate_call_get_limits().
+ * Finishes an operation started with com_lingmo_daemon_authenticate_call_get_limits().
  *
  * Returns: (skip): %TRUE if the call succeded, %FALSE if @error is set.
  */
 gboolean
-com_deepin_daemon_authenticate_call_get_limits_finish (
-    ComDeepinDaemonAuthenticate *proxy,
+com_lingmo_daemon_authenticate_call_get_limits_finish (
+    ComLingmoDaemonAuthenticate *proxy,
     gchar **out_limits,
     GAsyncResult *res,
     GError **error)
@@ -922,22 +922,22 @@ _out:
 }
 
 /**
- * com_deepin_daemon_authenticate_call_get_limits_sync:
- * @proxy: A #ComDeepinDaemonAuthenticateProxy.
+ * com_lingmo_daemon_authenticate_call_get_limits_sync:
+ * @proxy: A #ComLingmoDaemonAuthenticateProxy.
  * @arg_username: Argument to pass with the method invocation.
  * @out_limits: (out): Return location for return parameter or %NULL to ignore.
  * @cancellable: (nullable): A #GCancellable or %NULL.
  * @error: Return location for error or %NULL.
  *
- * Synchronously invokes the <link linkend="gdbus-method-com-deepin-daemon-Authenticate.GetLimits">GetLimits()</link> D-Bus method on @proxy. The calling thread is blocked until a reply is received.
+ * Synchronously invokes the <link linkend="gdbus-method-com-lingmo-daemon-Authenticate.GetLimits">GetLimits()</link> D-Bus method on @proxy. The calling thread is blocked until a reply is received.
  *
- * See com_deepin_daemon_authenticate_call_get_limits() for the asynchronous version of this method.
+ * See com_lingmo_daemon_authenticate_call_get_limits() for the asynchronous version of this method.
  *
  * Returns: (skip): %TRUE if the call succeded, %FALSE if @error is set.
  */
 gboolean
-com_deepin_daemon_authenticate_call_get_limits_sync (
-    ComDeepinDaemonAuthenticate *proxy,
+com_lingmo_daemon_authenticate_call_get_limits_sync (
+    ComLingmoDaemonAuthenticate *proxy,
     const gchar *arg_username,
     gchar **out_limits,
     GCancellable *cancellable,
@@ -963,22 +963,22 @@ _out:
 }
 
 /**
- * com_deepin_daemon_authenticate_call_pre_one_key_login:
- * @proxy: A #ComDeepinDaemonAuthenticateProxy.
+ * com_lingmo_daemon_authenticate_call_pre_one_key_login:
+ * @proxy: A #ComLingmoDaemonAuthenticateProxy.
  * @arg_flag: Argument to pass with the method invocation.
  * @cancellable: (nullable): A #GCancellable or %NULL.
  * @callback: A #GAsyncReadyCallback to call when the request is satisfied or %NULL.
  * @user_data: User data to pass to @callback.
  *
- * Asynchronously invokes the <link linkend="gdbus-method-com-deepin-daemon-Authenticate.PreOneKeyLogin">PreOneKeyLogin()</link> D-Bus method on @proxy.
+ * Asynchronously invokes the <link linkend="gdbus-method-com-lingmo-daemon-Authenticate.PreOneKeyLogin">PreOneKeyLogin()</link> D-Bus method on @proxy.
  * When the operation is finished, @callback will be invoked in the <link linkend="g-main-context-push-thread-default">thread-default main loop</link> of the thread you are calling this method from.
- * You can then call com_deepin_daemon_authenticate_call_pre_one_key_login_finish() to get the result of the operation.
+ * You can then call com_lingmo_daemon_authenticate_call_pre_one_key_login_finish() to get the result of the operation.
  *
- * See com_deepin_daemon_authenticate_call_pre_one_key_login_sync() for the synchronous, blocking version of this method.
+ * See com_lingmo_daemon_authenticate_call_pre_one_key_login_sync() for the synchronous, blocking version of this method.
  */
 void
-com_deepin_daemon_authenticate_call_pre_one_key_login (
-    ComDeepinDaemonAuthenticate *proxy,
+com_lingmo_daemon_authenticate_call_pre_one_key_login (
+    ComLingmoDaemonAuthenticate *proxy,
     gint arg_flag,
     GCancellable *cancellable,
     GAsyncReadyCallback callback,
@@ -996,19 +996,19 @@ com_deepin_daemon_authenticate_call_pre_one_key_login (
 }
 
 /**
- * com_deepin_daemon_authenticate_call_pre_one_key_login_finish:
- * @proxy: A #ComDeepinDaemonAuthenticateProxy.
+ * com_lingmo_daemon_authenticate_call_pre_one_key_login_finish:
+ * @proxy: A #ComLingmoDaemonAuthenticateProxy.
  * @out_result: (out): Return location for return parameter or %NULL to ignore.
- * @res: The #GAsyncResult obtained from the #GAsyncReadyCallback passed to com_deepin_daemon_authenticate_call_pre_one_key_login().
+ * @res: The #GAsyncResult obtained from the #GAsyncReadyCallback passed to com_lingmo_daemon_authenticate_call_pre_one_key_login().
  * @error: Return location for error or %NULL.
  *
- * Finishes an operation started with com_deepin_daemon_authenticate_call_pre_one_key_login().
+ * Finishes an operation started with com_lingmo_daemon_authenticate_call_pre_one_key_login().
  *
  * Returns: (skip): %TRUE if the call succeded, %FALSE if @error is set.
  */
 gboolean
-com_deepin_daemon_authenticate_call_pre_one_key_login_finish (
-    ComDeepinDaemonAuthenticate *proxy,
+com_lingmo_daemon_authenticate_call_pre_one_key_login_finish (
+    ComLingmoDaemonAuthenticate *proxy,
     gchar **out_result,
     GAsyncResult *res,
     GError **error)
@@ -1026,22 +1026,22 @@ _out:
 }
 
 /**
- * com_deepin_daemon_authenticate_call_pre_one_key_login_sync:
- * @proxy: A #ComDeepinDaemonAuthenticateProxy.
+ * com_lingmo_daemon_authenticate_call_pre_one_key_login_sync:
+ * @proxy: A #ComLingmoDaemonAuthenticateProxy.
  * @arg_flag: Argument to pass with the method invocation.
  * @out_result: (out): Return location for return parameter or %NULL to ignore.
  * @cancellable: (nullable): A #GCancellable or %NULL.
  * @error: Return location for error or %NULL.
  *
- * Synchronously invokes the <link linkend="gdbus-method-com-deepin-daemon-Authenticate.PreOneKeyLogin">PreOneKeyLogin()</link> D-Bus method on @proxy. The calling thread is blocked until a reply is received.
+ * Synchronously invokes the <link linkend="gdbus-method-com-lingmo-daemon-Authenticate.PreOneKeyLogin">PreOneKeyLogin()</link> D-Bus method on @proxy. The calling thread is blocked until a reply is received.
  *
- * See com_deepin_daemon_authenticate_call_pre_one_key_login() for the asynchronous version of this method.
+ * See com_lingmo_daemon_authenticate_call_pre_one_key_login() for the asynchronous version of this method.
  *
  * Returns: (skip): %TRUE if the call succeded, %FALSE if @error is set.
  */
 gboolean
-com_deepin_daemon_authenticate_call_pre_one_key_login_sync (
-    ComDeepinDaemonAuthenticate *proxy,
+com_lingmo_daemon_authenticate_call_pre_one_key_login_sync (
+    ComLingmoDaemonAuthenticate *proxy,
     gint arg_flag,
     gchar **out_result,
     GCancellable *cancellable,
@@ -1067,18 +1067,18 @@ _out:
 }
 
 /**
- * com_deepin_daemon_authenticate_complete_authenticate:
- * @object: A #ComDeepinDaemonAuthenticate.
+ * com_lingmo_daemon_authenticate_complete_authenticate:
+ * @object: A #ComLingmoDaemonAuthenticate.
  * @invocation: (transfer full): A #GDBusMethodInvocation.
  * @path: Parameter to return.
  *
- * Helper function used in service implementations to finish handling invocations of the <link linkend="gdbus-method-com-deepin-daemon-Authenticate.Authenticate">Authenticate()</link> D-Bus method. If you instead want to finish handling an invocation by returning an error, use g_dbus_method_invocation_return_error() or similar.
+ * Helper function used in service implementations to finish handling invocations of the <link linkend="gdbus-method-com-lingmo-daemon-Authenticate.Authenticate">Authenticate()</link> D-Bus method. If you instead want to finish handling an invocation by returning an error, use g_dbus_method_invocation_return_error() or similar.
  *
  * This method will free @invocation, you cannot use it afterwards.
  */
 void
-com_deepin_daemon_authenticate_complete_authenticate (
-    ComDeepinDaemonAuthenticate *object,
+com_lingmo_daemon_authenticate_complete_authenticate (
+    ComLingmoDaemonAuthenticate *object,
     GDBusMethodInvocation *invocation,
     const gchar *path)
 {
@@ -1088,18 +1088,18 @@ com_deepin_daemon_authenticate_complete_authenticate (
 }
 
 /**
- * com_deepin_daemon_authenticate_complete_get_limits:
- * @object: A #ComDeepinDaemonAuthenticate.
+ * com_lingmo_daemon_authenticate_complete_get_limits:
+ * @object: A #ComLingmoDaemonAuthenticate.
  * @invocation: (transfer full): A #GDBusMethodInvocation.
  * @limits: Parameter to return.
  *
- * Helper function used in service implementations to finish handling invocations of the <link linkend="gdbus-method-com-deepin-daemon-Authenticate.GetLimits">GetLimits()</link> D-Bus method. If you instead want to finish handling an invocation by returning an error, use g_dbus_method_invocation_return_error() or similar.
+ * Helper function used in service implementations to finish handling invocations of the <link linkend="gdbus-method-com-lingmo-daemon-Authenticate.GetLimits">GetLimits()</link> D-Bus method. If you instead want to finish handling an invocation by returning an error, use g_dbus_method_invocation_return_error() or similar.
  *
  * This method will free @invocation, you cannot use it afterwards.
  */
 void
-com_deepin_daemon_authenticate_complete_get_limits (
-    ComDeepinDaemonAuthenticate *object,
+com_lingmo_daemon_authenticate_complete_get_limits (
+    ComLingmoDaemonAuthenticate *object,
     GDBusMethodInvocation *invocation,
     const gchar *limits)
 {
@@ -1109,18 +1109,18 @@ com_deepin_daemon_authenticate_complete_get_limits (
 }
 
 /**
- * com_deepin_daemon_authenticate_complete_pre_one_key_login:
- * @object: A #ComDeepinDaemonAuthenticate.
+ * com_lingmo_daemon_authenticate_complete_pre_one_key_login:
+ * @object: A #ComLingmoDaemonAuthenticate.
  * @invocation: (transfer full): A #GDBusMethodInvocation.
  * @result: Parameter to return.
  *
- * Helper function used in service implementations to finish handling invocations of the <link linkend="gdbus-method-com-deepin-daemon-Authenticate.PreOneKeyLogin">PreOneKeyLogin()</link> D-Bus method. If you instead want to finish handling an invocation by returning an error, use g_dbus_method_invocation_return_error() or similar.
+ * Helper function used in service implementations to finish handling invocations of the <link linkend="gdbus-method-com-lingmo-daemon-Authenticate.PreOneKeyLogin">PreOneKeyLogin()</link> D-Bus method. If you instead want to finish handling an invocation by returning an error, use g_dbus_method_invocation_return_error() or similar.
  *
  * This method will free @invocation, you cannot use it afterwards.
  */
 void
-com_deepin_daemon_authenticate_complete_pre_one_key_login (
-    ComDeepinDaemonAuthenticate *object,
+com_lingmo_daemon_authenticate_complete_pre_one_key_login (
+    ComLingmoDaemonAuthenticate *object,
     GDBusMethodInvocation *invocation,
     const gchar *result)
 {
@@ -1132,45 +1132,45 @@ com_deepin_daemon_authenticate_complete_pre_one_key_login (
 /* ------------------------------------------------------------------------ */
 
 /**
- * ComDeepinDaemonAuthenticateProxy:
+ * ComLingmoDaemonAuthenticateProxy:
  *
- * The #ComDeepinDaemonAuthenticateProxy structure contains only private data and should only be accessed using the provided API.
+ * The #ComLingmoDaemonAuthenticateProxy structure contains only private data and should only be accessed using the provided API.
  */
 
 /**
- * ComDeepinDaemonAuthenticateProxyClass:
+ * ComLingmoDaemonAuthenticateProxyClass:
  * @parent_class: The parent class.
  *
- * Class structure for #ComDeepinDaemonAuthenticateProxy.
+ * Class structure for #ComLingmoDaemonAuthenticateProxy.
  */
 
-struct _ComDeepinDaemonAuthenticateProxyPrivate
+struct _ComLingmoDaemonAuthenticateProxyPrivate
 {
   GData *qdata;
 };
 
-static void com_deepin_daemon_authenticate_proxy_iface_init (ComDeepinDaemonAuthenticateIface *iface);
+static void com_lingmo_daemon_authenticate_proxy_iface_init (ComLingmoDaemonAuthenticateIface *iface);
 
 #if GLIB_VERSION_MAX_ALLOWED >= GLIB_VERSION_2_38
-G_DEFINE_TYPE_WITH_CODE (ComDeepinDaemonAuthenticateProxy, com_deepin_daemon_authenticate_proxy, G_TYPE_DBUS_PROXY,
-                         G_ADD_PRIVATE (ComDeepinDaemonAuthenticateProxy)
-                         G_IMPLEMENT_INTERFACE (TYPE_COM_DEEPIN_DAEMON_AUTHENTICATE, com_deepin_daemon_authenticate_proxy_iface_init))
+G_DEFINE_TYPE_WITH_CODE (ComLingmoDaemonAuthenticateProxy, com_lingmo_daemon_authenticate_proxy, G_TYPE_DBUS_PROXY,
+                         G_ADD_PRIVATE (ComLingmoDaemonAuthenticateProxy)
+                         G_IMPLEMENT_INTERFACE (TYPE_COM_LINGMO_DAEMON_AUTHENTICATE, com_lingmo_daemon_authenticate_proxy_iface_init))
 
 #else
-G_DEFINE_TYPE_WITH_CODE (ComDeepinDaemonAuthenticateProxy, com_deepin_daemon_authenticate_proxy, G_TYPE_DBUS_PROXY,
-                         G_IMPLEMENT_INTERFACE (TYPE_COM_DEEPIN_DAEMON_AUTHENTICATE, com_deepin_daemon_authenticate_proxy_iface_init))
+G_DEFINE_TYPE_WITH_CODE (ComLingmoDaemonAuthenticateProxy, com_lingmo_daemon_authenticate_proxy, G_TYPE_DBUS_PROXY,
+                         G_IMPLEMENT_INTERFACE (TYPE_COM_LINGMO_DAEMON_AUTHENTICATE, com_lingmo_daemon_authenticate_proxy_iface_init))
 
 #endif
 static void
-com_deepin_daemon_authenticate_proxy_finalize (GObject *object)
+com_lingmo_daemon_authenticate_proxy_finalize (GObject *object)
 {
-  ComDeepinDaemonAuthenticateProxy *proxy = COM_DEEPIN_DAEMON_AUTHENTICATE_PROXY (object);
+  ComLingmoDaemonAuthenticateProxy *proxy = COM_LINGMO_DAEMON_AUTHENTICATE_PROXY (object);
   g_datalist_clear (&proxy->priv->qdata);
-  G_OBJECT_CLASS (com_deepin_daemon_authenticate_proxy_parent_class)->finalize (object);
+  G_OBJECT_CLASS (com_lingmo_daemon_authenticate_proxy_parent_class)->finalize (object);
 }
 
 static void
-com_deepin_daemon_authenticate_proxy_get_property (GObject      *object,
+com_lingmo_daemon_authenticate_proxy_get_property (GObject      *object,
   guint         prop_id,
   GValue       *value,
   GParamSpec   *pspec G_GNUC_UNUSED)
@@ -1178,7 +1178,7 @@ com_deepin_daemon_authenticate_proxy_get_property (GObject      *object,
   const _ExtendedGDBusPropertyInfo *info;
   GVariant *variant;
   g_assert (prop_id != 0 && prop_id - 1 < 3);
-  info = (const _ExtendedGDBusPropertyInfo *) _com_deepin_daemon_authenticate_property_info_pointers[prop_id - 1];
+  info = (const _ExtendedGDBusPropertyInfo *) _com_lingmo_daemon_authenticate_property_info_pointers[prop_id - 1];
   variant = g_dbus_proxy_get_cached_property (G_DBUS_PROXY (object), info->parent_struct.name);
   if (info->use_gvariant)
     {
@@ -1194,7 +1194,7 @@ com_deepin_daemon_authenticate_proxy_get_property (GObject      *object,
 }
 
 static void
-com_deepin_daemon_authenticate_proxy_set_property_cb (GDBusProxy *proxy,
+com_lingmo_daemon_authenticate_proxy_set_property_cb (GDBusProxy *proxy,
   GAsyncResult *res,
   gpointer      user_data)
 {
@@ -1217,7 +1217,7 @@ com_deepin_daemon_authenticate_proxy_set_property_cb (GDBusProxy *proxy,
 }
 
 static void
-com_deepin_daemon_authenticate_proxy_set_property (GObject      *object,
+com_lingmo_daemon_authenticate_proxy_set_property (GObject      *object,
   guint         prop_id,
   const GValue *value,
   GParamSpec   *pspec G_GNUC_UNUSED)
@@ -1225,19 +1225,19 @@ com_deepin_daemon_authenticate_proxy_set_property (GObject      *object,
   const _ExtendedGDBusPropertyInfo *info;
   GVariant *variant;
   g_assert (prop_id != 0 && prop_id - 1 < 3);
-  info = (const _ExtendedGDBusPropertyInfo *) _com_deepin_daemon_authenticate_property_info_pointers[prop_id - 1];
+  info = (const _ExtendedGDBusPropertyInfo *) _com_lingmo_daemon_authenticate_property_info_pointers[prop_id - 1];
   variant = g_dbus_gvalue_to_gvariant (value, G_VARIANT_TYPE (info->parent_struct.signature));
   g_dbus_proxy_call (G_DBUS_PROXY (object),
     "org.freedesktop.DBus.Properties.Set",
-    g_variant_new ("(ssv)", "com.deepin.daemon.Authenticate", info->parent_struct.name, variant),
+    g_variant_new ("(ssv)", "com.lingmo.daemon.Authenticate", info->parent_struct.name, variant),
     G_DBUS_CALL_FLAGS_NONE,
     -1,
-    NULL, (GAsyncReadyCallback) com_deepin_daemon_authenticate_proxy_set_property_cb, (GDBusPropertyInfo *) &info->parent_struct);
+    NULL, (GAsyncReadyCallback) com_lingmo_daemon_authenticate_proxy_set_property_cb, (GDBusPropertyInfo *) &info->parent_struct);
   g_variant_unref (variant);
 }
 
 static void
-com_deepin_daemon_authenticate_proxy_g_signal (GDBusProxy *proxy,
+com_lingmo_daemon_authenticate_proxy_g_signal (GDBusProxy *proxy,
   const gchar *sender_name G_GNUC_UNUSED,
   const gchar *signal_name,
   GVariant *parameters)
@@ -1249,12 +1249,12 @@ com_deepin_daemon_authenticate_proxy_g_signal (GDBusProxy *proxy,
   gsize num_params;
   gsize n;
   guint signal_id;
-  info = (_ExtendedGDBusSignalInfo *) g_dbus_interface_info_lookup_signal ((GDBusInterfaceInfo *) &_com_deepin_daemon_authenticate_interface_info.parent_struct, signal_name);
+  info = (_ExtendedGDBusSignalInfo *) g_dbus_interface_info_lookup_signal ((GDBusInterfaceInfo *) &_com_lingmo_daemon_authenticate_interface_info.parent_struct, signal_name);
   if (info == NULL)
     return;
   num_params = g_variant_n_children (parameters);
   paramv = g_new0 (GValue, num_params + 1);
-  g_value_init (&paramv[0], TYPE_COM_DEEPIN_DAEMON_AUTHENTICATE);
+  g_value_init (&paramv[0], TYPE_COM_LINGMO_DAEMON_AUTHENTICATE);
   g_value_set_object (&paramv[0], proxy);
   g_variant_iter_init (&iter, parameters);
   n = 1;
@@ -1271,7 +1271,7 @@ com_deepin_daemon_authenticate_proxy_g_signal (GDBusProxy *proxy,
         g_dbus_gvariant_to_gvalue (child, &paramv[n++]);
       g_variant_unref (child);
     }
-  signal_id = g_signal_lookup (info->signal_name, TYPE_COM_DEEPIN_DAEMON_AUTHENTICATE);
+  signal_id = g_signal_lookup (info->signal_name, TYPE_COM_LINGMO_DAEMON_AUTHENTICATE);
   g_signal_emitv (paramv, signal_id, 0, NULL);
   for (n = 0; n < num_params + 1; n++)
     g_value_unset (&paramv[n]);
@@ -1279,11 +1279,11 @@ com_deepin_daemon_authenticate_proxy_g_signal (GDBusProxy *proxy,
 }
 
 static void
-com_deepin_daemon_authenticate_proxy_g_properties_changed (GDBusProxy *_proxy,
+com_lingmo_daemon_authenticate_proxy_g_properties_changed (GDBusProxy *_proxy,
   GVariant *changed_properties,
   const gchar *const *invalidated_properties)
 {
-  ComDeepinDaemonAuthenticateProxy *proxy = COM_DEEPIN_DAEMON_AUTHENTICATE_PROXY (_proxy);
+  ComLingmoDaemonAuthenticateProxy *proxy = COM_LINGMO_DAEMON_AUTHENTICATE_PROXY (_proxy);
   guint n;
   const gchar *key;
   GVariantIter *iter;
@@ -1291,7 +1291,7 @@ com_deepin_daemon_authenticate_proxy_g_properties_changed (GDBusProxy *_proxy,
   g_variant_get (changed_properties, "a{sv}", &iter);
   while (g_variant_iter_next (iter, "{&sv}", &key, NULL))
     {
-      info = (_ExtendedGDBusPropertyInfo *) g_dbus_interface_info_lookup_property ((GDBusInterfaceInfo *) &_com_deepin_daemon_authenticate_interface_info.parent_struct, key);
+      info = (_ExtendedGDBusPropertyInfo *) g_dbus_interface_info_lookup_property ((GDBusInterfaceInfo *) &_com_lingmo_daemon_authenticate_interface_info.parent_struct, key);
       g_datalist_remove_data (&proxy->priv->qdata, key);
       if (info != NULL)
         g_object_notify (G_OBJECT (proxy), info->hyphen_name);
@@ -1299,7 +1299,7 @@ com_deepin_daemon_authenticate_proxy_g_properties_changed (GDBusProxy *_proxy,
   g_variant_iter_free (iter);
   for (n = 0; invalidated_properties[n] != NULL; n++)
     {
-      info = (_ExtendedGDBusPropertyInfo *) g_dbus_interface_info_lookup_property ((GDBusInterfaceInfo *) &_com_deepin_daemon_authenticate_interface_info.parent_struct, invalidated_properties[n]);
+      info = (_ExtendedGDBusPropertyInfo *) g_dbus_interface_info_lookup_property ((GDBusInterfaceInfo *) &_com_lingmo_daemon_authenticate_interface_info.parent_struct, invalidated_properties[n]);
       g_datalist_remove_data (&proxy->priv->qdata, invalidated_properties[n]);
       if (info != NULL)
         g_object_notify (G_OBJECT (proxy), info->hyphen_name);
@@ -1307,9 +1307,9 @@ com_deepin_daemon_authenticate_proxy_g_properties_changed (GDBusProxy *_proxy,
 }
 
 static const gchar *
-com_deepin_daemon_authenticate_proxy_get_support_encrypts (ComDeepinDaemonAuthenticate *object)
+com_lingmo_daemon_authenticate_proxy_get_support_encrypts (ComLingmoDaemonAuthenticate *object)
 {
-  ComDeepinDaemonAuthenticateProxy *proxy = COM_DEEPIN_DAEMON_AUTHENTICATE_PROXY (object);
+  ComLingmoDaemonAuthenticateProxy *proxy = COM_LINGMO_DAEMON_AUTHENTICATE_PROXY (object);
   GVariant *variant;
   const gchar *value = NULL;
   variant = g_dbus_proxy_get_cached_property (G_DBUS_PROXY (proxy), "SupportEncrypts");
@@ -1322,9 +1322,9 @@ com_deepin_daemon_authenticate_proxy_get_support_encrypts (ComDeepinDaemonAuthen
 }
 
 static gint 
-com_deepin_daemon_authenticate_proxy_get_framework_state (ComDeepinDaemonAuthenticate *object)
+com_lingmo_daemon_authenticate_proxy_get_framework_state (ComLingmoDaemonAuthenticate *object)
 {
-  ComDeepinDaemonAuthenticateProxy *proxy = COM_DEEPIN_DAEMON_AUTHENTICATE_PROXY (object);
+  ComLingmoDaemonAuthenticateProxy *proxy = COM_LINGMO_DAEMON_AUTHENTICATE_PROXY (object);
   GVariant *variant;
   gint value = 0;
   variant = g_dbus_proxy_get_cached_property (G_DBUS_PROXY (proxy), "FrameworkState");
@@ -1337,9 +1337,9 @@ com_deepin_daemon_authenticate_proxy_get_framework_state (ComDeepinDaemonAuthent
 }
 
 static gint 
-com_deepin_daemon_authenticate_proxy_get_supported_flags (ComDeepinDaemonAuthenticate *object)
+com_lingmo_daemon_authenticate_proxy_get_supported_flags (ComLingmoDaemonAuthenticate *object)
 {
-  ComDeepinDaemonAuthenticateProxy *proxy = COM_DEEPIN_DAEMON_AUTHENTICATE_PROXY (object);
+  ComLingmoDaemonAuthenticateProxy *proxy = COM_LINGMO_DAEMON_AUTHENTICATE_PROXY (object);
   GVariant *variant;
   gint value = 0;
   variant = g_dbus_proxy_get_cached_property (G_DBUS_PROXY (proxy), "SupportedFlags");
@@ -1352,49 +1352,49 @@ com_deepin_daemon_authenticate_proxy_get_supported_flags (ComDeepinDaemonAuthent
 }
 
 static void
-com_deepin_daemon_authenticate_proxy_init (ComDeepinDaemonAuthenticateProxy *proxy)
+com_lingmo_daemon_authenticate_proxy_init (ComLingmoDaemonAuthenticateProxy *proxy)
 {
 #if GLIB_VERSION_MAX_ALLOWED >= GLIB_VERSION_2_38
-  proxy->priv = com_deepin_daemon_authenticate_proxy_get_instance_private (proxy);
+  proxy->priv = com_lingmo_daemon_authenticate_proxy_get_instance_private (proxy);
 #else
-  proxy->priv = G_TYPE_INSTANCE_GET_PRIVATE (proxy, TYPE_COM_DEEPIN_DAEMON_AUTHENTICATE_PROXY, ComDeepinDaemonAuthenticateProxyPrivate);
+  proxy->priv = G_TYPE_INSTANCE_GET_PRIVATE (proxy, TYPE_COM_LINGMO_DAEMON_AUTHENTICATE_PROXY, ComLingmoDaemonAuthenticateProxyPrivate);
 #endif
 
-  g_dbus_proxy_set_interface_info (G_DBUS_PROXY (proxy), com_deepin_daemon_authenticate_interface_info ());
+  g_dbus_proxy_set_interface_info (G_DBUS_PROXY (proxy), com_lingmo_daemon_authenticate_interface_info ());
 }
 
 static void
-com_deepin_daemon_authenticate_proxy_class_init (ComDeepinDaemonAuthenticateProxyClass *klass)
+com_lingmo_daemon_authenticate_proxy_class_init (ComLingmoDaemonAuthenticateProxyClass *klass)
 {
   GObjectClass *gobject_class;
   GDBusProxyClass *proxy_class;
 
   gobject_class = G_OBJECT_CLASS (klass);
-  gobject_class->finalize     = com_deepin_daemon_authenticate_proxy_finalize;
-  gobject_class->get_property = com_deepin_daemon_authenticate_proxy_get_property;
-  gobject_class->set_property = com_deepin_daemon_authenticate_proxy_set_property;
+  gobject_class->finalize     = com_lingmo_daemon_authenticate_proxy_finalize;
+  gobject_class->get_property = com_lingmo_daemon_authenticate_proxy_get_property;
+  gobject_class->set_property = com_lingmo_daemon_authenticate_proxy_set_property;
 
   proxy_class = G_DBUS_PROXY_CLASS (klass);
-  proxy_class->g_signal = com_deepin_daemon_authenticate_proxy_g_signal;
-  proxy_class->g_properties_changed = com_deepin_daemon_authenticate_proxy_g_properties_changed;
+  proxy_class->g_signal = com_lingmo_daemon_authenticate_proxy_g_signal;
+  proxy_class->g_properties_changed = com_lingmo_daemon_authenticate_proxy_g_properties_changed;
 
-  com_deepin_daemon_authenticate_override_properties (gobject_class, 1);
+  com_lingmo_daemon_authenticate_override_properties (gobject_class, 1);
 
 #if GLIB_VERSION_MAX_ALLOWED < GLIB_VERSION_2_38
-  g_type_class_add_private (klass, sizeof (ComDeepinDaemonAuthenticateProxyPrivate));
+  g_type_class_add_private (klass, sizeof (ComLingmoDaemonAuthenticateProxyPrivate));
 #endif
 }
 
 static void
-com_deepin_daemon_authenticate_proxy_iface_init (ComDeepinDaemonAuthenticateIface *iface)
+com_lingmo_daemon_authenticate_proxy_iface_init (ComLingmoDaemonAuthenticateIface *iface)
 {
-  iface->get_support_encrypts = com_deepin_daemon_authenticate_proxy_get_support_encrypts;
-  iface->get_framework_state = com_deepin_daemon_authenticate_proxy_get_framework_state;
-  iface->get_supported_flags = com_deepin_daemon_authenticate_proxy_get_supported_flags;
+  iface->get_support_encrypts = com_lingmo_daemon_authenticate_proxy_get_support_encrypts;
+  iface->get_framework_state = com_lingmo_daemon_authenticate_proxy_get_framework_state;
+  iface->get_supported_flags = com_lingmo_daemon_authenticate_proxy_get_supported_flags;
 }
 
 /**
- * com_deepin_daemon_authenticate_proxy_new:
+ * com_lingmo_daemon_authenticate_proxy_new:
  * @connection: A #GDBusConnection.
  * @flags: Flags from the #GDBusProxyFlags enumeration.
  * @name: (nullable): A bus name (well-known or unique) or %NULL if @connection is not a message bus connection.
@@ -1403,15 +1403,15 @@ com_deepin_daemon_authenticate_proxy_iface_init (ComDeepinDaemonAuthenticateIfac
  * @callback: A #GAsyncReadyCallback to call when the request is satisfied.
  * @user_data: User data to pass to @callback.
  *
- * Asynchronously creates a proxy for the D-Bus interface <link linkend="gdbus-interface-com-deepin-daemon-Authenticate.top_of_page">com.lingmo.daemon.Authenticate</link>. See g_dbus_proxy_new() for more details.
+ * Asynchronously creates a proxy for the D-Bus interface <link linkend="gdbus-interface-com-lingmo-daemon-Authenticate.top_of_page">com.lingmo.daemon.Authenticate</link>. See g_dbus_proxy_new() for more details.
  *
  * When the operation is finished, @callback will be invoked in the <link linkend="g-main-context-push-thread-default">thread-default main loop</link> of the thread you are calling this method from.
- * You can then call com_deepin_daemon_authenticate_proxy_new_finish() to get the result of the operation.
+ * You can then call com_lingmo_daemon_authenticate_proxy_new_finish() to get the result of the operation.
  *
- * See com_deepin_daemon_authenticate_proxy_new_sync() for the synchronous, blocking version of this constructor.
+ * See com_lingmo_daemon_authenticate_proxy_new_sync() for the synchronous, blocking version of this constructor.
  */
 void
-com_deepin_daemon_authenticate_proxy_new (
+com_lingmo_daemon_authenticate_proxy_new (
     GDBusConnection     *connection,
     GDBusProxyFlags      flags,
     const gchar         *name,
@@ -1420,20 +1420,20 @@ com_deepin_daemon_authenticate_proxy_new (
     GAsyncReadyCallback  callback,
     gpointer             user_data)
 {
-  g_async_initable_new_async (TYPE_COM_DEEPIN_DAEMON_AUTHENTICATE_PROXY, G_PRIORITY_DEFAULT, cancellable, callback, user_data, "g-flags", flags, "g-name", name, "g-connection", connection, "g-object-path", object_path, "g-interface-name", "com.lingmo.daemon.Authenticate", NULL);
+  g_async_initable_new_async (TYPE_COM_LINGMO_DAEMON_AUTHENTICATE_PROXY, G_PRIORITY_DEFAULT, cancellable, callback, user_data, "g-flags", flags, "g-name", name, "g-connection", connection, "g-object-path", object_path, "g-interface-name", "com.lingmo.daemon.Authenticate", NULL);
 }
 
 /**
- * com_deepin_daemon_authenticate_proxy_new_finish:
- * @res: The #GAsyncResult obtained from the #GAsyncReadyCallback passed to com_deepin_daemon_authenticate_proxy_new().
+ * com_lingmo_daemon_authenticate_proxy_new_finish:
+ * @res: The #GAsyncResult obtained from the #GAsyncReadyCallback passed to com_lingmo_daemon_authenticate_proxy_new().
  * @error: Return location for error or %NULL
  *
- * Finishes an operation started with com_deepin_daemon_authenticate_proxy_new().
+ * Finishes an operation started with com_lingmo_daemon_authenticate_proxy_new().
  *
- * Returns: (transfer full) (type ComDeepinDaemonAuthenticateProxy): The constructed proxy object or %NULL if @error is set.
+ * Returns: (transfer full) (type ComLingmoDaemonAuthenticateProxy): The constructed proxy object or %NULL if @error is set.
  */
-ComDeepinDaemonAuthenticate *
-com_deepin_daemon_authenticate_proxy_new_finish (
+ComLingmoDaemonAuthenticate *
+com_lingmo_daemon_authenticate_proxy_new_finish (
     GAsyncResult        *res,
     GError             **error)
 {
@@ -1443,13 +1443,13 @@ com_deepin_daemon_authenticate_proxy_new_finish (
   ret = g_async_initable_new_finish (G_ASYNC_INITABLE (source_object), res, error);
   g_object_unref (source_object);
   if (ret != NULL)
-    return COM_DEEPIN_DAEMON_AUTHENTICATE (ret);
+    return COM_LINGMO_DAEMON_AUTHENTICATE (ret);
   else
     return NULL;
 }
 
 /**
- * com_deepin_daemon_authenticate_proxy_new_sync:
+ * com_lingmo_daemon_authenticate_proxy_new_sync:
  * @connection: A #GDBusConnection.
  * @flags: Flags from the #GDBusProxyFlags enumeration.
  * @name: (nullable): A bus name (well-known or unique) or %NULL if @connection is not a message bus connection.
@@ -1457,16 +1457,16 @@ com_deepin_daemon_authenticate_proxy_new_finish (
  * @cancellable: (nullable): A #GCancellable or %NULL.
  * @error: Return location for error or %NULL
  *
- * Synchronously creates a proxy for the D-Bus interface <link linkend="gdbus-interface-com-deepin-daemon-Authenticate.top_of_page">com.lingmo.daemon.Authenticate</link>. See g_dbus_proxy_new_sync() for more details.
+ * Synchronously creates a proxy for the D-Bus interface <link linkend="gdbus-interface-com-lingmo-daemon-Authenticate.top_of_page">com.lingmo.daemon.Authenticate</link>. See g_dbus_proxy_new_sync() for more details.
  *
  * The calling thread is blocked until a reply is received.
  *
- * See com_deepin_daemon_authenticate_proxy_new() for the asynchronous version of this constructor.
+ * See com_lingmo_daemon_authenticate_proxy_new() for the asynchronous version of this constructor.
  *
- * Returns: (transfer full) (type ComDeepinDaemonAuthenticateProxy): The constructed proxy object or %NULL if @error is set.
+ * Returns: (transfer full) (type ComLingmoDaemonAuthenticateProxy): The constructed proxy object or %NULL if @error is set.
  */
-ComDeepinDaemonAuthenticate *
-com_deepin_daemon_authenticate_proxy_new_sync (
+ComLingmoDaemonAuthenticate *
+com_lingmo_daemon_authenticate_proxy_new_sync (
     GDBusConnection     *connection,
     GDBusProxyFlags      flags,
     const gchar         *name,
@@ -1475,16 +1475,16 @@ com_deepin_daemon_authenticate_proxy_new_sync (
     GError             **error)
 {
   GInitable *ret;
-  ret = g_initable_new (TYPE_COM_DEEPIN_DAEMON_AUTHENTICATE_PROXY, cancellable, error, "g-flags", flags, "g-name", name, "g-connection", connection, "g-object-path", object_path, "g-interface-name", "com.lingmo.daemon.Authenticate", NULL);
+  ret = g_initable_new (TYPE_COM_LINGMO_DAEMON_AUTHENTICATE_PROXY, cancellable, error, "g-flags", flags, "g-name", name, "g-connection", connection, "g-object-path", object_path, "g-interface-name", "com.lingmo.daemon.Authenticate", NULL);
   if (ret != NULL)
-    return COM_DEEPIN_DAEMON_AUTHENTICATE (ret);
+    return COM_LINGMO_DAEMON_AUTHENTICATE (ret);
   else
     return NULL;
 }
 
 
 /**
- * com_deepin_daemon_authenticate_proxy_new_for_bus:
+ * com_lingmo_daemon_authenticate_proxy_new_for_bus:
  * @bus_type: A #GBusType.
  * @flags: Flags from the #GDBusProxyFlags enumeration.
  * @name: A bus name (well-known or unique).
@@ -1493,15 +1493,15 @@ com_deepin_daemon_authenticate_proxy_new_sync (
  * @callback: A #GAsyncReadyCallback to call when the request is satisfied.
  * @user_data: User data to pass to @callback.
  *
- * Like com_deepin_daemon_authenticate_proxy_new() but takes a #GBusType instead of a #GDBusConnection.
+ * Like com_lingmo_daemon_authenticate_proxy_new() but takes a #GBusType instead of a #GDBusConnection.
  *
  * When the operation is finished, @callback will be invoked in the <link linkend="g-main-context-push-thread-default">thread-default main loop</link> of the thread you are calling this method from.
- * You can then call com_deepin_daemon_authenticate_proxy_new_for_bus_finish() to get the result of the operation.
+ * You can then call com_lingmo_daemon_authenticate_proxy_new_for_bus_finish() to get the result of the operation.
  *
- * See com_deepin_daemon_authenticate_proxy_new_for_bus_sync() for the synchronous, blocking version of this constructor.
+ * See com_lingmo_daemon_authenticate_proxy_new_for_bus_sync() for the synchronous, blocking version of this constructor.
  */
 void
-com_deepin_daemon_authenticate_proxy_new_for_bus (
+com_lingmo_daemon_authenticate_proxy_new_for_bus (
     GBusType             bus_type,
     GDBusProxyFlags      flags,
     const gchar         *name,
@@ -1510,20 +1510,20 @@ com_deepin_daemon_authenticate_proxy_new_for_bus (
     GAsyncReadyCallback  callback,
     gpointer             user_data)
 {
-  g_async_initable_new_async (TYPE_COM_DEEPIN_DAEMON_AUTHENTICATE_PROXY, G_PRIORITY_DEFAULT, cancellable, callback, user_data, "g-flags", flags, "g-name", name, "g-bus-type", bus_type, "g-object-path", object_path, "g-interface-name", "com.lingmo.daemon.Authenticate", NULL);
+  g_async_initable_new_async (TYPE_COM_LINGMO_DAEMON_AUTHENTICATE_PROXY, G_PRIORITY_DEFAULT, cancellable, callback, user_data, "g-flags", flags, "g-name", name, "g-bus-type", bus_type, "g-object-path", object_path, "g-interface-name", "com.lingmo.daemon.Authenticate", NULL);
 }
 
 /**
- * com_deepin_daemon_authenticate_proxy_new_for_bus_finish:
- * @res: The #GAsyncResult obtained from the #GAsyncReadyCallback passed to com_deepin_daemon_authenticate_proxy_new_for_bus().
+ * com_lingmo_daemon_authenticate_proxy_new_for_bus_finish:
+ * @res: The #GAsyncResult obtained from the #GAsyncReadyCallback passed to com_lingmo_daemon_authenticate_proxy_new_for_bus().
  * @error: Return location for error or %NULL
  *
- * Finishes an operation started with com_deepin_daemon_authenticate_proxy_new_for_bus().
+ * Finishes an operation started with com_lingmo_daemon_authenticate_proxy_new_for_bus().
  *
- * Returns: (transfer full) (type ComDeepinDaemonAuthenticateProxy): The constructed proxy object or %NULL if @error is set.
+ * Returns: (transfer full) (type ComLingmoDaemonAuthenticateProxy): The constructed proxy object or %NULL if @error is set.
  */
-ComDeepinDaemonAuthenticate *
-com_deepin_daemon_authenticate_proxy_new_for_bus_finish (
+ComLingmoDaemonAuthenticate *
+com_lingmo_daemon_authenticate_proxy_new_for_bus_finish (
     GAsyncResult        *res,
     GError             **error)
 {
@@ -1533,13 +1533,13 @@ com_deepin_daemon_authenticate_proxy_new_for_bus_finish (
   ret = g_async_initable_new_finish (G_ASYNC_INITABLE (source_object), res, error);
   g_object_unref (source_object);
   if (ret != NULL)
-    return COM_DEEPIN_DAEMON_AUTHENTICATE (ret);
+    return COM_LINGMO_DAEMON_AUTHENTICATE (ret);
   else
     return NULL;
 }
 
 /**
- * com_deepin_daemon_authenticate_proxy_new_for_bus_sync:
+ * com_lingmo_daemon_authenticate_proxy_new_for_bus_sync:
  * @bus_type: A #GBusType.
  * @flags: Flags from the #GDBusProxyFlags enumeration.
  * @name: A bus name (well-known or unique).
@@ -1547,16 +1547,16 @@ com_deepin_daemon_authenticate_proxy_new_for_bus_finish (
  * @cancellable: (nullable): A #GCancellable or %NULL.
  * @error: Return location for error or %NULL
  *
- * Like com_deepin_daemon_authenticate_proxy_new_sync() but takes a #GBusType instead of a #GDBusConnection.
+ * Like com_lingmo_daemon_authenticate_proxy_new_sync() but takes a #GBusType instead of a #GDBusConnection.
  *
  * The calling thread is blocked until a reply is received.
  *
- * See com_deepin_daemon_authenticate_proxy_new_for_bus() for the asynchronous version of this constructor.
+ * See com_lingmo_daemon_authenticate_proxy_new_for_bus() for the asynchronous version of this constructor.
  *
- * Returns: (transfer full) (type ComDeepinDaemonAuthenticateProxy): The constructed proxy object or %NULL if @error is set.
+ * Returns: (transfer full) (type ComLingmoDaemonAuthenticateProxy): The constructed proxy object or %NULL if @error is set.
  */
-ComDeepinDaemonAuthenticate *
-com_deepin_daemon_authenticate_proxy_new_for_bus_sync (
+ComLingmoDaemonAuthenticate *
+com_lingmo_daemon_authenticate_proxy_new_for_bus_sync (
     GBusType             bus_type,
     GDBusProxyFlags      flags,
     const gchar         *name,
@@ -1565,9 +1565,9 @@ com_deepin_daemon_authenticate_proxy_new_for_bus_sync (
     GError             **error)
 {
   GInitable *ret;
-  ret = g_initable_new (TYPE_COM_DEEPIN_DAEMON_AUTHENTICATE_PROXY, cancellable, error, "g-flags", flags, "g-name", name, "g-bus-type", bus_type, "g-object-path", object_path, "g-interface-name", "com.lingmo.daemon.Authenticate", NULL);
+  ret = g_initable_new (TYPE_COM_LINGMO_DAEMON_AUTHENTICATE_PROXY, cancellable, error, "g-flags", flags, "g-name", name, "g-bus-type", bus_type, "g-object-path", object_path, "g-interface-name", "com.lingmo.daemon.Authenticate", NULL);
   if (ret != NULL)
-    return COM_DEEPIN_DAEMON_AUTHENTICATE (ret);
+    return COM_LINGMO_DAEMON_AUTHENTICATE (ret);
   else
     return NULL;
 }
@@ -1576,19 +1576,19 @@ com_deepin_daemon_authenticate_proxy_new_for_bus_sync (
 /* ------------------------------------------------------------------------ */
 
 /**
- * ComDeepinDaemonAuthenticateSkeleton:
+ * ComLingmoDaemonAuthenticateSkeleton:
  *
- * The #ComDeepinDaemonAuthenticateSkeleton structure contains only private data and should only be accessed using the provided API.
+ * The #ComLingmoDaemonAuthenticateSkeleton structure contains only private data and should only be accessed using the provided API.
  */
 
 /**
- * ComDeepinDaemonAuthenticateSkeletonClass:
+ * ComLingmoDaemonAuthenticateSkeletonClass:
  * @parent_class: The parent class.
  *
- * Class structure for #ComDeepinDaemonAuthenticateSkeleton.
+ * Class structure for #ComLingmoDaemonAuthenticateSkeleton.
  */
 
-struct _ComDeepinDaemonAuthenticateSkeletonPrivate
+struct _ComLingmoDaemonAuthenticateSkeletonPrivate
 {
   GValue *properties;
   GList *changed_properties;
@@ -1598,7 +1598,7 @@ struct _ComDeepinDaemonAuthenticateSkeletonPrivate
 };
 
 static void
-_com_deepin_daemon_authenticate_skeleton_handle_method_call (
+_com_lingmo_daemon_authenticate_skeleton_handle_method_call (
   GDBusConnection *connection G_GNUC_UNUSED,
   const gchar *sender G_GNUC_UNUSED,
   const gchar *object_path G_GNUC_UNUSED,
@@ -1608,7 +1608,7 @@ _com_deepin_daemon_authenticate_skeleton_handle_method_call (
   GDBusMethodInvocation *invocation,
   gpointer user_data)
 {
-  ComDeepinDaemonAuthenticateSkeleton *skeleton = COM_DEEPIN_DAEMON_AUTHENTICATE_SKELETON (user_data);
+  ComLingmoDaemonAuthenticateSkeleton *skeleton = COM_LINGMO_DAEMON_AUTHENTICATE_SKELETON (user_data);
   _ExtendedGDBusMethodInfo *info;
   GVariantIter iter;
   GVariant *child;
@@ -1623,7 +1623,7 @@ _com_deepin_daemon_authenticate_skeleton_handle_method_call (
   num_params = g_variant_n_children (parameters);
   num_extra = info->pass_fdlist ? 3 : 2;  paramv = g_new0 (GValue, num_params + num_extra);
   n = 0;
-  g_value_init (&paramv[n], TYPE_COM_DEEPIN_DAEMON_AUTHENTICATE);
+  g_value_init (&paramv[n], TYPE_COM_LINGMO_DAEMON_AUTHENTICATE);
   g_value_set_object (&paramv[n++], skeleton);
   g_value_init (&paramv[n], G_TYPE_DBUS_METHOD_INVOCATION);
   g_value_set_object (&paramv[n++], invocation);
@@ -1650,7 +1650,7 @@ _com_deepin_daemon_authenticate_skeleton_handle_method_call (
         g_dbus_gvariant_to_gvalue (child, &paramv[n++]);
       g_variant_unref (child);
     }
-  signal_id = g_signal_lookup (info->signal_name, TYPE_COM_DEEPIN_DAEMON_AUTHENTICATE);
+  signal_id = g_signal_lookup (info->signal_name, TYPE_COM_LINGMO_DAEMON_AUTHENTICATE);
   g_value_init (&return_value, G_TYPE_BOOLEAN);
   g_signal_emitv (paramv, signal_id, 0, &return_value);
   if (!g_value_get_boolean (&return_value))
@@ -1662,7 +1662,7 @@ _com_deepin_daemon_authenticate_skeleton_handle_method_call (
 }
 
 static GVariant *
-_com_deepin_daemon_authenticate_skeleton_handle_get_property (
+_com_lingmo_daemon_authenticate_skeleton_handle_get_property (
   GDBusConnection *connection G_GNUC_UNUSED,
   const gchar *sender G_GNUC_UNUSED,
   const gchar *object_path G_GNUC_UNUSED,
@@ -1671,13 +1671,13 @@ _com_deepin_daemon_authenticate_skeleton_handle_get_property (
   GError **error,
   gpointer user_data)
 {
-  ComDeepinDaemonAuthenticateSkeleton *skeleton = COM_DEEPIN_DAEMON_AUTHENTICATE_SKELETON (user_data);
+  ComLingmoDaemonAuthenticateSkeleton *skeleton = COM_LINGMO_DAEMON_AUTHENTICATE_SKELETON (user_data);
   GValue value = G_VALUE_INIT;
   GParamSpec *pspec;
   _ExtendedGDBusPropertyInfo *info;
   GVariant *ret;
   ret = NULL;
-  info = (_ExtendedGDBusPropertyInfo *) g_dbus_interface_info_lookup_property ((GDBusInterfaceInfo *) &_com_deepin_daemon_authenticate_interface_info.parent_struct, property_name);
+  info = (_ExtendedGDBusPropertyInfo *) g_dbus_interface_info_lookup_property ((GDBusInterfaceInfo *) &_com_lingmo_daemon_authenticate_interface_info.parent_struct, property_name);
   g_assert (info != NULL);
   pspec = g_object_class_find_property (G_OBJECT_GET_CLASS (skeleton), info->hyphen_name);
   if (pspec == NULL)
@@ -1695,7 +1695,7 @@ _com_deepin_daemon_authenticate_skeleton_handle_get_property (
 }
 
 static gboolean
-_com_deepin_daemon_authenticate_skeleton_handle_set_property (
+_com_lingmo_daemon_authenticate_skeleton_handle_set_property (
   GDBusConnection *connection G_GNUC_UNUSED,
   const gchar *sender G_GNUC_UNUSED,
   const gchar *object_path G_GNUC_UNUSED,
@@ -1705,13 +1705,13 @@ _com_deepin_daemon_authenticate_skeleton_handle_set_property (
   GError **error,
   gpointer user_data)
 {
-  ComDeepinDaemonAuthenticateSkeleton *skeleton = COM_DEEPIN_DAEMON_AUTHENTICATE_SKELETON (user_data);
+  ComLingmoDaemonAuthenticateSkeleton *skeleton = COM_LINGMO_DAEMON_AUTHENTICATE_SKELETON (user_data);
   GValue value = G_VALUE_INIT;
   GParamSpec *pspec;
   _ExtendedGDBusPropertyInfo *info;
   gboolean ret;
   ret = FALSE;
-  info = (_ExtendedGDBusPropertyInfo *) g_dbus_interface_info_lookup_property ((GDBusInterfaceInfo *) &_com_deepin_daemon_authenticate_interface_info.parent_struct, property_name);
+  info = (_ExtendedGDBusPropertyInfo *) g_dbus_interface_info_lookup_property ((GDBusInterfaceInfo *) &_com_lingmo_daemon_authenticate_interface_info.parent_struct, property_name);
   g_assert (info != NULL);
   pspec = g_object_class_find_property (G_OBJECT_GET_CLASS (skeleton), info->hyphen_name);
   if (pspec == NULL)
@@ -1731,43 +1731,43 @@ _com_deepin_daemon_authenticate_skeleton_handle_set_property (
   return ret;
 }
 
-static const GDBusInterfaceVTable _com_deepin_daemon_authenticate_skeleton_vtable =
+static const GDBusInterfaceVTable _com_lingmo_daemon_authenticate_skeleton_vtable =
 {
-  _com_deepin_daemon_authenticate_skeleton_handle_method_call,
-  _com_deepin_daemon_authenticate_skeleton_handle_get_property,
-  _com_deepin_daemon_authenticate_skeleton_handle_set_property,
+  _com_lingmo_daemon_authenticate_skeleton_handle_method_call,
+  _com_lingmo_daemon_authenticate_skeleton_handle_get_property,
+  _com_lingmo_daemon_authenticate_skeleton_handle_set_property,
   {NULL}
 };
 
 static GDBusInterfaceInfo *
-com_deepin_daemon_authenticate_skeleton_dbus_interface_get_info (GDBusInterfaceSkeleton *skeleton G_GNUC_UNUSED)
+com_lingmo_daemon_authenticate_skeleton_dbus_interface_get_info (GDBusInterfaceSkeleton *skeleton G_GNUC_UNUSED)
 {
-  return com_deepin_daemon_authenticate_interface_info ();
+  return com_lingmo_daemon_authenticate_interface_info ();
 }
 
 static GDBusInterfaceVTable *
-com_deepin_daemon_authenticate_skeleton_dbus_interface_get_vtable (GDBusInterfaceSkeleton *skeleton G_GNUC_UNUSED)
+com_lingmo_daemon_authenticate_skeleton_dbus_interface_get_vtable (GDBusInterfaceSkeleton *skeleton G_GNUC_UNUSED)
 {
-  return (GDBusInterfaceVTable *) &_com_deepin_daemon_authenticate_skeleton_vtable;
+  return (GDBusInterfaceVTable *) &_com_lingmo_daemon_authenticate_skeleton_vtable;
 }
 
 static GVariant *
-com_deepin_daemon_authenticate_skeleton_dbus_interface_get_properties (GDBusInterfaceSkeleton *_skeleton)
+com_lingmo_daemon_authenticate_skeleton_dbus_interface_get_properties (GDBusInterfaceSkeleton *_skeleton)
 {
-  ComDeepinDaemonAuthenticateSkeleton *skeleton = COM_DEEPIN_DAEMON_AUTHENTICATE_SKELETON (_skeleton);
+  ComLingmoDaemonAuthenticateSkeleton *skeleton = COM_LINGMO_DAEMON_AUTHENTICATE_SKELETON (_skeleton);
 
   GVariantBuilder builder;
   guint n;
   g_variant_builder_init (&builder, G_VARIANT_TYPE ("a{sv}"));
-  if (_com_deepin_daemon_authenticate_interface_info.parent_struct.properties == NULL)
+  if (_com_lingmo_daemon_authenticate_interface_info.parent_struct.properties == NULL)
     goto out;
-  for (n = 0; _com_deepin_daemon_authenticate_interface_info.parent_struct.properties[n] != NULL; n++)
+  for (n = 0; _com_lingmo_daemon_authenticate_interface_info.parent_struct.properties[n] != NULL; n++)
     {
-      GDBusPropertyInfo *info = _com_deepin_daemon_authenticate_interface_info.parent_struct.properties[n];
+      GDBusPropertyInfo *info = _com_lingmo_daemon_authenticate_interface_info.parent_struct.properties[n];
       if (info->flags & G_DBUS_PROPERTY_INFO_FLAGS_READABLE)
         {
           GVariant *value;
-          value = _com_deepin_daemon_authenticate_skeleton_handle_get_property (g_dbus_interface_skeleton_get_connection (G_DBUS_INTERFACE_SKELETON (skeleton)), NULL, g_dbus_interface_skeleton_get_object_path (G_DBUS_INTERFACE_SKELETON (skeleton)), "com.lingmo.daemon.Authenticate", info->name, NULL, skeleton);
+          value = _com_lingmo_daemon_authenticate_skeleton_handle_get_property (g_dbus_interface_skeleton_get_connection (G_DBUS_INTERFACE_SKELETON (skeleton)), NULL, g_dbus_interface_skeleton_get_object_path (G_DBUS_INTERFACE_SKELETON (skeleton)), "com.lingmo.daemon.Authenticate", info->name, NULL, skeleton);
           if (value != NULL)
             {
               g_variant_take_ref (value);
@@ -1780,12 +1780,12 @@ out:
   return g_variant_builder_end (&builder);
 }
 
-static gboolean _com_deepin_daemon_authenticate_emit_changed (gpointer user_data);
+static gboolean _com_lingmo_daemon_authenticate_emit_changed (gpointer user_data);
 
 static void
-com_deepin_daemon_authenticate_skeleton_dbus_interface_flush (GDBusInterfaceSkeleton *_skeleton)
+com_lingmo_daemon_authenticate_skeleton_dbus_interface_flush (GDBusInterfaceSkeleton *_skeleton)
 {
-  ComDeepinDaemonAuthenticateSkeleton *skeleton = COM_DEEPIN_DAEMON_AUTHENTICATE_SKELETON (_skeleton);
+  ComLingmoDaemonAuthenticateSkeleton *skeleton = COM_LINGMO_DAEMON_AUTHENTICATE_SKELETON (_skeleton);
   gboolean emit_changed = FALSE;
 
   g_mutex_lock (&skeleton->priv->lock);
@@ -1798,15 +1798,15 @@ com_deepin_daemon_authenticate_skeleton_dbus_interface_flush (GDBusInterfaceSkel
   g_mutex_unlock (&skeleton->priv->lock);
 
   if (emit_changed)
-    _com_deepin_daemon_authenticate_emit_changed (skeleton);
+    _com_lingmo_daemon_authenticate_emit_changed (skeleton);
 }
 
 static void
-_com_deepin_daemon_authenticate_on_signal_limit_updated (
-    ComDeepinDaemonAuthenticate *object,
+_com_lingmo_daemon_authenticate_on_signal_limit_updated (
+    ComLingmoDaemonAuthenticate *object,
     const gchar *arg_username)
 {
-  ComDeepinDaemonAuthenticateSkeleton *skeleton = COM_DEEPIN_DAEMON_AUTHENTICATE_SKELETON (object);
+  ComLingmoDaemonAuthenticateSkeleton *skeleton = COM_LINGMO_DAEMON_AUTHENTICATE_SKELETON (object);
 
   GList      *connections, *l;
   GVariant   *signal_variant;
@@ -1825,21 +1825,21 @@ _com_deepin_daemon_authenticate_on_signal_limit_updated (
   g_list_free_full (connections, g_object_unref);
 }
 
-static void com_deepin_daemon_authenticate_skeleton_iface_init (ComDeepinDaemonAuthenticateIface *iface);
+static void com_lingmo_daemon_authenticate_skeleton_iface_init (ComLingmoDaemonAuthenticateIface *iface);
 #if GLIB_VERSION_MAX_ALLOWED >= GLIB_VERSION_2_38
-G_DEFINE_TYPE_WITH_CODE (ComDeepinDaemonAuthenticateSkeleton, com_deepin_daemon_authenticate_skeleton, G_TYPE_DBUS_INTERFACE_SKELETON,
-                         G_ADD_PRIVATE (ComDeepinDaemonAuthenticateSkeleton)
-                         G_IMPLEMENT_INTERFACE (TYPE_COM_DEEPIN_DAEMON_AUTHENTICATE, com_deepin_daemon_authenticate_skeleton_iface_init))
+G_DEFINE_TYPE_WITH_CODE (ComLingmoDaemonAuthenticateSkeleton, com_lingmo_daemon_authenticate_skeleton, G_TYPE_DBUS_INTERFACE_SKELETON,
+                         G_ADD_PRIVATE (ComLingmoDaemonAuthenticateSkeleton)
+                         G_IMPLEMENT_INTERFACE (TYPE_COM_LINGMO_DAEMON_AUTHENTICATE, com_lingmo_daemon_authenticate_skeleton_iface_init))
 
 #else
-G_DEFINE_TYPE_WITH_CODE (ComDeepinDaemonAuthenticateSkeleton, com_deepin_daemon_authenticate_skeleton, G_TYPE_DBUS_INTERFACE_SKELETON,
-                         G_IMPLEMENT_INTERFACE (TYPE_COM_DEEPIN_DAEMON_AUTHENTICATE, com_deepin_daemon_authenticate_skeleton_iface_init))
+G_DEFINE_TYPE_WITH_CODE (ComLingmoDaemonAuthenticateSkeleton, com_lingmo_daemon_authenticate_skeleton, G_TYPE_DBUS_INTERFACE_SKELETON,
+                         G_IMPLEMENT_INTERFACE (TYPE_COM_LINGMO_DAEMON_AUTHENTICATE, com_lingmo_daemon_authenticate_skeleton_iface_init))
 
 #endif
 static void
-com_deepin_daemon_authenticate_skeleton_finalize (GObject *object)
+com_lingmo_daemon_authenticate_skeleton_finalize (GObject *object)
 {
-  ComDeepinDaemonAuthenticateSkeleton *skeleton = COM_DEEPIN_DAEMON_AUTHENTICATE_SKELETON (object);
+  ComLingmoDaemonAuthenticateSkeleton *skeleton = COM_LINGMO_DAEMON_AUTHENTICATE_SKELETON (object);
   guint n;
   for (n = 0; n < 3; n++)
     g_value_unset (&skeleton->priv->properties[n]);
@@ -1849,16 +1849,16 @@ com_deepin_daemon_authenticate_skeleton_finalize (GObject *object)
     g_source_destroy (skeleton->priv->changed_properties_idle_source);
   g_main_context_unref (skeleton->priv->context);
   g_mutex_clear (&skeleton->priv->lock);
-  G_OBJECT_CLASS (com_deepin_daemon_authenticate_skeleton_parent_class)->finalize (object);
+  G_OBJECT_CLASS (com_lingmo_daemon_authenticate_skeleton_parent_class)->finalize (object);
 }
 
 static void
-com_deepin_daemon_authenticate_skeleton_get_property (GObject      *object,
+com_lingmo_daemon_authenticate_skeleton_get_property (GObject      *object,
   guint         prop_id,
   GValue       *value,
   GParamSpec   *pspec G_GNUC_UNUSED)
 {
-  ComDeepinDaemonAuthenticateSkeleton *skeleton = COM_DEEPIN_DAEMON_AUTHENTICATE_SKELETON (object);
+  ComLingmoDaemonAuthenticateSkeleton *skeleton = COM_LINGMO_DAEMON_AUTHENTICATE_SKELETON (object);
   g_assert (prop_id != 0 && prop_id - 1 < 3);
   g_mutex_lock (&skeleton->priv->lock);
   g_value_copy (&skeleton->priv->properties[prop_id - 1], value);
@@ -1866,9 +1866,9 @@ com_deepin_daemon_authenticate_skeleton_get_property (GObject      *object,
 }
 
 static gboolean
-_com_deepin_daemon_authenticate_emit_changed (gpointer user_data)
+_com_lingmo_daemon_authenticate_emit_changed (gpointer user_data)
 {
-  ComDeepinDaemonAuthenticateSkeleton *skeleton = COM_DEEPIN_DAEMON_AUTHENTICATE_SKELETON (user_data);
+  ComLingmoDaemonAuthenticateSkeleton *skeleton = COM_LINGMO_DAEMON_AUTHENTICATE_SKELETON (user_data);
   GList *l;
   GVariantBuilder builder;
   GVariantBuilder invalidated_builder;
@@ -1896,7 +1896,7 @@ _com_deepin_daemon_authenticate_emit_changed (gpointer user_data)
     {
       GList *connections, *ll;
       GVariant *signal_variant;
-      signal_variant = g_variant_ref_sink (g_variant_new ("(sa{sv}as)", "com.deepin.daemon.Authenticate",
+      signal_variant = g_variant_ref_sink (g_variant_new ("(sa{sv}as)", "com.lingmo.daemon.Authenticate",
                                            &builder, &invalidated_builder));
       connections = g_dbus_interface_skeleton_get_connections (G_DBUS_INTERFACE_SKELETON (skeleton));
       for (ll = connections; ll != NULL; ll = ll->next)
@@ -1926,7 +1926,7 @@ _com_deepin_daemon_authenticate_emit_changed (gpointer user_data)
 }
 
 static void
-_com_deepin_daemon_authenticate_schedule_emit_changed (ComDeepinDaemonAuthenticateSkeleton *skeleton, const _ExtendedGDBusPropertyInfo *info, guint prop_id, const GValue *orig_value)
+_com_lingmo_daemon_authenticate_schedule_emit_changed (ComLingmoDaemonAuthenticateSkeleton *skeleton, const _ExtendedGDBusPropertyInfo *info, guint prop_id, const GValue *orig_value)
 {
   ChangedProperty *cp;
   GList *l;
@@ -1952,18 +1952,18 @@ _com_deepin_daemon_authenticate_schedule_emit_changed (ComDeepinDaemonAuthentica
 }
 
 static void
-com_deepin_daemon_authenticate_skeleton_notify (GObject      *object,
+com_lingmo_daemon_authenticate_skeleton_notify (GObject      *object,
   GParamSpec *pspec G_GNUC_UNUSED)
 {
-  ComDeepinDaemonAuthenticateSkeleton *skeleton = COM_DEEPIN_DAEMON_AUTHENTICATE_SKELETON (object);
+  ComLingmoDaemonAuthenticateSkeleton *skeleton = COM_LINGMO_DAEMON_AUTHENTICATE_SKELETON (object);
   g_mutex_lock (&skeleton->priv->lock);
   if (skeleton->priv->changed_properties != NULL &&
       skeleton->priv->changed_properties_idle_source == NULL)
     {
       skeleton->priv->changed_properties_idle_source = g_idle_source_new ();
       g_source_set_priority (skeleton->priv->changed_properties_idle_source, G_PRIORITY_DEFAULT);
-      g_source_set_callback (skeleton->priv->changed_properties_idle_source, _com_deepin_daemon_authenticate_emit_changed, g_object_ref (skeleton), (GDestroyNotify) g_object_unref);
-      g_source_set_name (skeleton->priv->changed_properties_idle_source, "[generated] _com_deepin_daemon_authenticate_emit_changed");
+      g_source_set_callback (skeleton->priv->changed_properties_idle_source, _com_lingmo_daemon_authenticate_emit_changed, g_object_ref (skeleton), (GDestroyNotify) g_object_unref);
+      g_source_set_name (skeleton->priv->changed_properties_idle_source, "[generated] _com_lingmo_daemon_authenticate_emit_changed");
       g_source_attach (skeleton->priv->changed_properties_idle_source, skeleton->priv->context);
       g_source_unref (skeleton->priv->changed_properties_idle_source);
     }
@@ -1971,19 +1971,19 @@ com_deepin_daemon_authenticate_skeleton_notify (GObject      *object,
 }
 
 static void
-com_deepin_daemon_authenticate_skeleton_set_property (GObject      *object,
+com_lingmo_daemon_authenticate_skeleton_set_property (GObject      *object,
   guint         prop_id,
   const GValue *value,
   GParamSpec   *pspec)
 {
-  ComDeepinDaemonAuthenticateSkeleton *skeleton = COM_DEEPIN_DAEMON_AUTHENTICATE_SKELETON (object);
+  ComLingmoDaemonAuthenticateSkeleton *skeleton = COM_LINGMO_DAEMON_AUTHENTICATE_SKELETON (object);
   g_assert (prop_id != 0 && prop_id - 1 < 3);
   g_mutex_lock (&skeleton->priv->lock);
   g_object_freeze_notify (object);
   if (!_g_value_equal (value, &skeleton->priv->properties[prop_id - 1]))
     {
       if (g_dbus_interface_skeleton_get_connection (G_DBUS_INTERFACE_SKELETON (skeleton)) != NULL)
-        _com_deepin_daemon_authenticate_schedule_emit_changed (skeleton, (const _ExtendedGDBusPropertyInfo *) _com_deepin_daemon_authenticate_property_info_pointers[prop_id - 1], prop_id, &skeleton->priv->properties[prop_id - 1]);
+        _com_lingmo_daemon_authenticate_schedule_emit_changed (skeleton, (const _ExtendedGDBusPropertyInfo *) _com_lingmo_daemon_authenticate_property_info_pointers[prop_id - 1], prop_id, &skeleton->priv->properties[prop_id - 1]);
       g_value_copy (value, &skeleton->priv->properties[prop_id - 1]);
       g_object_notify_by_pspec (object, pspec);
     }
@@ -1992,12 +1992,12 @@ com_deepin_daemon_authenticate_skeleton_set_property (GObject      *object,
 }
 
 static void
-com_deepin_daemon_authenticate_skeleton_init (ComDeepinDaemonAuthenticateSkeleton *skeleton)
+com_lingmo_daemon_authenticate_skeleton_init (ComLingmoDaemonAuthenticateSkeleton *skeleton)
 {
 #if GLIB_VERSION_MAX_ALLOWED >= GLIB_VERSION_2_38
-  skeleton->priv = com_deepin_daemon_authenticate_skeleton_get_instance_private (skeleton);
+  skeleton->priv = com_lingmo_daemon_authenticate_skeleton_get_instance_private (skeleton);
 #else
-  skeleton->priv = G_TYPE_INSTANCE_GET_PRIVATE (skeleton, TYPE_COM_DEEPIN_DAEMON_AUTHENTICATE_SKELETON, ComDeepinDaemonAuthenticateSkeletonPrivate);
+  skeleton->priv = G_TYPE_INSTANCE_GET_PRIVATE (skeleton, TYPE_COM_LINGMO_DAEMON_AUTHENTICATE_SKELETON, ComLingmoDaemonAuthenticateSkeletonPrivate);
 #endif
 
   g_mutex_init (&skeleton->priv->lock);
@@ -2009,9 +2009,9 @@ com_deepin_daemon_authenticate_skeleton_init (ComDeepinDaemonAuthenticateSkeleto
 }
 
 static const gchar *
-com_deepin_daemon_authenticate_skeleton_get_support_encrypts (ComDeepinDaemonAuthenticate *object)
+com_lingmo_daemon_authenticate_skeleton_get_support_encrypts (ComLingmoDaemonAuthenticate *object)
 {
-  ComDeepinDaemonAuthenticateSkeleton *skeleton = COM_DEEPIN_DAEMON_AUTHENTICATE_SKELETON (object);
+  ComLingmoDaemonAuthenticateSkeleton *skeleton = COM_LINGMO_DAEMON_AUTHENTICATE_SKELETON (object);
   const gchar *value;
   g_mutex_lock (&skeleton->priv->lock);
   value = g_value_get_string (&(skeleton->priv->properties[0]));
@@ -2020,9 +2020,9 @@ com_deepin_daemon_authenticate_skeleton_get_support_encrypts (ComDeepinDaemonAut
 }
 
 static gint 
-com_deepin_daemon_authenticate_skeleton_get_framework_state (ComDeepinDaemonAuthenticate *object)
+com_lingmo_daemon_authenticate_skeleton_get_framework_state (ComLingmoDaemonAuthenticate *object)
 {
-  ComDeepinDaemonAuthenticateSkeleton *skeleton = COM_DEEPIN_DAEMON_AUTHENTICATE_SKELETON (object);
+  ComLingmoDaemonAuthenticateSkeleton *skeleton = COM_LINGMO_DAEMON_AUTHENTICATE_SKELETON (object);
   gint value;
   g_mutex_lock (&skeleton->priv->lock);
   value = g_value_get_int (&(skeleton->priv->properties[1]));
@@ -2031,9 +2031,9 @@ com_deepin_daemon_authenticate_skeleton_get_framework_state (ComDeepinDaemonAuth
 }
 
 static gint 
-com_deepin_daemon_authenticate_skeleton_get_supported_flags (ComDeepinDaemonAuthenticate *object)
+com_lingmo_daemon_authenticate_skeleton_get_supported_flags (ComLingmoDaemonAuthenticate *object)
 {
-  ComDeepinDaemonAuthenticateSkeleton *skeleton = COM_DEEPIN_DAEMON_AUTHENTICATE_SKELETON (object);
+  ComLingmoDaemonAuthenticateSkeleton *skeleton = COM_LINGMO_DAEMON_AUTHENTICATE_SKELETON (object);
   gint value;
   g_mutex_lock (&skeleton->priv->lock);
   value = g_value_get_int (&(skeleton->priv->properties[2]));
@@ -2042,50 +2042,50 @@ com_deepin_daemon_authenticate_skeleton_get_supported_flags (ComDeepinDaemonAuth
 }
 
 static void
-com_deepin_daemon_authenticate_skeleton_class_init (ComDeepinDaemonAuthenticateSkeletonClass *klass)
+com_lingmo_daemon_authenticate_skeleton_class_init (ComLingmoDaemonAuthenticateSkeletonClass *klass)
 {
   GObjectClass *gobject_class;
   GDBusInterfaceSkeletonClass *skeleton_class;
 
   gobject_class = G_OBJECT_CLASS (klass);
-  gobject_class->finalize = com_deepin_daemon_authenticate_skeleton_finalize;
-  gobject_class->get_property = com_deepin_daemon_authenticate_skeleton_get_property;
-  gobject_class->set_property = com_deepin_daemon_authenticate_skeleton_set_property;
-  gobject_class->notify       = com_deepin_daemon_authenticate_skeleton_notify;
+  gobject_class->finalize = com_lingmo_daemon_authenticate_skeleton_finalize;
+  gobject_class->get_property = com_lingmo_daemon_authenticate_skeleton_get_property;
+  gobject_class->set_property = com_lingmo_daemon_authenticate_skeleton_set_property;
+  gobject_class->notify       = com_lingmo_daemon_authenticate_skeleton_notify;
 
 
-  com_deepin_daemon_authenticate_override_properties (gobject_class, 1);
+  com_lingmo_daemon_authenticate_override_properties (gobject_class, 1);
 
   skeleton_class = G_DBUS_INTERFACE_SKELETON_CLASS (klass);
-  skeleton_class->get_info = com_deepin_daemon_authenticate_skeleton_dbus_interface_get_info;
-  skeleton_class->get_properties = com_deepin_daemon_authenticate_skeleton_dbus_interface_get_properties;
-  skeleton_class->flush = com_deepin_daemon_authenticate_skeleton_dbus_interface_flush;
-  skeleton_class->get_vtable = com_deepin_daemon_authenticate_skeleton_dbus_interface_get_vtable;
+  skeleton_class->get_info = com_lingmo_daemon_authenticate_skeleton_dbus_interface_get_info;
+  skeleton_class->get_properties = com_lingmo_daemon_authenticate_skeleton_dbus_interface_get_properties;
+  skeleton_class->flush = com_lingmo_daemon_authenticate_skeleton_dbus_interface_flush;
+  skeleton_class->get_vtable = com_lingmo_daemon_authenticate_skeleton_dbus_interface_get_vtable;
 
 #if GLIB_VERSION_MAX_ALLOWED < GLIB_VERSION_2_38
-  g_type_class_add_private (klass, sizeof (ComDeepinDaemonAuthenticateSkeletonPrivate));
+  g_type_class_add_private (klass, sizeof (ComLingmoDaemonAuthenticateSkeletonPrivate));
 #endif
 }
 
 static void
-com_deepin_daemon_authenticate_skeleton_iface_init (ComDeepinDaemonAuthenticateIface *iface)
+com_lingmo_daemon_authenticate_skeleton_iface_init (ComLingmoDaemonAuthenticateIface *iface)
 {
-  iface->limit_updated = _com_deepin_daemon_authenticate_on_signal_limit_updated;
-  iface->get_support_encrypts = com_deepin_daemon_authenticate_skeleton_get_support_encrypts;
-  iface->get_framework_state = com_deepin_daemon_authenticate_skeleton_get_framework_state;
-  iface->get_supported_flags = com_deepin_daemon_authenticate_skeleton_get_supported_flags;
+  iface->limit_updated = _com_lingmo_daemon_authenticate_on_signal_limit_updated;
+  iface->get_support_encrypts = com_lingmo_daemon_authenticate_skeleton_get_support_encrypts;
+  iface->get_framework_state = com_lingmo_daemon_authenticate_skeleton_get_framework_state;
+  iface->get_supported_flags = com_lingmo_daemon_authenticate_skeleton_get_supported_flags;
 }
 
 /**
- * com_deepin_daemon_authenticate_skeleton_new:
+ * com_lingmo_daemon_authenticate_skeleton_new:
  *
- * Creates a skeleton object for the D-Bus interface <link linkend="gdbus-interface-com-deepin-daemon-Authenticate.top_of_page">com.lingmo.daemon.Authenticate</link>.
+ * Creates a skeleton object for the D-Bus interface <link linkend="gdbus-interface-com-lingmo-daemon-Authenticate.top_of_page">com.lingmo.daemon.Authenticate</link>.
  *
- * Returns: (transfer full) (type ComDeepinDaemonAuthenticateSkeleton): The skeleton object.
+ * Returns: (transfer full) (type ComLingmoDaemonAuthenticateSkeleton): The skeleton object.
  */
-ComDeepinDaemonAuthenticate *
-com_deepin_daemon_authenticate_skeleton_new (void)
+ComLingmoDaemonAuthenticate *
+com_lingmo_daemon_authenticate_skeleton_new (void)
 {
-  return COM_DEEPIN_DAEMON_AUTHENTICATE (g_object_new (TYPE_COM_DEEPIN_DAEMON_AUTHENTICATE_SKELETON, NULL));
+  return COM_LINGMO_DAEMON_AUTHENTICATE (g_object_new (TYPE_COM_LINGMO_DAEMON_AUTHENTICATE_SKELETON, NULL));
 }
 

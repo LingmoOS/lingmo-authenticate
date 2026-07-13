@@ -11,8 +11,8 @@ import (
 )
 
 const (
-	dBusCharaMangerPath = "/com/deepin/daemon/Authenticate/CharaManger"
-	dBusCharaMangerface = "com.deepin.daemon.Authenticate.CharaManger"
+	dBusCharaMangerPath = "/com/lingmo/daemon/Authenticate/CharaManger"
+	dBusCharaMangerface = "com.lingmo.daemon.Authenticate.CharaManger"
 	charaInfoFile       = "/usr/share/deepin-authentication/chara/charaInfo"
 
 	actionIdFaceEnroll = "com.deepin.daemon.authenticate.Face.enroll"

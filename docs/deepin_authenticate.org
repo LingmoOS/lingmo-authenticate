@@ -14,15 +14,15 @@
 
 + *Service:*
 
-  =com.deepin.daemon.Authenticate=
+  =com.lingmo.daemon.Authenticate=
 
 + *Path:*
 
-  =/com/deepin/daemon/Authenticate=
+  =/com/lingmo/daemon/Authenticate=
 
 + *Interface:*
 
-  =com.deepin.daemon.Authenticate=
+  =com.lingmo.daemon.Authenticate=
 
 *(这里假定本文的阅读者熟悉 =DBus= ，故不再此介绍 =DBus= 了。)*
 
@@ -256,15 +256,15 @@
 
 + *Service:*
 
-  =com.deepin.daemon.Authenticate=
+  =com.lingmo.daemon.Authenticate=
 
 + *Path:*
 
-  =/com/deepin/daemon/Authenticate/Fingerprint=
+  =/com/lingmo/daemon/Authenticate/Fingerprint=
 
 + *Interface:*
 
-  =com.deepin.daemon.Authenticate.Fingerprint=
+  =com.lingmo.daemon.Authenticate.Fingerprint=
 
 --------
 

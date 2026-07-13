@@ -24,7 +24,7 @@ import (
 )
 
 const (
-	dbusFingerPrintPath      = "/com/deepin/daemon/Authenticate/Fingerprint"
+	dbusFingerPrintPath      = "/com/lingmo/daemon/Authenticate/Fingerprint"
 	dbusFingerPrintInterface = "com.lingmo.daemon.Authenticate.Fingerprint"
 
 	actionIdEnroll = "com.deepin.daemon.authenticate.Fingerprint.enroll"

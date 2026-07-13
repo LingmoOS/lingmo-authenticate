@@ -18,7 +18,7 @@ import (
 )
 
 const (
-	dBusFacePath      = "/com/deepin/daemon/Authenticate/Face"
+	dBusFacePath      = "/com/lingmo/daemon/Authenticate/Face"
 	dBusFaceInterface = "com.lingmo.daemon.Authenticate.Face"
 	defaultConfigFile = "/var/lib/deepin/authenticate/face.json"
 )

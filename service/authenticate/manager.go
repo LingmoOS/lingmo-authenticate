@@ -31,7 +31,7 @@ import (
 //go:generate dbusutil-gen em -type Manager
 
 const (
-	dbusServicePath       = "/com/deepin/daemon/Authenticate"
+	dbusServicePath       = "/com/lingmo/daemon/Authenticate"
 	dbusServiceInterface  = "com.lingmo.daemon.Authenticate"
 	pamCommonAuthFilePath = "/etc/pam.d/common-auth"
 	deepinPamConfFilePath = "/etc/pam.d/deepin_pam_unix"

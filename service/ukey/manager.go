@@ -17,7 +17,7 @@ import (
 //go:generate dbusutil-gen em -type Manager
 
 const (
-	dbusUKeyPath      = "/com/deepin/daemon/Authenticate/UKey"
+	dbusUKeyPath      = "/com/lingmo/daemon/Authenticate/UKey"
 	dbusUKeyInterface = "com.lingmo.daemon.Authenticate.UKey"
 	defaultConfigFile = "/var/lib/deepin/authenticate/ukey.json"
 )
