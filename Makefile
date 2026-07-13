@@ -37,8 +37,8 @@ print_gopath: prepare
 install: translate install-pam-module
 	install -d ${DESTDIR}${PREFIX}/share/locale
 	- cp -rf out/locale/* ${DESTDIR}${PREFIX}/share/locale
-	install -d ${DESTDIR}${PREFIX}/lib/deepin-authenticate/
-	install -m755 out/bin/deepin-authentication ${DESTDIR}${PREFIX}/lib/deepin-authenticate/
+	install -d ${DESTDIR}${PREFIX}/lib/lingmo-authenticate/
+	install -m755 out/bin/deepin-authentication ${DESTDIR}${PREFIX}/lib/lingmo-authenticate/
 	install -d ${DESTDIR}${PREFIX}/share/dbus-1/system.d
 	install -m644 misc/conf/*.conf ${DESTDIR}${PREFIX}/share/dbus-1/system.d/
 	install -d ${DESTDIR}/lib/systemd/system

@@ -4,4 +4,4 @@ Description=Deepin Authentication
 [Service]
 Type=dbus
 BusName=com.lingmo.daemon.Authenticate
-ExecStart=/usr/lib/deepin-authenticate/deepin-authentication
+ExecStart=/usr/lib/lingmo-authenticate/deepin-authentication

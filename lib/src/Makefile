@@ -1,5 +1,5 @@
 LIB_NAME = libdeepin-authenticate.so.1
-LIB_DIR_NAME = libdeepin-authenticate
+LIB_DIR_NAME = liblingmo-authenticate
 GDBUS_FILE = auth/com.lingmo.daemon.Authenticate.c auth/com.lingmo.daemon.Authenticate.Session.c
 LIB_DEST_DIR=../../out/lib
 PREFIX=/usr
